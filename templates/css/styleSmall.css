@@ -161,7 +161,7 @@ h1, h2, h3, h4{
     height: 90vh;
     padding: 0px;
     color: white;
-    /* margin-top: 10vh; */
+    margin-top: 20vh;
 }
 
 
@@ -216,12 +216,13 @@ h1, h2, h3, h4{
 .boton{
   position: relative;
     float: left;
-    background-color: white;
+    /* background-color: white; */
     width: 46%;
     height: 35%;
     margin: 1%;
     /*border: 5px solid #2c5aa9;*/
     text-align: center;
+    margin-bottom: 80px;
 }
 
 .big{
@@ -260,5 +261,20 @@ footer{
     content: "";
     display: table;
     clear: both;
+}
+
+a:link{
+  text-decoration: none;
+  color: white;
+}
+
+a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+a:active{
+  text-decoration: none;
+  color: white;
 }
 

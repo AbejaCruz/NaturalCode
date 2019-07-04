@@ -10,7 +10,7 @@ if ("geolocation" in navigator){ //check geolocation available
     
     navigator.geolocation.getCurrentPosition(function(position){ 
             console.log("EncontradaFound your location nLat : "+position.coords.latitude+" nLang :"+ position.coords.longitude);
-            $("#result").html("Found your location Lat: "+position.coords.latitude+" Lang:"+ position.coords.longitude);
+            $("#result").html("Su ubicación es: "+position.coords.latitude+" Lang:"+ position.coords.longitude);
             lat=position.coords.latitude;
         lon=position.coords.longitude;
         latlon=new google.maps.LatLng(lat, lon)
@@ -36,7 +36,7 @@ $("#find_btn").click(function () { //user clicks button
         //try to get user current location using getCurrentPosition() method
         navigator.geolocation.getCurrentPosition(function(position){ 
             console.log(position.coords.latitude)
-                $("#result").html("Found your location Lat: "+position.coords.latitude+" Lang:"+ position.coords.longitude);
+                $("#result").html("Su ubicación es: "+position.coords.latitude+" Lang:"+ position.coords.longitude);
             });
     }else{
         alert("Browser doesn't support geolocation!");
