@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/styleSmall.css" rel="stylesheet" type="text/css">
+    <title>NaturalCode</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <!--notificaciones-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="push.min.js"></script>
+    <script src="java.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <style>
+        #c1{
+            width: 100%;
+        }
+        #c2{
+            width: 35%;
+        }
+        #c3{
+            width: 30%;
+        }
+        @media screen and (max-width: 600px) {
+            #c1, #c2, #c3{
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header">
+        <img src="images/logoC.png" alt="" id="imgLogo">
+        <div class="header-right">
+            <a class="active" href="index.html">INICIO</a>
+            <a href="#contact">CONTACTO</a>
+            <a href="#about">ACERCA DE</a>
+        </div>
+    </header>
+
+    <!--conenido de jessica orozco------------------>
+    <!-- <button type="button" onclick="notificar()" >Enviar Notificacion</button> -->
+    <section id="listasos" class="listasos">
+        <h3>Servicios de Asistencia</h3>
+        <a href=""><img class="buscar"
+                src="https://images.vexels.com/media/users/3/132066/isolated/preview/71646d7673e8847ab07b3b7e78928777-buscar-icono-de-c--rculo-by-vexels.png"
+                title="Buscar"></a>
+        <!-- <div class="bannersos">
+        
+        
+    </div> -->
+        <button onclick="ocultarlistasos()" class="btncerrar">X</button>
+        <div id="sos" class="sos">
+
+        </div>
+
+    </section>
+    <!------------------------------------------------>
+
+    <div class="main row">
+
+        <form>
+            <div style="background-color: rgba(0,0,0,0.3); padding-top: 15px; margin: 10px auto; width: 98%; height: auto;" class="bloque2">
+                <p style="font-size: 24px;">ALERTA #1</p>
+                <br>
+                <div style="margin: 10px 30px;">
+                    
+                    <input type="checkbox">Seleccionar
+                    <button onclick="borrar()">Descartar</button>
+                    
+                </div>
+                
+                <br>
+                <p style="text-align: justify; margin: 10px 30px;"><b>Lugar:</b> La Estrella </p>
+                <p style="text-align: justify; margin: 10px 30px;"><b>Fecha:</b> 04/07/2019 </p>
+                <p style="text-align: justify; margin: 10px 30px;"><b>Descripción:</b> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et odit maiores cum ut iusto aspernatur labore ex incidunt provident! Aspernatur tenetur nesciunt atque nostrum mollitia nisi consectetur voluptatibus. Molestiae, possimus. </p>
+                <br>
+            </div>
+
+            <div style="background-color: rgba(0,0,0,0.3); padding-top: 15px; margin: 10px auto; width: 98%; height: auto;" class="bloque2">
+                <p style="font-size: 24px;">ALERTA #2</p>
+                <br>
+                <div style="margin: 10px 30px;">
+                    
+                    <input type="checkbox">Seleccionar
+                    <button onclick="borrar()">Descartar</button>
+                    
+                </div>
+                
+                <br>
+                <p style="text-align: justify; margin: 10px 30px;"><b>Lugar:</b> Bogotá </p>
+                <p style="text-align: justify; margin: 10px 30px;"><b>Fecha:</b> 04/07/2019 </p>
+                <p style="text-align: justify; margin: 10px 30px;"><b>Descripción:</b> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et odit maiores cum ut iusto aspernatur labore ex incidunt provident! Aspernatur tenetur nesciunt atque nostrum mollitia nisi consectetur voluptatibus. Molestiae, possimus. </p>
+                <br>
+            </div>
+
+            <div style="background-color: rgba(0,0,0,0.3); padding-top: 15px; margin: 10px auto; width: 98%; height: auto;" class="bloque2">
+                <p style="font-size: 24px;">ALERTA #3</p>
+                <br>
+                <div style="margin: 10px 30px;">
+                    
+                    <input type="checkbox">Seleccionar
+                    <button onclick="borrar()">Descartar</button>
+                    
+                </div>
+                
+                <br>
+                <p style="text-align: justify; margin: 10px 30px;"><b>Lugar:</b> Rionegro </p>
+                <p style="text-align: justify; margin: 10px 30px;"><b>Fecha:</b> 04/07/2019 </p>
+                <p style="text-align: justify; margin: 10px 30px;"><b>Descripción:</b> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et odit maiores cum ut iusto aspernatur labore ex incidunt provident! Aspernatur tenetur nesciunt atque nostrum mollitia nisi consectetur voluptatibus. Molestiae, possimus. </p>
+                <br>
+            </div>
+
+            <div style="width: 30%; margin: auto;">
+                <button style="width: 100%; height: 50px;" type="submit">Procesar</button>
+            </div>
+        </form>
+        
+
+        
+
+    </div>
+    <footer>
+        <img src="images/codeInkLogo.png" style="width: 8%;">
+        CodeINK Team / All rights reserved / BICTIA 2019
+    </footer>
+
+
+
+    <!--COMPONENTES DE LAS BARRAS DE CARGA ANIMADAS-->
+    <!-- These are probably out dated so you might want to use newest versions -->
+    <!--<script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>-->
+    <script src="js/progressbar.js"></script>
+    <script src="js/barras.js"></script>
+    <!--codigo de jessica orozco-->
+    <script src="contenido.js"></script>
+    <!-- <script src="notificaciones.js"></script> -->
+    <script>
+        function mostrar(){
+            var archivo = document.getElementById("file").files[0];
+            var reader = new FileReader();
+            if (file) {
+                reader.readAsDataURL(archivo );
+                reader.onloadend = function () {
+                document.getElementById("img").src = reader.result;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
