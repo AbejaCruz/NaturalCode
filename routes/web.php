@@ -23,15 +23,15 @@ Route::view('/', 'welcome');
 Auth::routes();
 
 Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
-Route::get('/login/writer', 'Auth\LoginController@showWriterLoginForm');
+Route::get('/login/persona', 'Auth\LoginController@showPersonaLoginForm');
 Route::get('/register/admin', 'Auth\RegisterController@showAdminRegisterForm');
-Route::get('/register/writer', 'Auth\RegisterController@showWriterRegisterForm');
+Route::get('/register/persona', 'Auth\RegisterController@showPersonaRegisterForm');
 
 Route::post('/login/admin', 'Auth\LoginController@adminLogin');
-Route::post('/login/writer', 'Auth\LoginController@writerLogin');
+Route::post('/login/persona', 'Auth\LoginController@personaLogin');
 Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
-Route::post('/register/writer', 'Auth\RegisterController@createWriter');
+Route::post('/register/persona', 'Auth\RegisterController@createPersona');
 
 Route::view('/home', 'home')->middleware('auth');
 Route::view('/admin', 'admin');
-Route::view('/writer', 'writer');
+Route::view('/persona', 'persona');
