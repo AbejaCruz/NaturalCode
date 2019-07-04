@@ -7,9 +7,26 @@ if ("geolocation" in navigator){ //check Geolocation available
 
 if ("geolocation" in navigator){ //check geolocation available 
     //try to get user current location using getCurrentPosition() method
+    
     navigator.geolocation.getCurrentPosition(function(position){ 
-            console.log("Found your location nLat : "+position.coords.latitude+" nLang :"+ position.coords.longitude);
-        });
+            console.log("EncontradaFound your location nLat : "+position.coords.latitude+" nLang :"+ position.coords.longitude);
+            $("#result").html("Found your location Lat: "+position.coords.latitude+" Lang:"+ position.coords.longitude);
+            lat=position.coords.latitude;
+        lon=position.coords.longitude;
+        latlon=new google.maps.LatLng(lat, lon)
+        mapholder=document.getElementById("mapa")
+        mapholder.style.height='250px';
+        mapholder.style.width='80%';
+        mapholder.style.margin='auto';
+        var myOptions={
+            center:latlon,zoom:10,
+            mapTypeId:google.maps.MapTypeId.ROADMAP,
+            mapTypeControl:false,
+            navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+        };
+        var map=new google.maps.Map(document.getElementById("mapa"),myOptions);
+        var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+        });        
 }else{
     console.log("Browser doesn't support geolocation!");
 }
@@ -18,10 +35,11 @@ $("#find_btn").click(function () { //user clicks button
     if ("geolocation" in navigator){ //check geolocation available 
         //try to get user current location using getCurrentPosition() method
         navigator.geolocation.getCurrentPosition(function(position){ 
+            console.log(position.coords.latitude)
                 $("#result").html("Found your location Lat: "+position.coords.latitude+" Lang:"+ position.coords.longitude);
             });
     }else{
-        console.log("Browser doesn't support geolocation!");
+        alert("Browser doesn't support geolocation!");
     }
 });
 
