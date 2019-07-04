@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main-form.css"> 
+    <style>
+    #news{
+        background-color: lightyellow;
+        width: 80%;
+        margin: auto;
+    }
+    #news p{
+        text-align: justify;
+        padding-left: 20px;
+        padding-right: 20px; 
+    }
+    </style>
+</head>
+<body>
+    <div id="cabecera"><b>Usuario: Pepe Perez</b></div>
+    <div class="container col-6">
+        <div id='ubicacion'></div>
+        <div id="demo"></div>
+        <div id="mapholder"></div>
+        <button onclick="cargarmap()">Ver Ubicación</button>
+        <div id="coord"></div>
+        <div id="news">
+            <div id="sec1_new">
+                <h3>INUNDACION</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto debitis et animi ut doloremque error adipisci ducimus, unde voluptas dolorum suscipit eos sequi impedit recusandae velit quidem eaque neque.</p>
+            </div><hr>
+            <div id="sec2_new">
+                <h3>DESLIZAMIENTO</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto debitis et animi ut doloremque error adipisci ducimus, unde voluptas dolorum suscipit eos sequi impedit recusandae velit quidem eaque neque.</p>
+            </div><hr>
+            <div id="sec1_new">
+                <h3>INCENDIO</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto debitis et animi ut doloremque error adipisci ducimus, unde voluptas dolorum suscipit eos sequi impedit recusandae velit quidem eaque neque.</p>
+            </div>
+
+        </div>
+    </div>   
+
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    
+    <script type="text/javascript">
+    var x=document.getElementById("demo");
+    function cargarmap(){
+        var bloc = document.getElementById("coord");
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+    function showPosition(position)
+  {
+    bloc.innerHTML = "Sus coordenadas son:" + "<br>" + "Latitud: " + position.coords.latitude + 
+    "<br>Longitud: " + position.coords.longitude;
+  lat=position.coords.latitude;
+  lon=position.coords.longitude;
+  latlon=new google.maps.LatLng(lat, lon)
+  mapholder=document.getElementById('mapholder')
+  mapholder.style.height='250px';
+  mapholder.style.width='80%';
+  mapholder.style.margin='auto';
+  var myOptions={
+  center:latlon,zoom:10,
+  mapTypeId:google.maps.MapTypeId.ROADMAP,
+  mapTypeControl:false,
+  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+  };
+  var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+  var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+  }
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="Denegada la peticion de Geolocalización en el navegador."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="La información de la localización no esta disponible."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML="El tiempo de petición ha expirado."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="Ha ocurrido un error desconocido."
+      break;
+    }
+  }}
+</script>    
+
+
+</body>
+</html>
