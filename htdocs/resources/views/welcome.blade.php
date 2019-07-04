@@ -1,57 +1,11 @@
-<!DOCTYPE html>
-<html>
+@extends('master')
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/styleSmall.css') }}" rel="stylesheet" type="text/css">
-    <title>{{ config('app.name') }}</title>
-    <link rel="shortcut icon" href="images/favicon.png" />
-
-    <!--notificaciones-->
-            <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="push.min.js"></script>
-    <script src="java.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
-
-</head>
-
-<body>
-
-    <header id="header" class="header">
-        <img src="{{ asset('img/logoC.png') }}" alt="" id="imgLogo">
-        <div class="header-right">
-            <a class="active" href="index.html">INICIO</a>
-            <a href="#contact">CONTACTO</a>
-            <a href="#about">ACERCA DE</a>
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        {{-- <a href="{{ route('login') }}">Login</a> --}}
-
-                        @if (Route::has('register'))
-                            {{-- <a href="{{ route('register') }}">Register</a> --}}
-                        @endif
-                    @endauth
-                </div>
-            @endif
-        </div>
-    </header>
-
-    <!--conenido de jessica orozco------------------>
+@section('content')
+      <!--conenido de jessica orozco------------------>
     <!-- <button type="button" onclick="notificar()" >Enviar Notificacion</button> -->
     <section id="listasos" class="listasos">
         <h3>Servicios de Asistencia</h3>
-        <a href=""><img class="buscar"
-                src="https://images.vexels.com/media/users/3/132066/isolated/preview/71646d7673e8847ab07b3b7e78928777-buscar-icono-de-c--rculo-by-vexels.png"
-                title="Buscar"></a>
+        <a href=""><img class="buscar" src="https://images.vexels.com/media/users/3/132066/isolated/preview/71646d7673e8847ab07b3b7e78928777-buscar-icono-de-c--rculo-by-vexels.png" title="Buscar"></a>
         <!-- <div class="bannersos">
         
         
@@ -133,7 +87,7 @@
 
                 <div id="detalles" class="sidenav">
                     <h3 style="margin-bottom: 25px;">DETALLES</h3>
-                    <div id="result">HOLA ESSTO ES UNA BENDITA PRUEBA</div>
+                    <div id="result">HOLA ESTO ES UNA BENDITA PRUEBA</div>
                     <!-- <a>COORD: 123123-213213</a> -->
                     <a>HORA: 15:15</a>
                     <a>FECHA: 04/07/19</a>
@@ -158,17 +112,16 @@
             <button class="button" style="vertical-align:middle" id="btn"><span>¿QUÉ HACER? </span></button>
             <button class="button" style="vertical-align:middle" id="btn" onclick="mostrarlistasos()"><span>SERVICIOS ASISTENCIA </span></button>
 
+            
             <div class="big boton">
                 <div id="mapa" style="height: 200px"></div>
                 <br>
                 <a href="Mapa/mapa.html">
                     Ver mapa de riesgos    
                 </a>
-                    
-                
-
             </div>
 
+            
             <button class="btnPanico button" style="vertical-align:middle;">
                 <span>REPORTAR DESASTRE</span>
             </button>
@@ -191,11 +144,4 @@
     <!--codigo de jessica orozco-->
     <script src="{{ asset('js/contenido.js') }}"></script>
     <!-- <script src="notificaciones.js"></script> -->
-    <script>
-        
-    
-    </script>
-
-</body>
-
-</html>
+@endsection

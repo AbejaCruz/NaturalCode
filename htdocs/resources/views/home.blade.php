@@ -1,5 +1,7 @@
 @extends('layouts.auth')
 
+{{-- Regular user --}}
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -9,15 +11,14 @@
 
                 <div class="card-body">
                         Hi there, regular user
-
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

@@ -33,16 +33,16 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "htdocs/app/"
         },
         "classmap": [
-            "database/seeds",
-            "database/factories"
+            "htdocs/database/seeds",
+            "htdocs/database/factories"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "htdocs/tests/"
         }
     },
     "minimum-stability": "dev",
