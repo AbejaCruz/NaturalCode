@@ -197,6 +197,7 @@ h1 {
 .bloque2{
     float: left;
     width: 25%;
+    min-width: 330px;
     height: 90vh;
     padding: 0px;
     color: white;
@@ -401,16 +402,15 @@ a{
 }
 .sos5
 {
-    width: 98%;
-    height: auto;
-    
+  width: 98%;
+  height: auto;
 }
 hr
-  {
-      position: relative;
-      width: 150px;
-      background-color: rgb(49, 23, 163);
-      size: 5;
+{
+  position: relative;
+  width: 150px;
+  background-color: rgb(49, 23, 163);
+  size: 5;
 }
 .buscar
 {
@@ -436,5 +436,3 @@ h3{
   top:10%;
   text-align: center;
 }
-
-

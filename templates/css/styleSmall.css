@@ -50,6 +50,7 @@ h1, h2, h3, h4{
     font-size: 18px; 
     line-height: 25px;
     border-radius: 4px;
+    width: 30%;
   }
   
   .header a.logo {
@@ -65,13 +66,14 @@ h1, h2, h3, h4{
 
 .header-right {
     float: right;
+    width: 100%;
   }
 
   /*---------------------------------------------*/
 
-  .main{
+  /* .main{
     padding-top: 25vh;
-}
+} */
 
 .bloque1{
     width: 100%;
@@ -102,7 +104,7 @@ h1, h2, h3, h4{
   }
 
   .grupo1-A {
-    float: left;
+    /* float: left; */
     margin: 3%;
     width: 30%;
     height: 10%;
@@ -131,7 +133,7 @@ h1, h2, h3, h4{
 /*LISTAS--------------*/
 .sidenav {
     float: left;
-    width: 30%;
+    width: 45%;
     z-index: 1;
     top: 0;
     left: 0;
@@ -159,14 +161,14 @@ h1, h2, h3, h4{
     height: 90vh;
     padding: 0px;
     color: white;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
 }
 
 
 /*botones---------------------------*/
 .button {
   position: relative;
-    float: left;
+    /* float: left; */
     background-color: white;
     width: 46%;
     height: 15%;
@@ -252,7 +254,6 @@ footer{
     float:left;
 }
 
-
 /* Clear floats after the blocks */
 /*Flota claro después de las blockas*/
 .row:after {
@@ -260,5 +261,4 @@ footer{
     display: table;
     clear: both;
 }
-
 
