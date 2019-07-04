@@ -1,0 +1,45 @@
+{
+    "type": "FeatureCollection",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "EPSG:4326"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.131135,
+                    4.576821
+                ]
+            },
+            "properties": {
+                "name": "Refugio #1",
+                "capacity": "Capacidad: 700 personas (50%)",
+                "description": "Refugio de la alcaldia",
+                "details": "NO Acepta mascotas",
+                "srcFoto": "src='images/refugio1.jpg'"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.068637,
+                    4.620908
+                ]
+            },
+            "properties": {
+                "name": "Refugio #2",
+                "capacity": "Capacidad: 1200 personas (75%)",
+                "description": "Refugio de la cruz roja",
+                "details": "Acepta mascotas",
+                "srcFoto": "src='images/refugio2.jpeg'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "type": "FeatureCollection",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "EPSG:4326"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.055602,
+                    4.696101
+                ]
+            },
+            "properties": {
+                "name": "Sensor #1",
+                "capacity": "Estado: Normal",
+                "description": "Sismografo",
+                "details": "Ninguna"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.154562,
+                    4.707106
+                ]
+            },
+            "properties": {
+                "name": "Sensor #2",
+                "capacity": "Estado: Vientos de 20Km/h",
+                "description": "Estacion Meteorologica",
+                "details": "Evite actividades al aire libre"
+            }
+        }
+    ]
+}

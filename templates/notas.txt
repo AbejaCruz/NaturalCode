@@ -1,0 +1,30 @@
+jessica (yo)
+luz
+Dilan
+jaime
+jessica
+gabriel
+don pedro
+
+medidores:
+RIESGO
+temperatura
+humedad relativa
+
+
+rios:
+clima
+humedad
+
+
+laderas:
+clima
+humedad
+
+usar notificaciones
+
+rangos de riesgo:
+NORMAL 0%-30% : defecto
+MODERADO 30% 60% : verde
+PROBABLE 60% 90% : naranja
+INMINENTE 90% -100% : rojo
