@@ -10,6 +10,7 @@
 
                 <div class="card-body">
                     Hi there, awesome Persona :v
+                    :c
                 </div>
             </div>
         </div>
