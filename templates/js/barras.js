@@ -28,7 +28,7 @@ window.onload = function onLoad() {
         // Set default step function for all animate calls
         step: (state, bar1) => {
             bar1.path.setAttribute('stroke', state.color);
-            var value = Math.round(bar1.value() * 100);     //100 es el numero limite del contador
+            var value = Math.round(bar1.value() * 35);     //100 es el numero limite del contador
             if (value === 0) {
                 bar1.setText('');
             } else {
@@ -134,7 +134,7 @@ window.onload = function onLoad() {
             if (value === 0) {
                 bar3.setText('');
             } else {
-                bar3.setText(value + 'Pts');
+                bar3.setText(value + '%');
             }
 
             bar3.text.style.color = state.color;
