@@ -54,7 +54,13 @@
     <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
             
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
-
+    <style>
+    #dialog1, #dialog2, #dialog3 {
+        background-color: white;
+        color:  darkred;
+        font-family: Arial, Helvetica, sans-serif
+      }
+    </style>
 </head>
 
 <body>
@@ -181,9 +187,9 @@
             <button class="button" style="vertical-align:middle" id="btn-que"><span>¿QUÉ HACER? </span></button>
             <button class="button" style="vertical-align:middle" id="btn" onclick="mostrarlistasos()"><span>SERVICIOS ASISTENCIA </span></button>
         
-            <div id="dialog1" title="Dialog Title" hidden="hidden">I'm a dialog</div>
-            <div id="dialog2" title="Dialog Title" hidden="hidden">I'm a dialog</div>
-            <div id="dialog3" title="Dialog Title" hidden="hidden">I'm a dialog</div>
+            <div id="dialog1" title="¿A donde ir?" hidden="hidden">TIP #1: Vaya a un sitio seguro por el plan de acción de su localidad...</div>
+            <div id="dialog2" title="¿Que hacer?" hidden="hidden">CONSEJO: Revise las alertas de su zona. Mantengase informado...</div>
+            <div id="dialog3" title="¿Detalles?" hidden="hidden">INFORMESE: Inspeccione los últimos eventos reportados. Ud. hace la diferencia...</div>
 
             <div class="big boton">
                 <div id="mapa" style="height: 200px"></div>
