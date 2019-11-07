@@ -114,9 +114,10 @@ header.main-header {
   max-width: 120px;
   overflow: hidden;
   background-color: #ffffff;
-  -webkit-box-shadow: 2px 0 15px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 2px 0 15px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -14px 3px 14px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: -14px 3px 14px 10px rgba(0, 0, 0, 0.5);
   height: 100%;
+  z-index: 121;
 }
 
 @media (max-width: 720px) {
@@ -274,25 +275,36 @@ main#main-content section.home-header .concesionario .logo {
   height: 70px;
 }
 
+@media (max-width: 720px) {
+  main#main-content section.home-header .concesionario .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 main#main-content section.home-header .concesionario .logo .vw-logo {
   padding: .7em;
-  margin-top: -2em;
   display: none;
   vertical-align: bottom;
 }
 
 @media (max-width: 720px) {
   main#main-content section.home-header .concesionario .logo .vw-logo {
-    display: inline-block;
     text-align: left;
     width: auto;
     height: 100%;
+    display: block;
   }
 }
 
 main#main-content section.home-header .concesionario .logo img {
   width: auto;
   height: 100%;
+  padding: .2em;
+  text-align: left;
+  margin-right: auto;
+  display: block;
 }
 
 main#main-content section.home-header .concesionario .nombre {
@@ -302,6 +314,7 @@ main#main-content section.home-header .concesionario .nombre {
   font-size: 1.4em;
   background-color: #fff;
   color: #1d1f20;
+  text-align: left;
 }
 
 @media (max-width: 720px) {
@@ -359,7 +372,7 @@ main#main-content section.home-header .concesionario .contacto {
 
 section.home-content {
   width: 100%;
-  padding-top: 88px;
+  padding-top: 86px;
 }
 
 @media (max-width: 720px) {
@@ -415,6 +428,7 @@ section.home-content .page-content .formulario-contacto-home form .info input {
   border: 1px solid #cccccc;
   border-radius: 5px;
   padding: .5em;
+  margin-top: 10px;
 }
 
 section.home-content .page-content .formulario-contacto-home form .info input {
@@ -591,5 +605,27 @@ footer#main-footer .section ul li.title {
   footer#main-footer .section.follow-us ul li {
     border-bottom: 1px solid transparent;
   }
+  footer#main-footer .section.follow-us ul li a {
+    text-align: center;
+  }
+}
+
+footer#main-footer .section.follow-us li.item a .icon {
+  width: 35px;
+  height: 35px;
+}
+
+footer#main-footer .section.follow-us li.item a .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+footer#main-footer .section.follow-us li.item a .text {
+  margin-left: 10px;
+}
+
+footer#main-footer .section.follow-us li.item a > div {
+  display: inline-block;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=styles.css.map */
