@@ -9,4 +9,10 @@ function includeFileContent ($file_name) {
 }
 
 $content = includeFileContent('main.htm');
+
+if (@$_SERVER[REQUEST_URI] == '/autos') $inner_content = 'autos';
+else $inner_content = 'home'; 
+
+$inner_content = includeFileContent("{$inner_content}.htm");
+$content = str_replace('[[content]]', $inner_content, $content);
 echo str_replace('[[cdn_domain]]/css/porsche', '/css', $content);
