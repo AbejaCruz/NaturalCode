@@ -245,6 +245,7 @@ main#main-content {
     @media (max-width: $screen-m) {
         padding-left: 0;
     }
+    
     >#web-content {
         width: 100%;
         $home-header-height: 86px;
@@ -253,6 +254,11 @@ main#main-content {
 
         @media (max-width: $screen-m) {
             padding-top: 155px;
+        }
+
+        >section {
+            width: 100%;
+            min-height: 60vh;
         }
     }
 
@@ -678,6 +684,58 @@ section.autos-view {
                         color: $font-contrast-color;
                     }
                 }
+            }
+        }
+    }
+}
+section.modelos-view {
+    padding: 1em 2em;
+
+    .contenedor-vehiculos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2em;
+        grid-row-gap: 2em;
+        text-align: center;
+
+        @media (max-width: $screen-m) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .dpr_container {
+
+            .dpr_listname{
+                width: 100%;
+
+                .dpr_imagen_thumb {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .dpr_product-name {
+                    font-size: 2em;
+                    font-weight: 600;
+                    padding-top: .5em;
+                    line-height: .8em;
+                }
+            }
+            .dpr_listprice {
+                color: $color-font-subtext;
+                font-size: 1.2em;
+                padding-top: .5em;
+
+                &::before {
+                    content: 'Desde: ';
+                }
+            }
+            .dpr_in_stock,
+            .dpr_product-list-add-button {
+                display: none;
             }
         }
     }

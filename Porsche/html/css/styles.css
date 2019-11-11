@@ -243,6 +243,11 @@ main#main-content > #web-content {
   }
 }
 
+main#main-content > #web-content > section {
+  width: 100%;
+  min-height: 60vh;
+}
+
 main#main-content section.home-header {
   -webkit-box-shadow: 2px 0 15px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 2px 0 15px 0 rgba(0, 0, 0, 0.5);
@@ -722,5 +727,62 @@ section.autos-view .autos-header nav ul li a {
 
 section.autos-view .autos-header nav ul li:hover {
   color: #ffffff;
+}
+
+section.modelos-view {
+  padding: 1em 2em;
+}
+
+section.modelos-view .contenedor-vehiculos {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  section.modelos-view .contenedor-vehiculos {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+section.modelos-view .contenedor-vehiculos .dpr_container .dpr_listname {
+  width: 100%;
+}
+
+section.modelos-view .contenedor-vehiculos .dpr_container .dpr_listname .dpr_imagen_thumb {
+  width: 100%;
+}
+
+section.modelos-view .contenedor-vehiculos .dpr_container .dpr_listname .dpr_imagen_thumb img {
+  width: 100%;
+  height: auto;
+}
+
+section.modelos-view .contenedor-vehiculos .dpr_container .dpr_listname .dpr_product-name {
+  font-size: 2em;
+  font-weight: 600;
+  padding-top: .5em;
+  line-height: .8em;
+}
+
+section.modelos-view .contenedor-vehiculos .dpr_container .dpr_listprice {
+  color: #808890;
+  font-size: 1.2em;
+  padding-top: .5em;
+}
+
+section.modelos-view .contenedor-vehiculos .dpr_container .dpr_listprice::before {
+  content: 'Desde: ';
+}
+
+section.modelos-view .contenedor-vehiculos .dpr_container .dpr_in_stock,
+section.modelos-view .contenedor-vehiculos .dpr_container .dpr_product-list-add-button {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
