@@ -8,20 +8,72 @@
     <title>Volkswagen Colombia - Main</title>
     <style>
         @font-face {
-            font-family: VH Head;
+            font-family: VW Head;
             src: url([[cdn_domain]]/css/porsche/assets/fonts/VWHEAD-BOLD_2.OTF);
+        }
+        @font-face {
+            font-family: VW Head ExtraBold;
+            src: url([[cdn_domain]]/css/porsche/assets/fonts/VWHEAD-EXTRABOLD_0.OTF);
+        }
+        @font-face {
+            font-family: VW Head Light;
+            src: url([[cdn_domain]]/css/porsche/assets/fonts/VWHEAD-LIGHT_0.OTF);
+        }
+        @font-face {
+            font-family: VW Text Light;
+            src: url([[cdn_domain]]/css/porsche/assets/fonts/VWTEXT-LIGHT_0.OTF);
+        }
+        @font-face {
+            font-family: VW Text;
+            src: url([[cdn_domain]]/css/porsche/assets/fonts/VWTEXT-REGULAR_2.OTF);
         }
     </style>
     <link rel="stylesheet" href="[[cdn_domain]]/css/porsche/styles.css">
+    <link rel="shortcut icon" href="[[cdn_domain]]/css/porsche/images/vw-logo.png" type="image/x-icon">
     
 </head>
 
 <body>
     <div class="container">
+        
+        <div id="hidden-hamburger-menu">
+            <ul>
+                <li>
+                    <a href="/categories">
+                        Modelos
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Cotización
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Promociones
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Financiamiento
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Servicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Autos Usados
+                    </a>
+                </li>
+            </ul>
+        </div>
         <header class="main-header">
             <ul>
                 <li class="logo">
-                    <a href="/main.html">
+                    <a href="/main.html" class="logo-vw">
                         <img src="[[cdn_domain]]/css/porsche/images/logo-name-vw.png" alt="VW Logo">
                     </a>
                 </li>
@@ -93,16 +145,28 @@
             </ul>
         </header>
         <main id="main-content">
+            <div id="page-top"></div>
+
             <section class="home-header">
                 <div class="concesionario">
                     <div class="logo">
                         <div class="vw-logo">
                             <img src="[[cdn_domain]]/css/porsche/images/vw-logo.png" alt="Volkswagen">
                         </div>
-                        <img src="[[cdn_domain]]/css/porsche/images/reindustrias-logo.png" alt="Reindustras Logo">
-                    </div>
-                    <div class="nombre">
-                        Reindustras S.A.
+                        <div class="concesionario-logo">
+                            <img src="[[cdn_domain]]/css/porsche/images/reindustrias-logo.png" alt="Reindustras Logo">
+                        </div>
+                        <div class="nombre">
+                            Reindustras S.A.
+                        </div>
+                        <div id="hamburger-button">
+                            <input type="checkbox" id="hamburger-checkbox" onclick="toggleMenu();"/>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" class="closed"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg> -->
+                            
+                        </div>
                     </div>
                     <div class="locacion">
                         <div class="direccion">
@@ -132,7 +196,6 @@
 
                             <div class="texto">
                                 Chat
-                                <br>&nbsp;
                             </div>
                         </a>
                         <a href="/" class="btn-secondary">
@@ -152,6 +215,11 @@
                 [[content]]
             </div>
 
+            <a href="#page-top" id="go-to-top">
+                <div>
+                    Volver arriba <b>&#8613;</b>
+                </div>
+            </a>
             <footer id="main-footer">
                 <div class="section horario-ventas">
                     <ul>
@@ -213,6 +281,12 @@
             </footer>
         </main>
     </div>
+    <script>
+        "use strict";
+        function toggleMenu() {
+            document.getElementById('hidden-hamburger-menu').classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>

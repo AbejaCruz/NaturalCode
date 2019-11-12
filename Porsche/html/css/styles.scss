@@ -1,5 +1,6 @@
 $screen-s: 400px;
 $screen-m: 720px;
+$screen-tablet: 850px;
 $screen-l: 1080px;
 $screen-xl: 1280px;
 
@@ -18,7 +19,11 @@ $font-contrast-color: #ffffff;
 $border-color: #bdc3c6;
 $main-bg-color: #ffffff;
 $concesionario-header-bg: #2680b4;
+$ff-main: VW Head, Helvetica Neue,Helvetica,Arial,sans-serif;
+$ff-main-light: VW Head Light, Helvetica Neue,Helvetica,Arial,sans-serif;
+$ff-main-bold: VW Head ExtraBold, Helvetica Neue,Helvetica,Arial,sans-serif;
 $ff-text: VW Text, Helvetica Neue,Helvetica,Arial,sans-serif;
+$ff-light: VW Text, Helvetica Neue,Helvetica,Arial,sans-serif;
 $footer-bg-color: #f3f5f6;
 
 $header-desktop-width: 120px;
@@ -27,20 +32,17 @@ $header-desktop-width: 120px;
 * {
     margin: 0;
     padding: 0;
-    font-family: VW Head, Helvetica Neue,Helvetica,Arial,sans-serif;
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    // background-color: red;
     min-height: 100vh;
     font-size: $font-size;
-    line-height: 16px;
-    font-stretch:100%;
-    font-family: VW Head, Helvetica Neue,Helvetica,Arial,sans-serif;
-    // font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1em;
+    font-stretch: 100%;
+    font-family: $ff-main;
     font-style:normal;
     font-variant-caps:normal;
     font-variant-east-asian:normal;
@@ -48,7 +50,6 @@ body {
     font-variant-numeric:normal;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    // letter-spacing: .2px;
     overflow-x: hidden;
 }
 a {
@@ -68,6 +69,7 @@ a {
     color: $font-contrast-color;
     fill: $font-contrast-color;
     background-color: $color-main;
+    font-family: $ff-main;
 
     transition: background-color .2s, border .2s;
     // min-height: 42px;
@@ -91,7 +93,6 @@ a {
     text-size-adjust:100%;
     vertical-align:middle;
     -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-    letter-spacing: .6px;
 
     &:hover {
         
@@ -110,7 +111,6 @@ a {
 
 .btn-secondary {
     text-align: center;
-    width: 80px;
 
     .icon {
         padding:.7em;
@@ -137,6 +137,60 @@ a {
     margin: auto;
 }
 
+#hidden-hamburger-menu {
+    display: none;
+    position: fixed;
+    z-index: 1300;
+    font-size: 1.5em;
+    top: 86px;
+    opacity: 0;
+    transition: 1s;
+
+    &.active {
+
+        @media (max-width: $screen-m) {
+            display: block;
+            width: 100vw;
+            min-height: 100vh;
+            height: 100%;
+            background-color: rgba(0,0,0,.4);
+            opacity: 1;
+            
+            ul {
+                width: 80%;
+            }
+        }
+    }
+    ul {
+        background-color: $main-bg-color;
+        width: 0;
+        margin-left: auto;
+        list-style: none;
+        line-height: 1em;
+        color: $color-font-subtext;
+        transition: width 1s;
+
+        li {
+            border-top: 1px solid #dfdfdf;
+            width: 100%;
+
+            a {
+                width: 100%;
+                display: block;
+                padding: .7em 0 .5em 2em;
+                border-bottom: 4px solid transparent;
+                transition: .3s;
+
+                &:hover,
+                &:active {
+                    border-bottom: 4px solid $color-main;
+                    color: $color-font-main;
+                }
+            }
+        }
+    }
+}
+
 header.main-header{
     position: fixed;
     max-width: $header-desktop-width;
@@ -157,6 +211,7 @@ header.main-header{
         width: 100%;
         padding: 0;
         margin: 0;
+        font-size: 1.11em;
         &> li {
             border-bottom: 5px solid transparent;
             transition: .4s;
@@ -175,7 +230,7 @@ header.main-header{
 
             &:first-child {
                 border-top: 0;
-                height: fit-content;
+                height: 131px;
             }
 
             &.option{
@@ -282,24 +337,26 @@ main#main-content {
         .concesionario {
             text-align: center;
             display: grid;
-            grid-template-areas: 
-                "concsrio-logo concsrio-locacion concsrio-contacto"
-                "concsrio-nombre concsrio-locacion concsrio-contacto";
-            grid-template-columns: 350px auto 15%;
+            grid-template-columns: 350px auto 25%;
             grid-column-gap: 2em;
-
-            @media(max-width: $screen-m) {
-                display: block;
+            
+            @media(max-width: $screen-tablet) {
+                grid-template-columns: 350px auto;
             }
 
             .logo {
-                grid-area: concsrio-logo;
                 background-color: #ffffff;
                 overflow-x: hidden;
                 overflow-y: hidden;
-                height: 70px;
+                height: 86px;
+                padding: .1em 1em;
+
                 @media (max-width: $screen-m) {
+                    padding: .1em;
                     display: flex;
+                    padding-left: 0;
+                    grid-column: 1/-1;
+                    justify-content: space-between;
                 }
                 
 
@@ -317,46 +374,135 @@ main#main-content {
                 }
                 img {
                     width: auto;
-                    height: 100%;
+                    height: 70px;
                     padding: .2em;
                     text-align: left;
-                    margin-right: auto;
+                    // margin-right: auto;
+                    margin: 0 auto;
                     display: block;
                 }
-            }
-            .nombre {
-                grid-area: concsrio-nombre;
-                font-size: 1.4em;
-                background-color: #fff;
-                color: $color-font-main;
-                text-align: left;
-                @media (max-width: $screen-m) {
+                .nombre {
+                    font-size: 1.4em;
+                    background-color: #fff;
+                    color: $color-font-main;
+                    text-align: center;
+    
+                    @media (max-width: $screen-m) {
+                        display: none;
+                    }
+                }
+                .concesionario-logo {
+                    @media (max-width: $screen-m) {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                }
+                #hamburger-button {
+                    color: red;
+                    position: relative;
                     display: none;
+                    padding: 1.7em 1em;
+                    flex-direction: column;
+                    justify-content: center;
+                    user-select: none;
+
+
+                    @media (max-width: $screen-m) {
+                        display: block;
+                    }
+
+                    input#hamburger-checkbox {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: -7px;
+                        left: -5px;
+                    
+                        cursor: pointer;
+                    
+                        opacity: 0;
+                        /* hide this */
+                        z-index: 2;
+                        /* and place it over the hamburger */
+                    
+                        -webkit-touch-callout: none;
+                    }
+
+                    span {
+                        display: block;
+                        width: 33px;
+                        height: 4px;
+                        margin-bottom: 5px;
+                        position: relative;
+                    
+                        background: $color-main;
+                        border-radius: 3px;
+                    
+                        z-index: 1;
+                    
+                        transform-origin: 4px 0px;
+                    
+                        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                            opacity 0.55s ease;
+                        
+                            &:first-child {
+                                transform-origin: 0% 0%;
+                            }
+                            &:nth-last-child(2) {
+                                transform-origin: 0% 100%;
+                            }
+                            
+                    }
+                    input#hamburger-checkbox:checked~span {
+                        opacity: 1;
+                        transform: rotate(45deg) translate(-10px, -10px);
+
+                        &:nth-last-child(3) {
+                            opacity: 0;
+                            transform: rotate(0deg) scale(0.2, 0.2) ;
+                        }
+                        &:nth-last-child(2) {
+                            transform: rotate(-45deg) translate(-9px, 10px);
+                        }
+                    }
                 }
             }
             .locacion {
-                grid-area: concsrio-locacion;
                 text-align: left;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                font-family: $ff-light;
 
-                @media (max-width: $screen-m) {
+
+                @media (max-width: $screen-tablet) {
                     display: none;
                 }
                 .direccion {
                     font-size: 1.3em;
+                    font-family: $ff-light;
+                    font-weight: 100;
+                }
+                .ciudad {
+                    font-family: $ff-light;
+                    font-weight: 300;
                 }
 
             }
             .contacto {
-                grid-area: concsrio-contacto;
                 display: flex;
                 justify-content: space-around;
                 background-color: $color-main;
+                font-family: $ff-main-light;
+                line-height: 1.4em;
 
                 @media (max-width: $screen-m) {
                     padding: .7em 0;
+                    grid-column: 1/-1;
+
                 }
             }
         }
@@ -384,9 +530,10 @@ section.home-content {
             padding: 1em 0;
             .title {
                 text-align: center;
-                font-size: 1.4em;
-                font-weight: bold;
+                font-size: 1.7em;
                 padding: 1em;
+                font-family: $ff-main-bold;
+                
             }
 
             form {
@@ -508,11 +655,15 @@ section.home-content {
                     height: auto;
                 }
             }
+            
+            .text {
+                font-family: $ff-light;
+            }
             .title {
                 font-size: 1.7em;
                 font-weight: bold;
                 padding-top: .5em;
-                padding-bottom: .5em;
+                padding-bottom: .3em;
             }
             .link {
                 font-size: 1.3em;
@@ -545,11 +696,29 @@ section.home-content {
     }
 }
 
+
+#go-to-top {
+    display: block;
+    text-align: right;
+    grid-column: 1/-1;
+    background-color: #dde0e2;
+    >div {
+        max-width: $screen-xl;
+        margin: 0 auto;
+        padding: 1em;
+        font-size: 1.2em;
+    }
+}
+
 footer#main-footer {
     // margin-left: $header-desktop-width;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 2em;
+    max-width: $screen-xl;
+    margin: 0 auto;
+    font-family: $ff-text;
+
 
     @media (max-width: $screen-m) {
         grid-template-columns: repeat(2, 1fr);
@@ -580,6 +749,7 @@ footer#main-footer {
             @media (max-width: $screen-m) {
                 grid-row: 1;
                 grid-column: 1/-1;
+                text-align: center;
 
                 ul {
                     display: grid;
@@ -626,8 +796,8 @@ footer#main-footer {
         }
     }
     ul.legalities {
+        margin-top: 2em;
         padding: 1em;
-        border-top: solid 1px $color-font-subtext;
         width: 100%;
         grid-column: 1/-1;
         color: $color-font-text;
@@ -694,13 +864,15 @@ section.modelos-view {
     .contenedor-vehiculos {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 2em;
         grid-row-gap: 2em;
         text-align: center;
+        margin: 0 auto;
+        max-width: 1400px;
 
-        @media (max-width: $screen-m) {
-            grid-template-columns: repeat(2, 1fr);
+        @media (min-width: $screen-m) {
+            grid-template-columns: repeat(3, 1fr);
         }
 
         .dpr_container {

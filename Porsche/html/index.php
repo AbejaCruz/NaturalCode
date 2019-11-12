@@ -19,6 +19,7 @@ $content = getHTML('main.htm');
 $paths=['categories'];
 $path = trim(@$_SERVER[PATH_INFO], '/');
 
+if ($path == 'autos') $path = 'categories';
 
 if (in_array($path, $paths)) $inner_content_path = $path;  
 else $inner_content_path = 'home';
