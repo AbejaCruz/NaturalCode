@@ -16,7 +16,10 @@ function getHTML ($file_name) {
 
 $content = getHTML('main.htm');
 
-$paths=['categories'];
+$paths=[
+    'categories',
+    'cotizador'
+];
 $path = trim(@$_SERVER[PATH_INFO], '/');
 
 if ($path == 'autos') $path = 'categories';
@@ -29,7 +32,9 @@ if (file_exists("{$inner_content_path}.php")) {
     include ("{$inner_content_path}.php");
 
 }
+else if (file_exists("{$inner_content_path}.htm")) $inner_content = getHTML("{$inner_content_path}.htm"); 
 else $inner_content = getHTML("home.htm");;
+
 
 $content = str_replace('[[content]]', $inner_content, $content);
 

@@ -114,8 +114,8 @@ a {
   font-size: 1.5em;
   top: 86px;
   opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media (max-width: 720px) {
@@ -126,6 +126,8 @@ a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 1;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
   #hidden-hamburger-menu.active ul {
     width: 80%;
@@ -962,5 +964,53 @@ section.modelos-view .contenedor-vehiculos .dpr_container .dpr_listprice::before
 section.modelos-view .contenedor-vehiculos .dpr_container .dpr_in_stock,
 section.modelos-view .contenedor-vehiculos .dpr_container .dpr_product-list-add-button {
   display: none;
+}
+
+.lm-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+}
+
+.lm-form > div {
+  border: transparent 1px solid;
+}
+
+.lm-form .banner img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.lm-form .formulario {
+  font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.lm-form .formulario .title {
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 1em;
+  line-height: 1em;
+}
+
+.lm-form .formulario .form-item label {
+  display: block;
+}
+
+.lm-form .formulario .form-item input,
+.lm-form .formulario .form-item select {
+  font-size: inherit;
+  font-family: inherit;
+  display: block;
+  margin-top: .3em;
+  padding: .5em 1em;
+  border-radius: 4px;
+  border: 1px solid #dedede;
+  width: 60%;
 }
 /*# sourceMappingURL=styles.css.map */
