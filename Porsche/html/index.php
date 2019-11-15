@@ -18,7 +18,10 @@ $content = getHTML('main.htm');
 
 $paths=[
     'categories',
-    'cotizador'
+    'cotizador',
+    'retoma',
+    'test-drive',
+    'nuestras-sedes'
 ];
 $path = trim(@$_SERVER[PATH_INFO], '/');
 
@@ -36,7 +39,7 @@ else if (file_exists("{$inner_content_path}.htm")) $inner_content = getHTML("{$i
 else $inner_content = getHTML("home.htm");;
 
 
-$content = str_replace('[[content]]', $inner_content, $content);
+$content = str_replace('[[page_content]]', $inner_content, $content);
 
 $content = str_replace('[[cdn_domain]]/css/porsche', '/css', $content);
 

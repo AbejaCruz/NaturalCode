@@ -966,16 +966,96 @@ section.modelos-view .contenedor-vehiculos .dpr_container .dpr_product-list-add-
   display: none;
 }
 
+.nuestras-sedes-view .banner {
+  width: 100%;
+}
+
+.nuestras-sedes-view .banner img {
+  width: 100%;
+  height: auto;
+}
+
+.nuestras-sedes-view .ns-title {
+  font-size: 3em;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: .6em 1em;
+}
+
+.nuestras-sedes-view .concesionario {
+  padding: 1em 0;
+  border-top: 1px solid #dee1e3;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+}
+
+@media (max-width: 720px) {
+  .nuestras-sedes-view .concesionario {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.nuestras-sedes-view .concesionario .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.6em;
+  line-height: 1.2em;
+}
+
+.nuestras-sedes-view .concesionario .info .title {
+  font-size: 1.4em;
+}
+
+.nuestras-sedes-view .concesionario .info .items {
+  font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+}
+
+.nuestras-sedes-view .concesionario .mapa {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.nuestras-sedes-view .concesionario .mapa img {
+  width: 100%;
+  height: auto;
+}
+
 .lm-form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
   grid-column-gap: 20px;
+}
+
+@media (max-width: 1080px) {
+  .lm-form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .lm-form > div {
   border: transparent 1px solid;
+}
+
+.lm-form .banner {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
 }
 
 .lm-form .banner img {
@@ -988,22 +1068,51 @@ section.modelos-view .contenedor-vehiculos .dpr_container .dpr_product-list-add-
   font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   line-height: 1.5em;
+  grid-row: 1/-1;
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+@media (max-width: 720px) {
+  .lm-form .formulario {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    text-align: center;
+  }
+  .lm-form .formulario input {
+    margin: 0 auto;
+  }
 }
 
 .lm-form .formulario .title {
   font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 2.5em;
-  text-align: center;
+  text-align: left;
   padding: 1em;
   line-height: 1em;
 }
 
-.lm-form .formulario .form-item label {
+.lm-form .formulario form {
+  width: 60%;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .lm-form .formulario form {
+    width: 95%;
+  }
+}
+
+.lm-form .formulario form .form-item label {
   display: block;
 }
 
-.lm-form .formulario .form-item input,
-.lm-form .formulario .form-item select {
+.lm-form .formulario form .form-item input,
+.lm-form .formulario form .form-item select {
   font-size: inherit;
   font-family: inherit;
   display: block;
@@ -1012,5 +1121,28 @@ section.modelos-view .contenedor-vehiculos .dpr_container .dpr_product-list-add-
   border-radius: 4px;
   border: 1px solid #dedede;
   width: 60%;
+}
+
+.lm-form .formulario form .form-item .btn {
+  margin: 1em auto;
+  border: 0;
+}
+
+.lm-form .add-text {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  font-size: 1.3em;
+  line-height: 1em;
+  text-align: justify;
+}
+
+.lm-form .add-text .title {
+  font-size: 1.6em;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: .7em;
+  line-height: 1em;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

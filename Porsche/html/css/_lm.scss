@@ -1,0 +1,101 @@
+
+.lm-form {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-column-gap: 20px;
+
+    @media (max-width: $screen-l) {
+        grid-template-columns: 1fr;
+    }
+
+
+    >div {
+        border: transparent 1px solid;
+    }
+    .banner {
+        grid-row: 1/2;
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+    }
+
+    .formulario {
+        font-family: $ff-text;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        grid-row: 1/-1;
+        grid-column: 2;
+        
+        @media (max-width: $screen-m) {
+            grid-column: 1;
+            grid-row: 2;
+            text-align: center;
+            input {
+                margin: 0 auto;
+            }
+        }
+
+
+        .title {
+            font-family: $ff-main;
+            font-size: 2.5em;
+            // text-align: center;
+            text-align: left;
+            padding: 1em;
+            line-height: 1em;
+        }
+
+        form {
+            width: 60%;
+            min-width: 300px;
+            max-width: 500px;
+            margin: 0 auto;
+
+            @media (max-width: $screen-m) {
+                width: 95%;
+            }
+
+            .form-item {
+                label {
+                    display: block;
+                }
+    
+                input,
+                select {
+                    font-size: inherit;
+                    font-family: inherit;
+                    display: block;
+                    margin-top: .3em;
+                    padding: .5em 1em;
+                    border-radius: 4px;
+                    border: 1px solid #dedede;
+                    width: 60%;
+                }
+                .btn {
+                    margin: 1em auto;
+                    border: 0;
+                }
+            }
+        }
+    }
+    .add-text {
+
+        grid-row: 2;
+        font-family: $ff-text;
+        padding: 1em;
+        font-size: 1.3em;
+        line-height: 1em;
+        text-align: justify;
+
+        .title {
+            font-size: 1.6em;
+            font-family: $ff-main;
+            padding: .7em;
+            line-height: 1em;
+            text-align: center;
+        }
+    }
+}
