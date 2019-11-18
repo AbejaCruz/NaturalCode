@@ -748,7 +748,7 @@ section.home-content .saber-mas .item .link {
 }
 
 #go-to-top {
-  display: block;
+  display: none;
   text-align: right;
   grid-column: 1/-1;
   background-color: #dde0e2;

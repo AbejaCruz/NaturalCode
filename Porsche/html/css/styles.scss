@@ -163,106 +163,7 @@ a {
     }
 }
 
-header.main-header{
-    position: fixed;
-    max-width: $header-desktop-width;
-    overflow: hidden;
-    background-color: $main-bg-color;
-    box-shadow: -14px 3px 14px 10px rgba(0, 0, 0, 0.5);
-    height: 100%;
-    z-index: 121;
-    
-    @media (max-width: $screen-m) {
-        padding-left: 0;
-        display: none;
-    }
-
-    ul {
-        list-style: none;
-        overflow: hidden;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        font-size: 1.11em;
-        &> li {
-            border-bottom: 5px solid transparent;
-            transition: .4s;
-
-            &:hover {
-                border-bottom-color: #0099da99;
-            }
-        }
-
-        li {
-            width: 100%;
-            height: 85px;
-            margin: 0;
-            padding: 0;
-            border-top: 1px solid #dddddd;
-
-            &:first-child {
-                border-top: 0;
-                height: 131px;
-            }
-
-            &.option{
-
-                a {
-                    width: 100%;
-                    height: 100%;
-                    color: $color-font-subtext;
-                    font-weight: 700;
-                    line-height: 16px;
-                    letter-spacing: -.25px;
-                    text-align: center;
-                    transition: color .3s;
-
-                    text-align: center;
-                        display: flex;
-                        justify-content: center;
-                        flex-direction: column;
-
-                    .icon {
-                        text-align: center;
-                        
-
-                        svg {
-                            margin-top: .7em;
-                            vertical-align: middle;
-                            display: inline-block;
-                            line-height: normal;
-                            width: 50px;
-                            height: 34px;
-                            fill: #808890;
-                        }
-                    }
-                    &:hover,
-                    &.active {
-                        color: $color-font-main;
-
-                        .icon {
-
-                            svg {
-                                fill: $color-main;
-                                transition: fill .3s;
-                            }
-                        }
-                    }
-                    
-                }
-            }
-
-            &.logo {
-                padding: 30px 20px 10px;
-                height: fit-content;
-                img {
-                    width: 100%;
-                    height: 82px;
-                }
-            }
-        }
-    }
-}
+@import './vertical-nav';
 main#main-content {
 
     width: 100%;
@@ -549,11 +450,6 @@ section.home-content {
                 .image {
                     overflow: hidden;
                     width: 100%;
-
-                    img {
-                        // width: 100%;
-                        // height: auto;
-                    }
                 }
                 .texto {
                     text-align: center;
@@ -670,7 +566,9 @@ section.home-content {
 
 
 #go-to-top {
-    display: block;
+
+
+    display: none;
     text-align: right;
     grid-column: 1/-1;
     background-color: #dde0e2;
