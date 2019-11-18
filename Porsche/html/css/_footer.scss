@@ -1,0 +1,110 @@
+
+footer#main-footer {
+    // margin-left: $header-desktop-width;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2em;
+    max-width: $screen-xl;
+    margin: 0 auto;
+    font-family: $ff-text;
+
+
+    @media (max-width: $screen-m) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    ul {
+        text-decoration: none;
+        list-style: none;
+    }
+    .section {
+        padding: 1em;
+        
+        ul {
+            li {
+
+                border-bottom: 1px solid #cccccc;
+                padding: 1em;
+                &.title {
+                    font-size: 1.3em;
+                    padding-bottom: 2em;
+                    font-weight: bold;
+                }
+            }
+        }
+
+
+        &.follow-us {
+            @media (max-width: $screen-m) {
+                grid-row: 1;
+                grid-column: 1/-1;
+                text-align: center;
+
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-column-gap: 1em;
+                    border-bottom: 1px solid #cccccc;
+
+                    .title {
+                        grid-column: 1/-1;
+                    }
+                    li {
+                        border-bottom: 1px solid transparent;
+
+                        a {
+                            text-align: center;                            
+                        }
+                    }
+                }
+            }
+
+            li.item {
+                a {
+
+                    .icon {
+                        width: 35px;
+                        height: 35px;
+    
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .text {
+                        margin-left: 10px;
+                    }
+
+                    >div {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                }
+            }
+        }
+    }
+    ul.legalities {
+        margin-top: 2em;
+        padding: 1em;
+        width: 100%;
+        grid-column: 1/-1;
+        color: $color-font-text;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            padding: 0 1em;
+            border-left: $color-font-text 1px solid;
+            margin-top: 5px;
+            transition: .2s;
+            
+            a {
+                border-bottom: 1px solid transparent;
+                &:hover {
+                    border-bottom: 1px solid $color-font-subtext;
+                }
+            }
+        }
+    }
+}
