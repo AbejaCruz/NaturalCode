@@ -21,7 +21,8 @@ $paths=[
     'cotizador',
     'retoma',
     'test-drive',
-    'nuestras-sedes'
+    'nuestras-sedes',
+    'contactanos'
 ];
 $path = trim(@$_SERVER[PATH_INFO], '/');
 
@@ -33,7 +34,6 @@ else $inner_content_path = 'home';
 if (file_exists("{$inner_content_path}.php")) {
     $inner_content = getHTML("{$path}.htm");
     include ("{$inner_content_path}.php");
-
 }
 else if (file_exists("{$inner_content_path}.htm")) $inner_content = getHTML("{$inner_content_path}.htm"); 
 else $inner_content = getHTML("home.htm");;
