@@ -23,8 +23,6 @@ section.lm-form {
 
     .formulario {
         font-family: $ff-text;
-        font-size: 1.5em;
-        line-height: 1.5em;
         grid-row: 1/-1;
         grid-column: 2;
         
@@ -40,7 +38,7 @@ section.lm-form {
 
         .title, h1 {
             font-family: $ff-main;
-            font-size: 2.5em;
+            font-size: 2em;
             text-align: left;
             padding: 1em 0;
             line-height: 1em;
@@ -51,6 +49,8 @@ section.lm-form {
             min-width: 300px;
             max-width: 500px;
             margin: 0 auto;
+            font-size: 1.5em;
+            line-height: 1em;
 
             @media (max-width: $screen-m) {
                 width: 95%;
