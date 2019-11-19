@@ -623,6 +623,32 @@ section.autos-view {
 
     }
 }
+main#main-content > #web-content > section.blank-view {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: $color-font-main;
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    height: 95vh;
+
+    .text-1 {
+        font-size: 8em;
+        line-height: 1em;
+    }
+    .text-2 {
+        font-size: 4em;
+        line-height: 1em;
+        padding: .5em 0;
+    }
+    .text-3 {
+        color: $color-main;
+        font-size: 2em;
+        line-height: 1em;
+    }
+}
 
 @import "./modules/escribanos";
 @import "./modules/lm";

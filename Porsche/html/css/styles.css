@@ -1309,6 +1309,42 @@ section.autos-view .content .module.interior .text {
   height: auto;
 }
 
+main#main-content > #web-content > section.blank-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #1d1f20;
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  height: 95vh;
+}
+
+main#main-content > #web-content > section.blank-view .text-1 {
+  font-size: 8em;
+  line-height: 1em;
+}
+
+main#main-content > #web-content > section.blank-view .text-2 {
+  font-size: 4em;
+  line-height: 1em;
+  padding: .5em 0;
+}
+
+main#main-content > #web-content > section.blank-view .text-3 {
+  color: #0099da;
+  font-size: 2em;
+  line-height: 1em;
+}
+
 section.escribanos-view {
   padding: 2em;
   line-height: 1em;
