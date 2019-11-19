@@ -385,7 +385,7 @@ main#main-content {
 
 section.home-content {
 
-    .main-banner {
+    .home_banners, .home_banners_mobile {
         width: 100%;
         position: relative;
         overflow: hidden;
@@ -912,3 +912,4 @@ section.escribanos-view {
 
 
 @import "./lm";
+@import './slick';
