@@ -1,0 +1,64 @@
+section.escribanos-view {
+    padding: 2em;
+    line-height: 1em;
+    font-size: 1.5em;
+    max-width: $screen-xl;
+    margin: 0 auto;
+
+    .title {
+        font-size: 2.5em;
+        line-height: 1em;
+    }
+
+    form {
+        padding-left: 2em;
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1em;
+        line-height: 1em;
+        
+
+        @media (max-width: $screen-m) {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        >div {
+            .input {
+                padding: .4em;
+
+                input, textarea {
+                    width: 100%;
+                    font-family: $ff-text-light;
+
+                    margin: .5em 0;
+                    padding: .6em;
+                    border-radius: 5px;
+                    border: 1px solid $color-font-subtext;
+
+                }
+                &.submit {
+                    text-align: right;
+
+                    @media (max-width: $screen-m) {
+                        text-align: center;
+                    }
+                    .btn {
+                        max-width: 180px;
+                        border: 0;
+                    }
+                }
+            }
+            .tyc, .pp {
+                font-family: $ff-text-light;
+
+                .accept {                
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+
+}

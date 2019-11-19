@@ -34,6 +34,15 @@ a {
   position: relative;
 }
 
+.img {
+  width: 100%;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+}
+
 .btn {
   color: #ffffff;
   fill: #ffffff;
@@ -984,57 +993,6 @@ section.home-content .saber-mas .item .link {
   }
 }
 
-#go-to-top {
-  display: none;
-  text-align: right;
-  grid-column: 1/-1;
-  background-color: #dde0e2;
-}
-
-#go-to-top > div {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1em;
-  font-size: 1.2em;
-}
-
-section.autos-view .autos-header {
-  width: 100%;
-}
-
-section.autos-view .autos-header h1 {
-  background-color: #dee1e3;
-  color: #1d1f20;
-  font-size: 2em;
-  padding: 1em 0 1em 50px;
-  width: 100%;
-}
-
-section.autos-view .autos-header nav {
-  padding: 0.5em 0 0.5em 50px;
-  font-size: 1.2em;
-  width: 100%;
-  background-color: #808890;
-}
-
-section.autos-view .autos-header nav ul {
-  width: 100%;
-}
-
-section.autos-view .autos-header nav ul li {
-  display: inline-block;
-  padding-right: 1em;
-}
-
-section.autos-view .autos-header nav ul li a {
-  width: 100%;
-  color: inherit;
-}
-
-section.autos-view .autos-header nav ul li:hover {
-  color: #ffffff;
-}
-
 section.modelos-view {
   padding: 1em 2em;
 }
@@ -1092,6 +1050,190 @@ section.modelos-view .contenedor-vehiculos .dpr_container .dpr_listprice::before
 section.modelos-view .contenedor-vehiculos .dpr_container .dpr_in_stock,
 section.modelos-view .contenedor-vehiculos .dpr_container .dpr_product-list-add-button {
   display: none;
+}
+
+#go-to-top {
+  display: none;
+  text-align: right;
+  grid-column: 1/-1;
+  background-color: #dde0e2;
+}
+
+#go-to-top > div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+section.autos-view .autos-header {
+  width: 100%;
+}
+
+section.autos-view .autos-header h1 {
+  background-color: #dee1e3;
+  color: #1d1f20;
+  font-size: 2em;
+  padding: 1em 0 1em 50px;
+  width: 100%;
+}
+
+section.autos-view .autos-header nav {
+  padding: 0.5em 0 0.5em 50px;
+  font-size: 1.2em;
+  width: 100%;
+  background-color: #808890;
+}
+
+section.autos-view .autos-header nav ul {
+  width: 100%;
+}
+
+section.autos-view .autos-header nav ul li {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+section.autos-view .autos-header nav ul li a {
+  width: 100%;
+  color: inherit;
+  padding: .5em;
+  display: inherit;
+}
+
+section.autos-view .autos-header nav ul li:hover {
+  color: #ffffff;
+}
+
+section.autos-view .content {
+  width: 100%;
+}
+
+section.autos-view .content .main-banner {
+  width: 100%;
+}
+
+section.autos-view .content .main-banner img {
+  width: inherit;
+  height: auto;
+}
+
+section.autos-view .content .module {
+  background-color: #fff;
+  width: 100%;
+}
+
+section.autos-view .content .module > .title {
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-size: 2.3em;
+  line-height: 1em;
+  text-align: center;
+  background-color: #f3f5f6;
+  padding: .7em;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  margin: 1em 0;
+  grid-column: 1/-1;
+}
+
+section.autos-view .content .module .carousel {
+  width: 100%;
+  height: 250px;
+  text-align: center;
+}
+
+section.autos-view .content .module .carousel img {
+  height: 100%;
+  width: auto;
+}
+
+section.autos-view .content .module .galeria {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module .galeria {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+section.autos-view .content .module .galeria .interior,
+section.autos-view .content .module .galeria .exterior {
+  padding: 1em;
+}
+
+section.autos-view .content .module .galeria .interior img,
+section.autos-view .content .module .galeria .exterior img {
+  width: 100%;
+  height: auto;
+}
+
+section.autos-view .content .module.exterior, section.autos-view .content .module.interior {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 4em;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module.exterior, section.autos-view .content .module.interior {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+section.autos-view .content .module.exterior img, section.autos-view .content .module.interior img {
+  width: 100%;
+  height: auto;
+}
+
+section.autos-view .content .module.exterior .text, section.autos-view .content .module.interior .text {
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1em;
+  color: #808890;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module.exterior .text, section.autos-view .content .module.interior .text {
+    padding: 1.3em;
+  }
+}
+
+section.autos-view .content .module.exterior > .img,
+section.autos-view .content .module.exterior > .text, section.autos-view .content .module.interior > .img,
+section.autos-view .content .module.interior > .text {
+  padding: 0 10%;
+}
+
+section.autos-view .content .module.exterior .extra .title, section.autos-view .content .module.interior .extra .title {
+  font-size: 1.8em;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 1em;
+  padding: .7em;
+}
+
+section.autos-view .content .module.exterior .extra .info, section.autos-view .content .module.interior .extra .info {
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+  color: #808890;
+}
+
+section.autos-view .content .module.interior .text {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
 }
 
 .nuestras-sedes-view .banner {
