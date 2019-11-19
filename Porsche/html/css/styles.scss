@@ -1,4 +1,4 @@
-@import "./variables";
+@import "./modules/variables";
 
 * {
     margin: 0;
@@ -171,9 +171,9 @@ a {
     }
 }
 
-@import './vertical-nav';
-@import "./lm";
-@import "./footer";
+@import './modules/vertical-nav';
+@import "./modules/lm";
+@import "./modules/footer";
 
 main#main-content {
 
@@ -394,8 +394,8 @@ main#main-content {
     }
 }
 
-@import './home-view';
-@import './categorias';
+@import './modules/home-view';
+@import './modules/categorias';
 
 #go-to-top {
 
@@ -618,6 +618,6 @@ section.autos-view {
     }
 }
 
-@import './escribanos';
-@import "./lm";
-@import './slick';
+@import './modules/escribanos';
+@import "./modules/lm";
+@import './modules/slick';
