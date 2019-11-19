@@ -1,8 +1,7 @@
-
-.lm-form {
+section.lm-form {
     display: grid;
-    grid-template-columns: 60% 40%;
-    grid-column-gap: 20px;
+    grid-template-columns: 45% 50%;
+    grid-column-gap: 5%;
 
     @media (max-width: $screen-l) {
         grid-template-columns: 1fr;
@@ -39,17 +38,16 @@
         }
 
 
-        .title {
+        .title, h1 {
             font-family: $ff-main;
             font-size: 2.5em;
-            // text-align: center;
             text-align: left;
-            padding: 1em;
+            padding: 1em 0;
             line-height: 1em;
         }
 
         form {
-            width: 60%;
+            width: 80%;
             min-width: 300px;
             max-width: 500px;
             margin: 0 auto;
@@ -58,7 +56,7 @@
                 width: 95%;
             }
 
-            .form-item {
+            .li_forma {
                 label {
                     display: block;
                 }

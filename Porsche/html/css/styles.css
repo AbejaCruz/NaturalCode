@@ -49,7 +49,7 @@ ul, li {
   margin: 0;
 }
 
-.btn {
+.btn, .button_def {
   color: #ffffff;
   fill: #ffffff;
   background-color: #0099da;
@@ -83,13 +83,13 @@ ul, li {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.btn:hover {
+.btn:hover, .button_def:hover {
   border: 1px solid #0068aa;
   background-color: #0068aa;
   cursor: pointer;
 }
 
-.btn svg {
+.btn svg, .button_def svg {
   height: 1.5em;
   width: auto;
   margin: 0 5px;
@@ -288,38 +288,38 @@ header.main-header ul li.logo img {
   height: 82px;
 }
 
-.lm-form {
+section.lm-form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
-  grid-column-gap: 20px;
+  -ms-grid-columns: 45% 50%;
+      grid-template-columns: 45% 50%;
+  grid-column-gap: 5%;
 }
 
 @media (max-width: 1080px) {
-  .lm-form {
+  section.lm-form {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
 }
 
-.lm-form > div {
+section.lm-form > div {
   border: transparent 1px solid;
 }
 
-.lm-form .banner {
+section.lm-form .banner {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
 }
 
-.lm-form .banner img {
+section.lm-form .banner img {
   width: 100%;
   height: auto;
   margin: auto;
 }
 
-.lm-form .formulario {
+section.lm-form .formulario {
   font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   line-height: 1.5em;
@@ -329,45 +329,45 @@ header.main-header ul li.logo img {
 }
 
 @media (max-width: 720px) {
-  .lm-form .formulario {
+  section.lm-form .formulario {
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-row: 2;
     grid-row: 2;
     text-align: center;
   }
-  .lm-form .formulario input {
+  section.lm-form .formulario input {
     margin: 0 auto;
   }
 }
 
-.lm-form .formulario .title {
+section.lm-form .formulario .title, section.lm-form .formulario h1 {
   font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 2.5em;
   text-align: left;
-  padding: 1em;
+  padding: 1em 0;
   line-height: 1em;
 }
 
-.lm-form .formulario form {
-  width: 60%;
+section.lm-form .formulario form {
+  width: 80%;
   min-width: 300px;
   max-width: 500px;
   margin: 0 auto;
 }
 
 @media (max-width: 720px) {
-  .lm-form .formulario form {
+  section.lm-form .formulario form {
     width: 95%;
   }
 }
 
-.lm-form .formulario form .form-item label {
+section.lm-form .formulario form .li_forma label {
   display: block;
 }
 
-.lm-form .formulario form .form-item input,
-.lm-form .formulario form .form-item select {
+section.lm-form .formulario form .li_forma input,
+section.lm-form .formulario form .li_forma select {
   font-size: inherit;
   font-family: inherit;
   display: block;
@@ -378,12 +378,12 @@ header.main-header ul li.logo img {
   width: 60%;
 }
 
-.lm-form .formulario form .form-item .btn {
+section.lm-form .formulario form .li_forma .btn {
   margin: 1em auto;
   border: 0;
 }
 
-.lm-form .add-text {
+section.lm-form .add-text {
   -ms-grid-row: 2;
   grid-row: 2;
   font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -393,7 +393,7 @@ header.main-header ul li.logo img {
   text-align: justify;
 }
 
-.lm-form .add-text .title {
+section.lm-form .add-text .title {
   font-size: 1.6em;
   font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: .7em;
@@ -1417,38 +1417,38 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
       justify-content: space-around;
 }
 
-.lm-form {
+section.lm-form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
-  grid-column-gap: 20px;
+  -ms-grid-columns: 45% 50%;
+      grid-template-columns: 45% 50%;
+  grid-column-gap: 5%;
 }
 
 @media (max-width: 1080px) {
-  .lm-form {
+  section.lm-form {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
 }
 
-.lm-form > div {
+section.lm-form > div {
   border: transparent 1px solid;
 }
 
-.lm-form .banner {
+section.lm-form .banner {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
 }
 
-.lm-form .banner img {
+section.lm-form .banner img {
   width: 100%;
   height: auto;
   margin: auto;
 }
 
-.lm-form .formulario {
+section.lm-form .formulario {
   font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   line-height: 1.5em;
@@ -1458,45 +1458,45 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
 }
 
 @media (max-width: 720px) {
-  .lm-form .formulario {
+  section.lm-form .formulario {
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-row: 2;
     grid-row: 2;
     text-align: center;
   }
-  .lm-form .formulario input {
+  section.lm-form .formulario input {
     margin: 0 auto;
   }
 }
 
-.lm-form .formulario .title {
+section.lm-form .formulario .title, section.lm-form .formulario h1 {
   font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 2.5em;
   text-align: left;
-  padding: 1em;
+  padding: 1em 0;
   line-height: 1em;
 }
 
-.lm-form .formulario form {
-  width: 60%;
+section.lm-form .formulario form {
+  width: 80%;
   min-width: 300px;
   max-width: 500px;
   margin: 0 auto;
 }
 
 @media (max-width: 720px) {
-  .lm-form .formulario form {
+  section.lm-form .formulario form {
     width: 95%;
   }
 }
 
-.lm-form .formulario form .form-item label {
+section.lm-form .formulario form .li_forma label {
   display: block;
 }
 
-.lm-form .formulario form .form-item input,
-.lm-form .formulario form .form-item select {
+section.lm-form .formulario form .li_forma input,
+section.lm-form .formulario form .li_forma select {
   font-size: inherit;
   font-family: inherit;
   display: block;
@@ -1507,12 +1507,12 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
   width: 60%;
 }
 
-.lm-form .formulario form .form-item .btn {
+section.lm-form .formulario form .li_forma .btn {
   margin: 1em auto;
   border: 0;
 }
 
-.lm-form .add-text {
+section.lm-form .add-text {
   -ms-grid-row: 2;
   grid-row: 2;
   font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -1522,7 +1522,7 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
   text-align: justify;
 }
 
-.lm-form .add-text .title {
+section.lm-form .add-text .title {
   font-size: 1.6em;
   font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: .7em;
