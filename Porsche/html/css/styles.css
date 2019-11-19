@@ -43,6 +43,12 @@ a {
   height: auto;
 }
 
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .btn {
   color: #ffffff;
   fill: #ffffff;
