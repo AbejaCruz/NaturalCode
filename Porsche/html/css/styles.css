@@ -34,6 +34,15 @@ a {
   position: relative;
 }
 
+.img {
+  width: 100%;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+}
+
 .btn {
   color: #ffffff;
   fill: #ffffff;
@@ -271,6 +280,228 @@ header.main-header ul li.logo {
 header.main-header ul li.logo img {
   width: 100%;
   height: 82px;
+}
+
+.lm-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  grid-column-gap: 20px;
+}
+
+@media (max-width: 1080px) {
+  .lm-form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.lm-form > div {
+  border: transparent 1px solid;
+}
+
+.lm-form .banner {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.lm-form .banner img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.lm-form .formulario {
+  font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  grid-row: 1/-1;
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+@media (max-width: 720px) {
+  .lm-form .formulario {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    text-align: center;
+  }
+  .lm-form .formulario input {
+    margin: 0 auto;
+  }
+}
+
+.lm-form .formulario .title {
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
+  text-align: left;
+  padding: 1em;
+  line-height: 1em;
+}
+
+.lm-form .formulario form {
+  width: 60%;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .lm-form .formulario form {
+    width: 95%;
+  }
+}
+
+.lm-form .formulario form .form-item label {
+  display: block;
+}
+
+.lm-form .formulario form .form-item input,
+.lm-form .formulario form .form-item select {
+  font-size: inherit;
+  font-family: inherit;
+  display: block;
+  margin-top: .3em;
+  padding: .5em 1em;
+  border-radius: 4px;
+  border: 1px solid #dedede;
+  width: 60%;
+}
+
+.lm-form .formulario form .form-item .btn {
+  margin: 1em auto;
+  border: 0;
+}
+
+.lm-form .add-text {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  font-size: 1.3em;
+  line-height: 1em;
+  text-align: justify;
+}
+
+.lm-form .add-text .title {
+  font-size: 1.6em;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: .7em;
+  line-height: 1em;
+  text-align: center;
+}
+
+footer#main-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 720px) {
+  footer#main-footer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+footer#main-footer ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+footer#main-footer .section {
+  padding: 1em;
+}
+
+footer#main-footer .section ul li {
+  border-bottom: 1px solid #cccccc;
+  padding: 1em;
+}
+
+footer#main-footer .section ul li.title {
+  font-size: 1.3em;
+  padding-bottom: 2em;
+  font-weight: bold;
+}
+
+@media (max-width: 720px) {
+  footer#main-footer .section.follow-us {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    grid-column: 1/-1;
+    text-align: center;
+  }
+  footer#main-footer .section.follow-us ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    border-bottom: 1px solid #cccccc;
+  }
+  footer#main-footer .section.follow-us ul .title {
+    grid-column: 1/-1;
+  }
+  footer#main-footer .section.follow-us ul li {
+    border-bottom: 1px solid transparent;
+  }
+  footer#main-footer .section.follow-us ul li a {
+    text-align: center;
+  }
+}
+
+footer#main-footer .section.follow-us li.item a .icon {
+  width: 35px;
+  height: 35px;
+}
+
+footer#main-footer .section.follow-us li.item a .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+footer#main-footer .section.follow-us li.item a .text {
+  margin-left: 10px;
+}
+
+footer#main-footer .section.follow-us li.item a > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer#main-footer ul.legalities {
+  margin-top: 2em;
+  padding: 1em;
+  width: 100%;
+  grid-column: 1/-1;
+  color: #2f3538;
+  text-align: center;
+}
+
+footer#main-footer ul.legalities li {
+  display: inline-block;
+  padding: 0 1em;
+  border-left: #2f3538 1px solid;
+  margin-top: 5px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+footer#main-footer ul.legalities li a {
+  border-bottom: 1px solid transparent;
+}
+
+footer#main-footer ul.legalities li a:hover {
+  border-bottom: 1px solid #808890;
 }
 
 main#main-content {
@@ -549,13 +780,13 @@ main#main-content section.home-header .concesionario .contacto {
   }
 }
 
-section.home-content .home_banners, section.home-content .home_banners_mobile {
+section.home-content .main-banner {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-section.home-content .home_banners img, section.home-content .home_banners_mobile img {
+section.home-content .main-banner img {
   width: 100%;
   height: auto;
 }
@@ -762,166 +993,6 @@ section.home-content .saber-mas .item .link {
   }
 }
 
-#go-to-top {
-  display: none;
-  text-align: right;
-  grid-column: 1/-1;
-  background-color: #dde0e2;
-}
-
-#go-to-top > div {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1em;
-  font-size: 1.2em;
-}
-
-footer#main-footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2em;
-  max-width: 1280px;
-  margin: 0 auto;
-  font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-@media (max-width: 720px) {
-  footer#main-footer {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-footer#main-footer ul {
-  text-decoration: none;
-  list-style: none;
-}
-
-footer#main-footer .section {
-  padding: 1em;
-}
-
-footer#main-footer .section ul li {
-  border-bottom: 1px solid #cccccc;
-  padding: 1em;
-}
-
-footer#main-footer .section ul li.title {
-  font-size: 1.3em;
-  padding-bottom: 2em;
-  font-weight: bold;
-}
-
-@media (max-width: 720px) {
-  footer#main-footer .section.follow-us {
-    -ms-grid-row: 1;
-    grid-row: 1;
-    grid-column: 1/-1;
-    text-align: center;
-  }
-  footer#main-footer .section.follow-us ul {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1em;
-    border-bottom: 1px solid #cccccc;
-  }
-  footer#main-footer .section.follow-us ul .title {
-    grid-column: 1/-1;
-  }
-  footer#main-footer .section.follow-us ul li {
-    border-bottom: 1px solid transparent;
-  }
-  footer#main-footer .section.follow-us ul li a {
-    text-align: center;
-  }
-}
-
-footer#main-footer .section.follow-us li.item a .icon {
-  width: 35px;
-  height: 35px;
-}
-
-footer#main-footer .section.follow-us li.item a .icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-footer#main-footer .section.follow-us li.item a .text {
-  margin-left: 10px;
-}
-
-footer#main-footer .section.follow-us li.item a > div {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-footer#main-footer ul.legalities {
-  margin-top: 2em;
-  padding: 1em;
-  width: 100%;
-  grid-column: 1/-1;
-  color: #2f3538;
-  text-align: center;
-}
-
-footer#main-footer ul.legalities li {
-  display: inline-block;
-  padding: 0 1em;
-  border-left: #2f3538 1px solid;
-  margin-top: 5px;
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-
-footer#main-footer ul.legalities li a {
-  border-bottom: 1px solid transparent;
-}
-
-footer#main-footer ul.legalities li a:hover {
-  border-bottom: 1px solid #808890;
-}
-
-section.autos-view .autos-header {
-  width: 100%;
-}
-
-section.autos-view .autos-header h1 {
-  background-color: #dee1e3;
-  color: #1d1f20;
-  font-size: 2em;
-  padding: 1em 0 1em 50px;
-  width: 100%;
-}
-
-section.autos-view .autos-header nav {
-  padding: 0.5em 0 0.5em 50px;
-  font-size: 1.2em;
-  width: 100%;
-  background-color: #808890;
-}
-
-section.autos-view .autos-header nav ul {
-  width: 100%;
-}
-
-section.autos-view .autos-header nav ul li {
-  display: inline-block;
-  padding-right: 1em;
-}
-
-section.autos-view .autos-header nav ul li a {
-  width: 100%;
-  color: inherit;
-}
-
-section.autos-view .autos-header nav ul li:hover {
-  color: #ffffff;
-}
-
 section.modelos-view {
   padding: 1em 2em;
 }
@@ -979,6 +1050,190 @@ section.modelos-view .contenedor-vehiculos .dpr_container .dpr_listprice::before
 section.modelos-view .contenedor-vehiculos .dpr_container .dpr_in_stock,
 section.modelos-view .contenedor-vehiculos .dpr_container .dpr_product-list-add-button {
   display: none;
+}
+
+#go-to-top {
+  display: none;
+  text-align: right;
+  grid-column: 1/-1;
+  background-color: #dde0e2;
+}
+
+#go-to-top > div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+section.autos-view .autos-header {
+  width: 100%;
+}
+
+section.autos-view .autos-header h1 {
+  background-color: #dee1e3;
+  color: #1d1f20;
+  font-size: 2em;
+  padding: 1em 0 1em 50px;
+  width: 100%;
+}
+
+section.autos-view .autos-header nav {
+  padding: 0.5em 0 0.5em 50px;
+  font-size: 1.2em;
+  width: 100%;
+  background-color: #808890;
+}
+
+section.autos-view .autos-header nav ul {
+  width: 100%;
+}
+
+section.autos-view .autos-header nav ul li {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+section.autos-view .autos-header nav ul li a {
+  width: 100%;
+  color: inherit;
+  padding: .5em;
+  display: inherit;
+}
+
+section.autos-view .autos-header nav ul li:hover {
+  color: #ffffff;
+}
+
+section.autos-view .content {
+  width: 100%;
+}
+
+section.autos-view .content .main-banner {
+  width: 100%;
+}
+
+section.autos-view .content .main-banner img {
+  width: inherit;
+  height: auto;
+}
+
+section.autos-view .content .module {
+  background-color: #fff;
+  width: 100%;
+}
+
+section.autos-view .content .module > .title {
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-size: 2.3em;
+  line-height: 1em;
+  text-align: center;
+  background-color: #f3f5f6;
+  padding: .7em;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  margin: 1em 0;
+  grid-column: 1/-1;
+}
+
+section.autos-view .content .module .carousel {
+  width: 100%;
+  height: 250px;
+  text-align: center;
+}
+
+section.autos-view .content .module .carousel img {
+  height: 100%;
+  width: auto;
+}
+
+section.autos-view .content .module .galeria {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module .galeria {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+section.autos-view .content .module .galeria .interior,
+section.autos-view .content .module .galeria .exterior {
+  padding: 1em;
+}
+
+section.autos-view .content .module .galeria .interior img,
+section.autos-view .content .module .galeria .exterior img {
+  width: 100%;
+  height: auto;
+}
+
+section.autos-view .content .module.exterior, section.autos-view .content .module.interior {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 4em;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module.exterior, section.autos-view .content .module.interior {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+section.autos-view .content .module.exterior img, section.autos-view .content .module.interior img {
+  width: 100%;
+  height: auto;
+}
+
+section.autos-view .content .module.exterior .text, section.autos-view .content .module.interior .text {
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1em;
+  color: #808890;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module.exterior .text, section.autos-view .content .module.interior .text {
+    padding: 1.3em;
+  }
+}
+
+section.autos-view .content .module.exterior > .img,
+section.autos-view .content .module.exterior > .text, section.autos-view .content .module.interior > .img,
+section.autos-view .content .module.interior > .text {
+  padding: 0 10%;
+}
+
+section.autos-view .content .module.exterior .extra .title, section.autos-view .content .module.interior .extra .title {
+  font-size: 1.8em;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 1em;
+  padding: .7em;
+}
+
+section.autos-view .content .module.exterior .extra .info, section.autos-view .content .module.interior .extra .info {
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+  color: #808890;
+}
+
+section.autos-view .content .module.interior .text {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
 }
 
 .nuestras-sedes-view .banner {

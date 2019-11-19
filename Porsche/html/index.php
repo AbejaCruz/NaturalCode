@@ -9,12 +9,12 @@ function dd ($var) {
 function getHTML ($file_name) {
     ob_start();
     ob_implicit_flush(false);
-    include ($file_name);
+    include ("views/$file_name.htm");
     return ob_get_clean();
 }
 
 
-$content = getHTML('main.htm');
+$content = getHTML('main');
 
 $paths=[
     'categories',
@@ -22,21 +22,22 @@ $paths=[
     'retoma',
     'test-drive',
     'nuestras-sedes',
-    'contactanos'
+    'contactanos',
+    'autos'
 ];
 $path = trim(@$_SERVER[PATH_INFO], '/');
 
-if ($path == 'autos') $path = 'categories';
+// if ($path == 'autos') $path = 'categories';
 
 if (in_array($path, $paths)) $inner_content_path = $path;  
 else $inner_content_path = 'home';
 
 if (file_exists("{$inner_content_path}.php")) {
-    $inner_content = getHTML("{$path}.htm");
+    $inner_content = getHTML($path);
     include ("{$inner_content_path}.php");
 }
-else if (file_exists("{$inner_content_path}.htm")) $inner_content = getHTML("{$inner_content_path}.htm"); 
-else $inner_content = getHTML("home.htm");;
+else if (file_exists($inner_content_path)) $inner_content = getHTML($inner_content_path); 
+else $inner_content = getHTML("home");;
 
 
 $content = str_replace('[[page_content]]', $inner_content, $content);
