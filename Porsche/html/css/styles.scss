@@ -199,7 +199,7 @@ main#main-content {
         position: relative;
 
         @media (max-width: $screen-m) {
-            padding-top: 155px;
+            padding-top: 154px;
         }
 
         >section {
@@ -244,10 +244,11 @@ main#main-content {
                 padding-top: 9px;
                 @media (max-width: $screen-m) {
                     padding: .1em;
-                    display: flex;
                     padding-left: 0;
                     grid-column: 1/-1;
-                    justify-content: space-between;
+                    display: grid;
+                    grid-template-columns: 60px auto 60px;
+                    width: 100vw;
                 }
                 
 
@@ -261,6 +262,7 @@ main#main-content {
                         width: auto;
                         height: 100%;
                         display: block;
+                        display: flex;
                     }
                 }
                 
@@ -269,9 +271,14 @@ main#main-content {
                     height: 70px;
                     padding: .2em;
                     text-align: left;
-                    // margin-right: auto;
                     margin: 0 auto;
                     display: block;
+
+                    @media (max-width: $screen-m) {
+                        width: 100%;
+                        height: auto;
+                        margin: auto;
+                    }
                 }
                 .nombre {
                     font-size: 1.4em;
@@ -294,11 +301,10 @@ main#main-content {
                 #hamburger-button {
                     position: relative;
                     display: none;
-                    padding: 1.7em 1em;
                     flex-direction: column;
                     justify-content: center;
                     user-select: none;
-
+                    margin: auto;
 
                     @media (max-width: $screen-m) {
                         display: flex;
@@ -633,7 +639,8 @@ main#main-content > #web-content > section.blank-view {
     width: 50%;
     margin: auto;
     text-align: left;
-    height: 90vh;
+    height: 100vh;
+    margin-top: -80px;
 
     .text-1 {
         font-size: 8em;
