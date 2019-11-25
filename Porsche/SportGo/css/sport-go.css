@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100vw;
+  height: 100%;
+}
+
+main#content {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+
+main#content section.banner-img {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+main#content section.banner-img .banner-bg-blurred {
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+main#content section.banner-img img {
+  height: 100%;
+  width: auto;
+  display: block;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+
+main#content div.info {
+  border: 1px solid black;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+}
+
+main#content div.info div.image-preview {
+  height: 200px;
+  width: 200px;
+}
+
+main#content div.info div.image-preview img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+main#content div.info .title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+main#content div.info .description:after {
+  font-size: 1.3em;
+  font-weight: bold;
+  display: block;
+  color: aquamarine;
+  content: "More...";
+}
+
+.svg {
+  fill: black;
+}
+
+.svg:hover {
+  fill: red;
+}
+/*# sourceMappingURL=sport-go.css.map */
