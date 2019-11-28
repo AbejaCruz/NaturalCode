@@ -14,26 +14,6 @@ function getHTML (string $file_name) {
 }
 
 
-$content = getHTML('main');
-$routes = include ('routes.php');
-$path = trim(@$_SERVER[PATH_INFO], '/');
-
-if ($path == '') $path = 'home';
-
-if (in_array($path, $routes)) $inner_content_path = $path;  
-else $inner_content_path = 'blank';
-
-
-if (file_exists("{$inner_content_path}.php")) {
-    $inner_content = getHTML($path);
-    include ("{$inner_content_path}.php");
-}
-else if (file_exists("views/{$inner_content_path}.htm") || file_exists("views/{$inner_content_path}.htm") ) $inner_content = getHTML($inner_content_path); 
-else $inner_content = getHTML("blank");
-
-
-
-$content = str_replace('[[page_content]]', $inner_content, $content);
-$content = str_replace('[[cdn_domain]]/css/porsche', '/css', $content);
+include ('./functions/replace_tags/main.php');
 
 echo $content;

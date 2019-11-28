@@ -63,22 +63,34 @@ section.home-content {
             }
 
         }
-        .banner2 {
-            display: flex;
-            justify-content: space-between;
+        .info_banner {
+            display: grid;
             width: 100%;
-            overflow: hidden;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            @media(max-width: $screen-m) {
+                grid-template-columns: 1fr;
+                padding: 1em;
+            }
 
             .item {
                 margin: 10px;
+                text-align: center;
+
                 .image {
                     overflow: hidden;
                     width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
                 }
                 .texto {
                     text-align: center;
                     font-weight: bold;
                     font-size: 2em;
+                    line-height: 1em;
                 }
             }
         }
