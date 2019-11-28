@@ -22,7 +22,7 @@ $facebook_dynamic_ads_code = '';
 $google_analytics_code = '';
 $head = '';
 
-$meta_tag_title .= 'Porsche';
+$meta_tag_title .= 'Sport-go';
 $conf_headloca_address= "Calle Falsa 123";
 $conf_headloca_city= "Bogotá";
 $conf_headloca_state= "Cundinamarca";
@@ -54,6 +54,6 @@ $content = str_replace(array_keys($arr_replacements_final), $arr_replacements_fi
 
 
 $content = str_replace('[[page_content]]', $inner_content, $content);
-$content = str_replace('[[cdn_domain]]/css/porsche', '/css', $content);
+$content = str_replace('[[cdn_domain]]/css/sport-go', '/css', $content);
 
-$content = str_replace('/css/porsche', '/css', $content);
+$content = str_replace('/css/sport-go', '/css', $content);

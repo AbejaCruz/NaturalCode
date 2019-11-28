@@ -134,9 +134,15 @@ svg {
     color: #ffffff;
     padding: .5em 1em;
     border-radius: 20px;
-    top: 1em;
-    right: 1em;
+    top: 5em;
+    right: 5em;
     text-decoration: none;
+
+    @media (max-width: $screen-tablet) {
+        font-size: .7em;
+        top: .5em;
+        right: 1em;
+    }
 
     .quantity {
         display: inline;
@@ -187,10 +193,9 @@ a.info-link {
         text-decoration: none;
         color: #000;
         position        : absolute;
-        $info_padding   : 10px;
         border          : 1px solid transparent;
         width           : $image_preview_size;
-        padding         : $info_padding;
+        padding         : 10px;
         text-align      : center;
         // top          : 300px;
         // right        : 30em;
@@ -247,6 +252,8 @@ a.info-link {
     pointer-events: none;
     opacity:0;
     text-decoration: none;
+    overflow: hidden;
+    transition: .3s;
 
     &:target {
         opacity:1;
@@ -271,7 +278,7 @@ a.info-link {
             grid-template-columns: 1fr;
             width: 80%;
             height:auto;
-            min-width: 340px;
+            min-width: 320px;
         }
 
         .title {
@@ -379,10 +386,13 @@ a.info-link {
     background: rgba(255, 255, 255, 0.8);
     z-index: 99999;
     opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
+    overflow: scroll;
+
+    @media (max-width: $screen-m) {
+        font-size: .8em;
+    }
 
     &:target {
         opacity:1;
@@ -399,6 +409,12 @@ a.info-link {
         border: #000 solid 1px;
         background: #fff;
         // height: 300px;
+
+        @media (max-width: $screen-m) {
+            width: 80%;
+            max-width: 340px;
+            top: 2.3em;
+        }
 
         .title {
             font-size: 2em;
@@ -518,6 +534,7 @@ a.info-link {
                         padding: .1em;
                         overflow: hidden;
                         position: relative;
+                        line-height: 1em;
 
                         &:hover {
                             border: transparent solid 1px;
@@ -577,9 +594,9 @@ a.info-link {
         position: absolute;
         background-color: transparent;
         border: solid 1px #227FC4;
-        margin-top: calc(-.3em - 2px);
+        top: -4px;
         transition: border .2s, background-color .2s;
-        margin-left: calc(-1em + 2px);
+        left: 4px;
     }
 
     &:hover {

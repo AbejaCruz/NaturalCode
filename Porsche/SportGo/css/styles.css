@@ -151,9 +151,17 @@ svg a:active .shape.pink {
   color: #ffffff;
   padding: .5em 1em;
   border-radius: 20px;
-  top: 1em;
-  right: 1em;
+  top: 5em;
+  right: 5em;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .shopping-cart {
+    font-size: .7em;
+    top: .5em;
+    right: 1em;
+  }
 }
 
 .shopping-cart .quantity {
@@ -271,6 +279,9 @@ a.info-link div.info-item .description:after {
   pointer-events: none;
   opacity: 0;
   text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 #viewShoppingCart:target {
@@ -301,7 +312,7 @@ a.info-link div.info-item .description:after {
         grid-template-columns: 1fr;
     width: 80%;
     height: auto;
-    min-width: 340px;
+    min-width: 320px;
   }
 }
 
@@ -430,6 +441,13 @@ a.info-link div.info-item .description:after {
   -webkit-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   pointer-events: none;
+  overflow: scroll;
+}
+
+@media (max-width: 540px) {
+  .modalDialog {
+    font-size: .8em;
+  }
 }
 
 .modalDialog:target {
@@ -446,6 +464,14 @@ a.info-link div.info-item .description:after {
   padding: 5px 20px 13px 20px;
   border: #000 solid 1px;
   background: #fff;
+}
+
+@media (max-width: 540px) {
+  .modalDialog > div.product-modal {
+    width: 80%;
+    max-width: 340px;
+    top: 2.3em;
+  }
 }
 
 .modalDialog > div.product-modal .title {
@@ -565,6 +591,7 @@ a.info-link div.info-item .description:after {
   padding: .1em;
   overflow: hidden;
   position: relative;
+  line-height: 1em;
 }
 
 .modalDialog > div.product-modal .specs .spec .variants .variant:hover {
@@ -627,10 +654,10 @@ a.info-link div.info-item .description:after {
   position: absolute;
   background-color: transparent;
   border: solid 1px #227FC4;
-  margin-top: calc(-.3em - 2px);
+  top: -4px;
   -webkit-transition: border .2s, background-color .2s;
   transition: border .2s, background-color .2s;
-  margin-left: calc(-1em + 2px);
+  left: 4px;
 }
 
 .btn:hover {
