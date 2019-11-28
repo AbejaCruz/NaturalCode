@@ -616,7 +616,9 @@ header.main-header ul li .children-menu .option {
 #tpl_titulo {
   color: var(--main-title-color);
   font-weight: 500;
-  font-size: 1.8em;
+  font-size: 2em;
+  line-height: 1em;
+  padding: .5em;
   text-align: center;
 }
 
@@ -1221,6 +1223,7 @@ section.home-content .page-content .formulario-contacto-home .title {
 
 section.home-content .page-content .formulario-contacto-home form {
   text-align: center;
+  padding: 0 10%;
 }
 
 section.home-content .page-content .formulario-contacto-home form .info {
@@ -1306,7 +1309,6 @@ section.home-content .page-content .info_banner .item .texto {
 section.home-content .selectone {
   background-color: #EEEEEE;
   padding: 3em 1em;
-  height: 500px;
 }
 
 section.home-content .selectone .title {
@@ -1917,5 +1919,49 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+#cn_slider {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+#cn_slider .dpr_container {
+  text-align: center;
+}
+
+#cn_slider .dpr_container .dpr_imagen_thumb {
+  padding: .5em;
+}
+
+#cn_slider .dpr_container .dpr_imagen_thumb img {
+  width: 100%;
+  height: auto;
+}
+
+#cn_slider .dpr_container .dpr_product-name {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+#cn_slider .dpr_container .dpr_listprice {
+  font-size: 1.3em;
+  line-height: 1em;
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #808890;
+}
+
+#cn_slider .dpr_container .price_per_unit,
+#cn_slider .dpr_container .dpr_in_stock {
+  display: none;
+}
+
+#cn_slider .dpr_container .swiper-pagination {
+  bottom: 0;
+}
+
+#cn_slider .container_div.swiper-wrapper {
+  padding-bottom: 2em;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -520,3 +520,43 @@ main#main-content > #web-content > section.blank-view {
 }
 
 @import "./modules/escribanos";
+
+
+#cn_slider {
+    position: relative;
+    max-width: $screen-l;
+    margin: 0 auto;
+
+    .dpr_container {
+        text-align: center;
+
+        .dpr_imagen_thumb {
+            padding: .5em;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .dpr_product-name {
+            font-size: 1.5em;
+            line-height: 1em;
+        }
+        .dpr_listprice {
+            font-size: 1.3em;
+            line-height: 1em;
+            font-family: $ff-main-light;
+            color: $color-font-subtext;
+        }
+        .price_per_unit,
+        .dpr_in_stock {
+            display: none;
+        }
+        .swiper-pagination {
+            bottom: 0;
+        }
+    }
+    .container_div.swiper-wrapper {
+        padding-bottom: 2em;
+    }
+}

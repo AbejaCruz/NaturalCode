@@ -60,36 +60,36 @@
     </div>
 
     <div class="selectone">
-        <div class="title">Elige tu Volkswagen</div>
+        [[box2content]]
+        <script>
+            let grpContainer = document.createElement('div');
+            grpContainer.classList.add('swiper-container');
 
-        <div class="carousel">
-            <div class="img-car">
-                <img src="[[cdn_domain]]/css/porsche/images/TRPS18.jpg" alt="">
-                <div class="name">
-                    Transporter Pasajeros 2018
-                </div>
-            </div>
-            <div class="img-car">
-                <img src="[[cdn_domain]]/css/porsche/images/TRPS19.jpg" alt="">
-                <div class="name">
-                    Transporter Pasajeros 2019
-                </div>
-            </div>
-            <div class="img-car">
-                <img src="[[cdn_domain]]/css/porsche/images/PASA18.jpg" alt="">
-                <div class="name">
-                    Passat 2018
-                </div>
-            </div>
-            <div class="img-car">
-                <img src="[[cdn_domain]]/css/porsche/images/AMAR18.jpg" alt="">
-                <div class="name">
-                    Amarok 2018
-                </div>
-            </div>
-        </div>
+            grpContainer.style.position = 'relative';
+            grpContainer.setAttribute('id', 'cn_slider');
+            
+            // document.getElementsByClassName('container_div')[0];
+            document.getElementsByClassName('container_div')[0].classList.add('swiper-wrapper');
+            [...document.getElementsByClassName('dpr_container')].forEach (function (el) {
+                el.classList.add('swiper-slide');
+            });
+
+            grpContainer.appendChild(document.getElementsByClassName('container_div')[0]);
+            let swprPag =document.createElement('div');
+            swprPag.classList.add('swiper-pagination');
+            grpContainer.appendChild(swprPag);
+            swprPag =document.createElement('div');
+            swprPag.classList.add('swiper-button-next');
+            grpContainer.appendChild(swprPag);
+            swprPag =document.createElement('div');
+            swprPag.classList.add('swiper-button-prev');
+            grpContainer.appendChild(swprPag);
+
+            document.getElementsByClassName('selectone')[0].appendChild(grpContainer);
+
+        </script>
     </div>
-
+    
     <div class="saber-mas">
         <div class="title">¿Quieres Saber más?</div>
         <div class="item asesor">

@@ -260,7 +260,9 @@
 #tpl_titulo {
     color: var(--main-title-color);
     font-weight: 500;
-    font-size: 1.8em;
+    font-size: 2em;
+    line-height: 1em;
+    padding: .5em;
     text-align: center;
 }
 
