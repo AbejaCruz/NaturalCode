@@ -28,15 +28,16 @@ section.escribanos-view {
             .input {
                 padding: .4em;
 
-                input, textarea {
+                input, textarea, select {
                     width: 100%;
                     font-family: $ff-text-light;
 
                     margin: .5em 0;
                     padding: .6em;
                     border-radius: 5px;
-                    border: 1px solid $color-font-subtext;
-
+                    border: 1px solid #dddddd;
+                    font-size: .9em;
+                    line-height: 1em;
                 }
                 &.submit {
                     text-align: right;

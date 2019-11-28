@@ -644,7 +644,7 @@ section.lm-form {
   display: grid;
   -ms-grid-columns: 45% 50%;
       grid-template-columns: 45% 50%;
-  grid-column-gap: 5%;
+  grid-column-gap: 1%;
 }
 
 @media (max-width: 1080px) {
@@ -662,12 +662,20 @@ section.lm-form .banner {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  overflow-x: hidden;
 }
 
 section.lm-form .banner img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   margin: auto;
+}
+
+@media (max-width: 1080px) {
+  section.lm-form .banner img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 section.lm-form .formulario {
@@ -727,6 +735,7 @@ section.lm-form .formulario form .li_forma p {
   font-family: VW Text Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .9em;
   line-height: 1em;
+  margin-bottom: 1em;
 }
 
 section.lm-form .formulario form .li_forma label {
@@ -734,7 +743,8 @@ section.lm-form .formulario form .li_forma label {
 }
 
 section.lm-form .formulario form .li_forma input,
-section.lm-form .formulario form .li_forma select {
+section.lm-form .formulario form .li_forma select,
+section.lm-form .formulario form .li_forma textarea {
   font-size: inherit;
   font-family: inherit;
   display: block;
@@ -746,9 +756,10 @@ section.lm-form .formulario form .li_forma select {
   width: 60%;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1080px) {
   section.lm-form .formulario form .li_forma input,
-  section.lm-form .formulario form .li_forma select {
+  section.lm-form .formulario form .li_forma select,
+  section.lm-form .formulario form .li_forma textarea {
     margin: 0 auto;
   }
 }
@@ -757,6 +768,7 @@ section.lm-form .formulario form .li_forma input[type="checkbox"] {
   display: inline-block;
   margin: 0 1em;
   width: unset;
+  margin-bottom: 1em;
 }
 
 section.lm-form .formulario form .li_forma .btn {
@@ -1480,6 +1492,13 @@ section.autos-view .autos-header nav {
   font-size: 1.2em;
   width: 100%;
   background-color: #808890;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .autos-header nav {
+    display: none;
+  }
 }
 
 section.autos-view .autos-header nav ul {
@@ -1518,11 +1537,68 @@ section.autos-view .content .main-banner img {
 
 section.autos-view .content .main-banner .inner-form {
   position: absolute;
-  left: 3em;
-  top: 3em;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  right: 10px;
+  top: 2em;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   padding: 1em;
+  width: 30%;
+  height: 70%;
+  overflow-y: scroll;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .main-banner .inner-form {
+    position: relative;
+    left: 0;
+    width: 80%;
+    padding: 3em;
+  }
+}
+
+section.autos-view .content .main-banner .inner-form h1 {
+  line-height: 1em;
+}
+
+section.autos-view .content .main-banner .inner-form li {
+  margin-top: .5em;
+}
+
+section.autos-view .content .main-banner .inner-form p {
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+}
+
+section.autos-view .content .main-banner .inner-form input,
+section.autos-view .content .main-banner .inner-form select {
+  font-size: inherit;
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: block;
+  margin-top: .3em;
+  margin-bottom: .5em;
+  padding: .7em;
+  border-radius: 4px;
+  border: 1px solid #dedede;
+  width: 60%;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .main-banner .inner-form input,
+  section.autos-view .content .main-banner .inner-form select {
+    margin: 0 auto;
+  }
+}
+
+section.autos-view .content .main-banner .inner-form input[type="checkbox"] {
+  display: inline-block;
+  margin: 0 1em;
+  width: unset;
+}
+
+section.autos-view .content .main-banner .inner-form .btn, section.autos-view .content .main-banner .inner-form input[type="submit"] {
+  margin: 1em auto;
+  border: 0;
 }
 
 section.autos-view .content .module {
@@ -1547,6 +1623,7 @@ section.autos-view .content .module > .title {
 section.autos-view .content .module .carousel {
   width: 100%;
   height: 250px;
+  overflow-y: hidden;
   text-align: center;
 }
 
@@ -1680,7 +1757,7 @@ section.autos-view .content .module.interior .text {
 }
 
 .nuestras-sedes-view .concesionario {
-  padding: 1em 0;
+  padding: 1em 10%;
   border-top: 1px solid #dee1e3;
   width: 100%;
   display: -ms-grid;
@@ -1804,13 +1881,15 @@ section.escribanos-view form > div .input {
   padding: .4em;
 }
 
-section.escribanos-view form > div .input input, section.escribanos-view form > div .input textarea {
+section.escribanos-view form > div .input input, section.escribanos-view form > div .input textarea, section.escribanos-view form > div .input select {
   width: 100%;
   font-family: VW Text Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: .5em 0;
   padding: .6em;
   border-radius: 5px;
-  border: 1px solid #808890;
+  border: 1px solid #dddddd;
+  font-size: .9em;
+  line-height: 1em;
 }
 
 section.escribanos-view form > div .input.submit {
