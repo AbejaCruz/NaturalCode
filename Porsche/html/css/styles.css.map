@@ -10,6 +10,7 @@
         "modules/_footer.scss",
         "modules/_home-view.scss",
         "modules/_categorias.scss",
+        "modules/_autos-view.scss",
         "modules/_escribanos.scss"
     ],
     "names": [],

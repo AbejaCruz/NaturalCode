@@ -131,6 +131,9 @@ ul, li {
   opacity: 0;
   -webkit-transition: .3s;
   transition: .3s;
+  position: fixed;
+  overflow: scroll;
+  font-size: 1.2em;
 }
 
 @media (max-width: 720px) {
@@ -149,7 +152,7 @@ ul, li {
   }
 }
 
-#hidden-hamburger-menu ul {
+#hidden-hamburger-menu > ul {
   background-color: #ffffff;
   width: 0;
   margin-left: auto;
@@ -158,14 +161,16 @@ ul, li {
   color: #808890;
   -webkit-transition: width .3s;
   transition: width .3s;
+  overflow-y: scroll;
+  height: 80vh;
 }
 
-#hidden-hamburger-menu ul li {
+#hidden-hamburger-menu > ul li {
   border-top: 1px solid #dfdfdf;
   width: 100%;
 }
 
-#hidden-hamburger-menu ul li a {
+#hidden-hamburger-menu > ul li a {
   width: 100%;
   display: block;
   padding: .7em 0 .5em 2em;
@@ -174,14 +179,19 @@ ul, li {
   transition: .3s;
 }
 
-#hidden-hamburger-menu ul li a:hover, #hidden-hamburger-menu ul li a:active {
+#hidden-hamburger-menu > ul li a:hover, #hidden-hamburger-menu > ul li a:active {
   border-bottom: 4px solid #0099da;
   color: #1d1f20;
 }
 
+#hidden-hamburger-menu > ul li > ul {
+  padding-left: 1em;
+  margin: auto;
+}
+
 header.main-header {
   position: fixed;
-  max-width: 120px;
+  max-width: 100px;
   overflow: hidden;
   background-color: #ffffff;
   -webkit-box-shadow: -14px 3px 14px 10px rgba(0, 0, 0, 0.5);
@@ -203,7 +213,7 @@ header.main-header ul {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-size: 1.11em;
+  font-size: 1em;
 }
 
 header.main-header ul > li {
@@ -218,15 +228,27 @@ header.main-header ul > li:hover {
 
 header.main-header ul li {
   width: 100%;
-  height: 85px;
+  height: 75px;
   margin: 0;
   padding: 0;
   border-top: 1px solid #dddddd;
 }
 
-header.main-header ul li:first-child {
+header.main-header ul li.main-logo {
   border-top: 0;
-  height: 131px;
+  height: 126px;
+  padding: 2.5em 1.5em;
+}
+
+header.main-header ul li.main-logo img {
+  width: 100%;
+  height: auto;
+  max-height: 73px;
+}
+
+header.main-header ul li:hover .children-menu {
+  width: 200px;
+  opacity: 1;
 }
 
 header.main-header ul li.option a {
@@ -285,7 +307,28 @@ header.main-header ul li.logo {
 
 header.main-header ul li.logo img {
   width: 100%;
-  height: 82px;
+  height: auto;
+  max-height: 73px;
+}
+
+header.main-header ul li .children-menu {
+  display: block;
+  position: fixed;
+  left: 100px;
+  width: 0;
+  opacity: 0;
+  height: calc(100% - 86px);
+  top: 86px;
+  background-color: #fff;
+  -webkit-box-shadow: 8px 2px 20px -9px rgba(0, 0, 0, 0.5);
+          box-shadow: 8px 2px 20px -9px rgba(0, 0, 0, 0.5);
+  border-left: 1px solid #dddddd;
+  -webkit-transition: width .5s, opacity .3s;
+  transition: width .5s, opacity .3s;
+}
+
+header.main-header ul li .children-menu .option {
+  border-top: 1px solid #dddddd;
 }
 
 /* Slick Carousel */
@@ -850,7 +893,7 @@ footer#main-footer ul.legalities li a:hover {
 
 main#main-content {
   width: 100%;
-  padding-left: 120px;
+  padding-left: 100px;
   min-height: 100vh;
 }
 
@@ -881,7 +924,7 @@ main#main-content section.home-header {
   -webkit-box-shadow: 2px 0 15px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 2px 0 15px 0 rgba(0, 0, 0, 0.5);
   position: fixed;
-  width: calc(100% - 120px);
+  width: calc(100% - 100px);
   z-index: 120;
   background-color: #0099da;
   color: #ffffff;
@@ -997,6 +1040,7 @@ main#main-content section.home-header .concesionario .logo .concesionario-logo {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-width: 320px;
   }
 }
 
@@ -1109,6 +1153,7 @@ main#main-content section.home-header .concesionario .locacion .direccion {
   font-size: 1.3em;
   font-family: VW Text Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 100;
+  line-height: 1em;
 }
 
 main#main-content section.home-header .concesionario .locacion .ciudad {
@@ -1208,30 +1253,42 @@ section.home-content .page-content .formulario-contacto-home form .tyc {
       justify-content: space-around;
 }
 
-section.home-content .page-content .banner2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+section.home-content .page-content .info_banner {
+  display: -ms-grid;
+  display: grid;
   width: 100%;
-  overflow: hidden;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-section.home-content .page-content .banner2 .item {
+@media (max-width: 720px) {
+  section.home-content .page-content .info_banner {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 1em;
+  }
+}
+
+section.home-content .page-content .info_banner .item {
   margin: 10px;
+  text-align: center;
 }
 
-section.home-content .page-content .banner2 .item .image {
+section.home-content .page-content .info_banner .item .image {
   overflow: hidden;
   width: 100%;
 }
 
-section.home-content .page-content .banner2 .item .texto {
+section.home-content .page-content .info_banner .item .image img {
+  width: 100%;
+  height: auto;
+}
+
+section.home-content .page-content .info_banner .item .texto {
   text-align: center;
   font-weight: bold;
   font-size: 2em;
+  line-height: 1em;
 }
 
 section.home-content .selectone {
@@ -1406,20 +1463,6 @@ section.modelos-view .container_div .dpr_container .dpr_product-list-add-button 
   display: none;
 }
 
-#go-to-top {
-  display: none;
-  text-align: right;
-  grid-column: 1/-1;
-  background-color: #dde0e2;
-}
-
-#go-to-top > div {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1em;
-  font-size: 1.2em;
-}
-
 section.autos-view .autos-header {
   width: 100%;
 }
@@ -1465,11 +1508,21 @@ section.autos-view .content {
 
 section.autos-view .content .main-banner {
   width: 100%;
+  position: relative;
 }
 
 section.autos-view .content .main-banner img {
   width: inherit;
   height: auto;
+}
+
+section.autos-view .content .main-banner .inner-form {
+  position: absolute;
+  left: 3em;
+  top: 3em;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 1em;
 }
 
 section.autos-view .content .module {
@@ -1500,6 +1553,13 @@ section.autos-view .content .module .carousel {
 section.autos-view .content .module .carousel img {
   height: 100%;
   width: auto;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module .carousel img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 section.autos-view .content .module .galeria {
@@ -1588,6 +1648,20 @@ section.autos-view .content .module.interior .text {
   grid-column: 1;
   -ms-grid-row: 2;
   grid-row: 2;
+}
+
+#go-to-top {
+  display: none;
+  text-align: right;
+  grid-column: 1/-1;
+  background-color: #dde0e2;
+}
+
+#go-to-top > div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1em;
+  font-size: 1.2em;
 }
 
 .nuestras-sedes-view .banner {
