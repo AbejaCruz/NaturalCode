@@ -26,8 +26,8 @@ body {
   color: #FFFFFF;
   line-height: 25px;
   position: absolute;
-  right: -12px;
   text-align: center;
+  right: -12px;
   top: -10px;
   width: 24px;
   text-decoration: none;
@@ -37,6 +37,13 @@ body {
           box-shadow: 1px 1px 3px #000;
   font-family: Arial, sans-serif;
   font-size: 20px;
+}
+
+@media (max-width: 540px) {
+  .close-modal {
+    top: 5px;
+    right: 3px;
+  }
 }
 
 .close-modal:hover {
@@ -320,7 +327,6 @@ a.info-link div.info-item .description:after {
   pointer-events: none;
   opacity: 0;
   text-decoration: none;
-  overflow: hidden;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -331,6 +337,7 @@ a.info-link div.info-item .description:after {
 }
 
 #viewShoppingCart .inner {
+  position: relative;
   width: 80%;
   min-width: 600px;
   min-height: 300px;

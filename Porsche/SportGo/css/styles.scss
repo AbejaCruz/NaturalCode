@@ -32,8 +32,8 @@ body {
     color: #FFFFFF;
     line-height: 25px;
     position: absolute;
-    right: -12px;
     text-align: center;
+    right: -12px;
     top: -10px;
     width: 24px;
     text-decoration: none;
@@ -43,6 +43,10 @@ body {
     font-family: Arial, sans-serif;
     font-size: 20px;
 
+    @media (max-width: $screen-m) {
+        top: 5px;
+        right: 3px;
+    }
     &:hover {
         background: #00d9ff;
     }
@@ -298,7 +302,7 @@ a.info-link {
     pointer-events: none;
     opacity:0;
     text-decoration: none;
-    overflow: hidden;
+    // overflow: hidden;
     transition: .3s;
 
     &:target {
@@ -307,6 +311,7 @@ a.info-link {
     }
 
     .inner {
+        position: relative;
         width: 80%;
         min-width: 600px;
         min-height: 300px;
@@ -327,6 +332,8 @@ a.info-link {
             min-width: 320px;
             padding: 1em;
         }
+
+        
 
         .title {
             font-weight: bold;
