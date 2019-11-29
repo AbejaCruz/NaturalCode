@@ -1,4 +1,4 @@
-$image_preview_size: 200px;
+$image_preview_size: 180pxpx;
 $screen-m: 540px;
 $screen-tablet: 768px;
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
@@ -225,11 +225,20 @@ a.info-link {
             font-size  : 1.3em;
             font-weight: bold;
         }
+
+        .description {
+            display: -webkit-box;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     
         .description:after {
             font-size  : 1.3em;
             font-weight: bold;
-            display    : block;
+            // display    : block;
             color      : aquamarine;
             content    : "More...";
     
@@ -391,13 +400,16 @@ a.info-link {
     overflow: scroll;
 
     @media (max-width: $screen-m) {
-        font-size: .8em;
+        font-size: .7em;
     }
 
     &:target {
         opacity:1;
         pointer-events: auto;
     }
+
+    
+
     &> div.product-modal {
         width: 60vw;
         min-width: 300px;
@@ -409,6 +421,11 @@ a.info-link {
         border: #000 solid 1px;
         background: #fff;
         // height: 300px;
+
+        p {
+            line-height: 1em;
+            margin: .3em 0;
+        }
 
         @media (max-width: $screen-m) {
             width: 80%;

@@ -217,7 +217,7 @@ a.info-link div.info-item {
   color: #000;
   position: absolute;
   border: 1px solid transparent;
-  width: 200px;
+  width: 180pxpx;
   padding: 10px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
@@ -231,8 +231,8 @@ a.info-link div.info-item:hover {
 }
 
 a.info-link div.info-item div.image-preview {
-  height: 200px;
-  width: 200px;
+  height: 180pxpx;
+  width: 180pxpx;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -249,10 +249,17 @@ a.info-link div.info-item .title {
   font-weight: bold;
 }
 
+a.info-link div.info-item .description {
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 a.info-link div.info-item .description:after {
   font-size: 1.3em;
   font-weight: bold;
-  display: block;
   color: aquamarine;
   content: "More...";
 }
@@ -446,7 +453,7 @@ a.info-link div.info-item .description:after {
 
 @media (max-width: 540px) {
   .modalDialog {
-    font-size: .8em;
+    font-size: .7em;
   }
 }
 
@@ -464,6 +471,11 @@ a.info-link div.info-item .description:after {
   padding: 5px 20px 13px 20px;
   border: #000 solid 1px;
   background: #fff;
+}
+
+.modalDialog > div.product-modal p {
+  line-height: 1em;
+  margin: .3em 0;
 }
 
 @media (max-width: 540px) {
