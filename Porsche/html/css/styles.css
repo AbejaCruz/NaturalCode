@@ -1268,6 +1268,32 @@ section.home-content .page-content .formulario-contacto-home form .tyc {
       justify-content: space-around;
 }
 
+section.home-content .page-content .info-banner {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 2em 0;
+  text-align: center;
+}
+
+section.home-content .page-content .info-banner .swiper-wrapper {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section.home-content .page-content .info-banner .web_content_item_title {
+  font-size: 2em;
+  line-height: 1em;
+  text-transform: 1em;
+}
+
+section.home-content .page-content .info-banner .web_content_item_date {
+  display: none;
+}
+
+section.home-content .page-content .info-banner .web_content_item_description {
+  display: none;
+}
+
 section.home-content .page-content .info_banner {
   display: -ms-grid;
   display: grid;
@@ -1525,6 +1551,10 @@ section.autos-view .autos-header nav ul li:hover {
 
 section.autos-view .content {
   width: 100%;
+}
+
+section.autos-view .content #product_description_title {
+  display: none;
 }
 
 section.autos-view .content .main-banner {
