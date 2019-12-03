@@ -1,0 +1,349 @@
+#botonera {
+	margin-left:auto;
+	margin-right:auto;
+	border-top:1px solid #bbb;
+	position:relative;
+	text-align:center;
+}
+
+#botonera ul li a {
+	
+	text-decoration: none;
+	
+	display:block;
+	padding:0px 10px;
+}
+#botonera ul li a:hover {
+	color:#F5E8D5;
+}
+#botonera ul li {
+	float: left;
+	list-style-type: none;
+	display: block;
+	text-align: center;
+	position: relative;
+	padding: 0px;
+	text-transform:uppercase;
+	line-height: 26px;
+	margin-left:11px;
+	margin-right:11px;
+	cursor:pointer;
+	border:1px solid red;
+	
+}
+#botonera ul li:hover {
+	color:#000000;
+	text-decoration:underline;
+}
+
+#botonera .subgrupos{
+	display:none;
+	position: absolute;
+	border:1px solid #cecece;
+	color:#888;
+	background:#fff;
+	z-index:1000;
+	padding:10px;
+	/*min-width:250px;
+	max-width:770px;*/
+	text-align:left;
+	font-weight:normal;
+	box-shadow: 0px 1px 3px 2px #888;
+	-moz-box-shadow: inset 0 0 5px #888;
+	-webkit-box-shadow: inset 0 0 5px #888;
+	box-shadow: inner 0 0 5px #888;
+	-moz-border-radius-bottomleft:8px;
+	border-bottom-left-radius:8px;
+	-moz-border-radius-bottomright:8px;
+	border-bottom-right-radius:8px;
+}
+#botonera .subgrupos a {
+	color:#888;
+	padding:0px;
+	text-align:left;
+	font-weight:normal;
+}
+#botonera .subgrupos_sec {
+	margin-left:10px;
+	text-align:left;
+	color:#888;
+}
+
+#botonera .subgr_niv_2 {
+	color:#bd1719;
+	font-size:14px;
+	font-weight:bold;
+	line-height:20px;
+	text-align:left;
+}
+
+#botonera  .subgr_niv_2 a {
+	color:#000;
+	text-decoration:none;
+}
+#botonera  .subgr_niv_mayor_2 {
+	color:#2b2b2b;
+	font-size:11px;
+	line-height:20px;
+	text-align:left;
+}
+
+
+#botonera ul {
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	position:relative;
+	border:1px solid red;
+	
+}
+/*level 2 categories*/
+.subcat {
+	width:170px;
+	display:block;
+	position:absolute;
+	margin-bottom:6px;
+	/*left:-1200px;
+	top:-1000px;*/
+	padding-top:11px;
+	z-index:1000;
+	border:0px solid blue;
+	display:none;
+
+}
+.subcat_ul{
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0;
+}
+.subcat_li {
+	text-align:left;
+	min-height:24px;
+	padding-left:10px;
+	padding-right:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	background:#FAFAFA;
+	border-bottom:1px solid #FAFAFA;
+
+}
+.subcat_ul li:last-child {
+	border-bottom:none;
+}
+.li_subcat_con_hijos{
+	
+}
+.li_subcat_con_hijos:before {
+	font-family: "FontAwesome";
+	color:#0A4D6D;
+	content: "\f0a9"; 
+	margin-left:84%;
+	border:0px solid red;
+	font-size:14px;
+	position:absolute;
+	padding-top:6px;
+}
+.a_subcat {
+	color:#0A4D6D;
+	text-decoration:none;
+	font-weight:200;
+	font-size:14px;
+}
+
+.a_subcat:hover{
+	color: #5f899e;
+}
+/*level 3 categories*/
+/*se arregla css pra qu sea display:block en el javascript*/
+.subcat3{
+	width:170px;
+	display:inline-block;
+	margin-bottom:6px;
+	/*position:relative;*/
+	position:absolute;
+	/*left:-1200px;
+	top:-1000px;
+	z-index:4;*/
+	border:0px solid red;
+	padding-left:20px;
+	margin-top:-24px;
+	margin-left:153px;
+	float:left;
+	z-index:8;
+	display:none;
+}
+.subcat3_ul{
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0;
+	border:1px solid #fafafa;
+}
+.subcat3_li{
+	text-align:left;
+	min-height:24px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:4px;
+	padding-bottom:4px;
+	background:#FAFAFA;
+	border-bottom:1px solid #0A4D6D;
+}
+.subcat3_ul li:last-child {
+	border-bottom:none;
+}
+.a_subcat3{
+	color:#0A4D6D;
+	text-decoration:none;
+	font-weight:200;
+	font-size:14px;
+}
+.a_subcat3:hover{
+	color: #5f899e;
+}
+
+#maincontent {
+	border:0px solid red; 
+	width:1200px; 
+	margin-left:auto; 
+	margin-right:auto;
+}
+
+.check_class {
+	background:url('/css/floresymas/images/check.jpg');
+	background-repeat:no-repeat;
+	background-position:0 0;
+	padding-left:24px;
+	padding-bottom:3px;
+	text-align:left;
+}
+
+.featured-products {
+	margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+.button_red {
+	background-color: #FF0016;
+    display:inline-block; 
+    color: #ffffff;
+    font-size:15px; 
+    font-weight:bold; 
+    padding:9px 34px; 
+    text-decoration:none;
+	text-transform:uppercase; 
+	border:none;
+	border-radius:0px; 
+	letter-spacing: 0.08em;
+}
+.home-list {
+	background:url("/css/floresymas/images/check-home.png");
+	background-repeat:no-repeat;
+	background-position:0 0;
+	padding-left:36px;
+	padding-top:7px;
+	padding-bottom:7px;
+	margin-bottom:20px;
+	border:0px solid green;
+	font-size:16px;
+}
+#home_testimonial {
+	border:0px solid green;
+	width:830px;
+	margin-left:auto;
+	margin-right:auto;
+	height: 120px;
+}
+.slick-testimonial {
+	border:0px solid red;
+	font-size:20px;
+}
+.q-left { margin-right:20px;  display:table-cell; 
+	border:0px solid red;}
+.q-right { margin-left:20px;  display:table-cell;
+	border:0px solid red;
+}
+.testimonial-1 {
+	display:table-cell;
+	border:0px solid yellow;
+	font-size:52px;
+	width:60px;
+}
+.p-testimonial{
+	border:0px solid yellow;
+	text-align:center;
+	display:table-cell;
+	width:700px;
+	vertical-align:top;
+	font-size:16px;
+}
+
+#home_testimonial .slick-dots {
+	margin-top:-80px;
+	border:0px solid yellow;
+	position:absolute;
+}
+
+#home_testimonial .slick-dots li button:before {
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '\f1db';
+    text-align: center;
+    opacity: .35;
+    color: #585655;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#home_testimonial .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #585655;
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    content: '\f111';
+}
+
+#menu {
+	border:0px solid red;
+	/*display:table-cell;*/
+	/*margin-left: auto;
+    margin-right: 0;*/
+    width:98%;
+    	
+}
+.div_menu {
+	border:0px solid green;
+	display: inline-block;
+	position:relative;
+	font-size: 18px;
+    font-weight: 600;
+    text-align:right;
+    margin-right:50px;
+}
+header .primary-links nav {
+	text-align:right;
+}
+header .primary-links nav .anchor {
+	margin-left:0px;
+/*	margin-right:50px;*/
+	border:0px solid red;
+}
+
+footer .bottom {
+	position:relative;
+}
+.normal {
+	font-size:16px;
+	line-height:1.2em;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+
+
