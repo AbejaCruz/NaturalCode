@@ -64,6 +64,30 @@ section.home-content {
             }
 
         }
+        .info-banner {
+
+            width: 100%;
+            margin-bottom: 1em;
+                padding: 2em 0;
+                text-align:center;
+
+            .swiper-wrapper {
+                justify-content: space-around;
+            }
+
+            .web_content_item_title {
+                font-size: 2em;
+                line-height: 1em;
+                text-transform: 1em;
+            }
+
+            .web_content_item_date{
+                display: none;
+            }
+            .web_content_item_description{
+                display: none;
+            }
+        }
         .info_banner {
             display: grid;
             width: 100%;
