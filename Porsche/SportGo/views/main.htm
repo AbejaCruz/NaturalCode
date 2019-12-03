@@ -33,6 +33,202 @@
         <span class="sport">Sport</span>
         <span class="go">GO</span>
     </div>
+    <div id="checkout-window">
+    
+        <a href="#close" title="Close" class="close-modal" style="top: 1em;">&times;</a>
+        <a href="#" class="btn continuar">Seguir Comprando</a>
+
+        <div class="products">
+            <div class="title">
+                Productos Seleccionados
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="[[cdn_domain]]/css/sport-go/images/woman-hoodie.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="prod-variant"><span class="ttl">Marca:</span><span>Nike</span></div>
+                    <div class="prod-variant"><span class="ttl">Talla</span><span>M</span></div>
+                    <div class="prod-variant"><span class="ttl">Candidad</span><span>2</span></div>
+                    <div class="prod-variant"><span class="ttl">Precio</span><span>$41,000</span></div>
+                    <div class="prod-variant"><span class="ttl">Total</span><span>$81,000</span></div>
+                </div>
+                <div class="name">
+                    Hoodie Lorem ipsum dolor sit amet consectetur
+                </div>
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="[[cdn_domain]]/css/sport-go/images/sport-go-joggers.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="prod-variant"><span class="ttl">Marca:</span><span>Adidas</span></div>
+                    <div class="prod-variant"><span class="ttl">Talla:</span><span>M</span></div>
+                    <div class="prod-variant"><span class="ttl">Candidad:</span><span>1</span></div>
+                    <div class="prod-variant"><span class="ttl">Precio:</span><span>$241,000</span></div>
+                </div>
+                <div class="name">
+                    Joggers Lorem ipsum dolor sit amet consectetur
+                </div>
+            </div>
+            <div class="total">
+                Total: $322,000
+            </div>
+        </div>
+        
+        <div class="vendor-code">
+            <form action="">
+                <div class="input">
+                    <label for="vendor-code">Código de vendedor:</label>
+                    <input type="text" name="vendor-code" id="vendor-code" required>
+                </div>
+                <div class="input">
+                    <label for="discount-code">Código de descuento:</label>
+                    <input type="text" name="discount-code" id="discount-code" required>
+                </div>
+                <div class="met-envio">
+                    <div class="title">Métodos de envío</div>
+                    <div class="compra-rapida">
+                        <div class="input">
+                            <label>Envío Rápido:</label>
+                            <input type="radio" name="metodo-envio" id="metodo-envio" value="0" required>
+                            <span class="time">1 a 10 días</span>
+                        </div>
+                        <div class="input">
+                            <label>Envío Normal:</label>
+                            <input type="radio" name="metodo-envio" id="metodo-envio" value="1" required>
+                            <span class="time">11 a 20 días</span>
+                        </div>
+                    </div>
+            </div>
+
+                <div class="input">
+                    <a href="#checkout-window" class="btn go-font">go</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="delivery-window">
+        <a href="#close" title="Close" class="close-modal" style="top: 1em;">&times;</a>
+        <a href="#" class="btn continuar">Seguir Comprando</a>
+        <div class="title">¿Dónde te lo entregamos?</div>
+        <form action="">
+            
+            <div class="input" style="display: block;">
+                <input type="checkbox" name="copiar-direccion" id="copiar-direccion" required>
+                <label for="copiar-direccion">Copiar información</label>
+            </div>
+            <div class="input">
+                <label for="direccion">Dirección:</label>
+                <input type="text" name="direccion" id="direccion" required>
+            </div>
+            <div class="input">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
+            <div class="input">
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" required>
+            </div>
+            <div class="input">
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" name="ciudad" id="ciudad" required>
+            </div>
+            <div class="input">
+                <label for="departamento">Departamento:</label>
+                <input type="text" name="departamento" id="departamento" required>
+            </div>
+            
+            <div class="input">
+                <a href="#checkout-window" class="btn go-font">go</a>
+            </div>
+        </form>
+
+    </div>
+    <div id="login-window">
+        
+        <a href="#close" title="Close" class="close-modal" style="top: 1em;">&times;</a>
+        <a href="#registration-window" class="btn" id="registration-btn">
+            Registrarse
+        </a>
+
+        <form action="">
+            <div class="input">
+                <label for="email">e-mail:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="input">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="input">
+                <a href="#checkout-window" class="btn">Login</a>
+            </div>
+        </form>
+    </div>
+    <div id="registration-window">
+            <a href="#close" title="Close" class="close-modal">&times;</a>
+
+        <div class="title">
+            Registrarse
+        </div>
+        <form action="">
+            <div class="input">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
+            <div class="input">
+                <label for="pais">País:</label>
+                <input type="text" name="pais" id="pais" required>
+            </div>
+            <div class="input">
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" required>
+            </div>
+            <div class="input">
+                <label for="cedula">Departamento:</label>
+                <input type="text" name="cedula" id="cedula" required>
+            </div>
+            <div class="input">
+                <label for="email">email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="input">
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" name="ciudad" id="ciudad" required>
+            </div>
+            <div class="input">
+                <label for="cedula">Cédula:</label>
+                <input type="text" name="cedula" id="cedula" required>
+            </div>
+            <div class="input">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="telefono" id="telefono" required>
+            </div>
+            <div class="input">
+                <label for="direccion">Dirección:</label>
+                <input type="text" name="direccion" id="direccion" required>
+            </div>
+            <div class="input">
+                <label for="telefono2">Teléfono 2:</label>
+                <input type="tel" name="telefono2" id="telefono2" required>
+            </div>
+            <div class="input line">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" name="contrasena" id="contrasena" required>
+            </div>
+            <div class="input line">
+                <label for="confirmacion">Confirmación:</label>
+                <input type="password" name="confirmacion" id="confirmacion" required>
+            </div>
+            <div class="input line">
+                <a href="#delivery-window" class="btn go-font">go</a>
+            </div>
+        </form>
+    </div>
+    <div id="checkout-window">
+
+    </div>
     <a class="shopping-cart" id="shopping-cart" href="#viewShoppingCart">
         <div class="quantity" id="shopping-cart-qty">
             0
@@ -79,8 +275,7 @@
                 <a href="#openHoodie" class="info-link pos1">
                     <div class="info-item">
                         <div class="image-preview">
-                            <img src="[[cdn_domain]]/css/sport-go/images/women-hoodie-preview.png"
-                                alt="">
+                            <img src="[[cdn_domain]]/css/sport-go/images/women-hoodie-preview.png" alt="">
                         </div>
                         <div class="title">
                             Lorem Ipsum
@@ -177,7 +372,7 @@
             
             <div id="openJoggers" class="modalDialog">
                     <div class="product-modal">
-                        <a href="#close" title="Close" class="close">&times;</a>
+                        <a href="#close" title="Close" class="close-modal">&times;</a>
                         <div class="title">Woman Joggers Sport-Go</div>
                         <div class="prod-images">
                             <div class="thumbs">
@@ -295,7 +490,7 @@
                 <div class="inf">Tarjeta crédito</div>
                 <div class="value">$318,670</div>
 
-                <a class="btn keep-shopping" href="#">
+                <a class="btn keep-shopping" href="#login-window">
                     <div class="outter-box"></div>
                     Comprar
                 </a>
