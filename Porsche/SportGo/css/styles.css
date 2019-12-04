@@ -310,6 +310,58 @@ a.info-link div.info-item .description:after {
   content: "More...";
 }
 
+#thanks-message {
+  font-family: Typewriter_Condensed;
+  display: none;
+  position: fixed;
+  z-index: 2;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  left: 0;
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 1.3em;
+  opacity: 0;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: -10;
+}
+
+@media (max-width: 540px) {
+  #thanks-message {
+    font-size: .9em;
+  }
+}
+
+#thanks-message:target {
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 9;
+}
+
+#thanks-message .message {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+#thanks-message span.message-body {
+  display: block;
+  font-size: .7em;
+  padding: 1em;
+}
+
 #viewShoppingCart {
   z-index: 10;
   display: -webkit-box;

@@ -291,6 +291,48 @@ a.info-link {
     }
 }
 
+#thanks-message {
+    font-family: Typewriter_Condensed;
+    display: none;
+    position: fixed;
+    z-index: 2;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.3em;
+    opacity:0;
+    text-decoration: none;
+    transition: .3s;
+    z-index: -10;
+
+    @media (max-width: $screen-m) {
+        font-size: .9em;
+    }
+
+
+    &:target {
+        opacity:1;
+        display: flex;
+        z-index: 9;
+    }
+
+    .message {
+        font-size: 2em;
+        line-height: 1em;
+    }
+    span.message-body {
+        display: block;
+        font-size: .7em;
+        padding: 1em;
+    }
+}
+
 
 
 #viewShoppingCart{
