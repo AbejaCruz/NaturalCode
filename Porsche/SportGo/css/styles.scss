@@ -754,6 +754,7 @@ a.info-link {
         @media (max-width: $screen-tablet) {
             grid-template-columns: 1fr;
             padding: 0 1em;
+            overflow-y: auto;
         }
         @media ($screen-m) {
             padding: 0;

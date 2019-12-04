@@ -834,6 +834,7 @@ a.info-link div.info-item .description:after {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding: 0 1em;
+    overflow-y: auto;
   }
 }
 
