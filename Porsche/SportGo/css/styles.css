@@ -1191,6 +1191,12 @@ a.info-link div.info-item .description:after {
   border-color: #227FC4;
 }
 
+#login-window form {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 80%;
+}
+
 #login-window label, #login-window input {
   display: block;
   font-family: inherit;

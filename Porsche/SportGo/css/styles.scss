@@ -1028,6 +1028,12 @@ a.info-link {
         }
     }
 
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        width: 80%;
+    }
+
     label, input {
         display: block;
         font-family: inherit;
