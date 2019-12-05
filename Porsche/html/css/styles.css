@@ -1759,6 +1759,194 @@ section.autos-view .content .module.interior .text {
   grid-row: 2;
 }
 
+section.blog {
+  color: #1d1f20;
+  padding: 3em;
+}
+
+section.blog h1,
+section.blog .title {
+  font-size: 2.6em;
+  line-height: 1em;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin: .5em 0;
+}
+
+section.blog .blog-list {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
+}
+
+@media (max-width: 1080px) {
+  section.blog .blog-list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  section.blog .blog-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+section.blog .blog-list .web_content_item {
+  overflow: hidden;
+  text-align: center;
+  font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  border: 1px solid transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+  padding: 1em;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 13px 9px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 13px 9px rgba(0, 0, 0, 0.1);
+}
+
+section.blog .blog-list .web_content_item:hover, section.blog .blog-list .web_content_item:active {
+  border-color: #ddd;
+  background-color: #ddd;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+section.blog .blog-list .web_content_item .web_content_item_img {
+  padding: .3em;
+}
+
+section.blog .blog-list .web_content_item .web_content_item_img a {
+  width: 100%;
+}
+
+section.blog .blog-list .web_content_item .web_content_item_img img, section.blog .blog-list .web_content_item .web_content_item_img iframe {
+  width: 100%;
+  height: auto;
+}
+
+section.blog .blog-list .web_content_item .web_content_item_title {
+  font-size: 1.1em;
+  line-height: 1em;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: .3em 0;
+}
+
+section.blog .blog-list .web_content_item .web_content_item_date {
+  display: none;
+}
+
+section.blog .blog-list .web_content_item .web_content_item_description {
+  line-height: 1em;
+}
+
+section.blog .blog-list .web_content_paginate {
+  grid-column: 1/-1;
+  font-size: 1.5em;
+  padding-top: 1em;
+  line-height: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.blog .blog-list .web_content_paginate select {
+  font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif, Helvetica;
+  font-size: .9em;
+  margin-left: 1em;
+}
+
+section.contenido {
+  color: #2f3538;
+}
+
+section.contenido .main-title {
+  font-size: 2.6em;
+  line-height: 1em;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin: .5em 0;
+  background-color: #bdc3c6;
+  padding: 1em 0 .8em 1.5em;
+  margin: 0;
+}
+
+section.contenido .banner {
+  position: relative;
+  width: 100%;
+}
+
+section.contenido .banner .main-title {
+  position: absolute;
+  background-color: transparent;
+  color: #fff;
+  font-size: 3em;
+}
+
+@media (max-width: 1080px) {
+  section.contenido .banner .main-title {
+    font-size: 2.6em;
+  }
+}
+
+@media (max-width: 720px) {
+  section.contenido .banner .main-title {
+    font-size: 1.6em;
+  }
+}
+
+section.contenido .banner img {
+  width: 100%;
+  height: auto;
+}
+
+section.contenido .content {
+  padding: 3em;
+  font-family: VW Text Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  line-height: 1em;
+}
+
+section.contenido .content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+section.contenido .content .title {
+  line-height: 1em;
+  font-size: 1.2em;
+  padding: .5em 0;
+  margin: 0;
+  background-color: unset;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+section.contenido .content p {
+  margin-top: 1.7em;
+}
+
+section.contenido .content p::after, section.contenido .content div::after, section.contenido .content span::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+section.contenido .content img {
+  width: 45%;
+  float: right;
+  height: auto;
+  padding-left: 1em;
+  max-height: 350px;
+}
+
 #go-to-top {
   display: none;
   text-align: right;

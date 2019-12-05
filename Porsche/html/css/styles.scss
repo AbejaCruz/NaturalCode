@@ -423,6 +423,9 @@ main#main-content {
 @import "./modules/home-view";
 @import "./modules/categorias";
 @import "./modules/autos-view";
+@import "./modules/blog";
+@import "./modules/blog-item";
+
 #go-to-top {
     display: none;
     text-align: right;

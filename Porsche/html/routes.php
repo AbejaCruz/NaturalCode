@@ -9,6 +9,8 @@ $paths=[
     'nuestras-sedes' => 'nuestras-sedes',
     'contactanos' => 'contactanos',
     'autos' => 'autos',
+    'blog' => 'blog',
+    'blog-content' => 'blog-content',
 ];
 
 return $paths;

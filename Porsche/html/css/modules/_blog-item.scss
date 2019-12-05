@@ -1,0 +1,78 @@
+section.contenido {
+
+    color: $color-font-text;
+    
+    .main-title {
+        font-size: 2.6em;
+        line-height: 1em;
+        font-family: $ff-main;
+        margin: .5em 0;
+        background-color: $border-color;
+        padding: 1em 0 .8em 1.5em;
+        margin: 0;
+    }
+
+    .banner {
+        position: relative;
+        width: 100%;
+
+        .main-title {
+            position: absolute;
+            background-color: transparent;
+            color: #fff;
+            font-size: 3em;
+
+            @media (max-width: $screen-l) {
+                font-size: 2.6em;
+            }
+            @media (max-width: $screen-m) {
+                font-size: 1.6em;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .content {
+        padding: 3em;
+        font-family: $ff-text-light;
+        font-size: 1.3em;
+        line-height: 1em;
+
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .title {
+            line-height: 1em;
+            font-size: 1.2em;
+            padding: .5em 0;
+            margin: 0;
+            background-color: unset;
+            font-family: $ff-main;
+
+        }
+
+        p {
+            margin-top: 1.7em;
+        }
+        
+        p::after, div::after, span::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        img {
+            width: 45%;
+            float: right;
+            height: auto;
+            padding-left: 1em;
+            max-height: 350px;
+        }
+    }
+}
