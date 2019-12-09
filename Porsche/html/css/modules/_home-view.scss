@@ -29,38 +29,49 @@ section.home-content {
             form {
                 text-align: center;
                 padding: 0 10%;
+                font-size: 1.1em;
+                line-height: 1em;
 
+                h1 {
+                    display: none;
+                }
+                >p {
+                    display: none;
+                }
 
-                .info {
+                ul.ul_formulario {
                     display: flex;
-                    justify-content: space-around;
                     flex-wrap: wrap;
+                    justify-content: space-around;
+
+                    li {
+                        text-align: left;
+                        padding: .3em;
+
+                        p {
+                            font-family: $ff-main-light;
+                            margin: .5em 0;
+                        }
+                        #label_8, #label_9 {
+                            display: none;
+                        }
+                    }
 
                     
-                    @media (max-width: $screen-m) {
-                        display: grid;
-                        grid-template-columns: 1fr;
-                    }
-
-                    select,
-                    input {
-                        border: 1px solid #cccccc;
-                        border-radius: 5px;
-                        padding: .5em;
-                        margin-top: 10px;
-                    }
-                    input {
-                        text-align: center;
-                    }
-
                 }
-                .tyc {
-                    text-align: center;
-                    padding: 2em 0;
-                    font-size: 1.1em;
-                    display: flex;
-                    justify-content: space-around;
+
+                input, select {
+                    padding: .5em;
+                    font-family: $ff-main-light;
+                    border-radius: 5px;
+                    border: 1px solid #dddddd;
                 }
+                input.button_def {
+                    border: 0;
+                    font-family: $ff-main;
+                    padding: 1em;
+                }
+
             }
 
         }
