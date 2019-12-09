@@ -1,62 +1,157 @@
 <section class="escribanos-view">
-    <h1 class="title">
-        Escríbanos
-    </h1>
-    <form action="" method="post" id="escribanos-form">
-        <div class="col-1">
-            <div class="input">
-                <label for="nombre">Nombre*:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-            </div>
-            <div class="input">
-                <label for="apellido">Apellido*:</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-            </div>
-            <div class="input">
-                <label for="telefono">Teléfono*:</label>
-                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
-            </div>
-            <div class="input">
-                <label for="email">Email*:</label>
-                <input type="text" name="email" id="email" placeholder="e-mail">
-            </div>
-        </div>
-        <div class="col-2">
-            <div class="input">
-                <label for="comentarios">Comentarios:</label>
-                <textarea name="comentarios" id="comentarios" rows="10"></textarea>
-            </div>
-            <div class="tyc">
-                <div class="text">Autoriza el uso de mis datos personales para que Porsche Colombia S.A.S., su red de concesionarios autorizados en Colombia, sus matrices, filiales y/o empresas del grupo Volkswagen y/o terceros relacionados con estos, en adelante "Las Compañías" e contacten por todos los canales disponibles, incluidos medios electrónicos con el fin de recibir información relacionada con la cotización solicitada.*:</div>
-                <div class="accept">
-                    <div class="input">
-                        <input type="radio" name="tyc" id="tyc" value="1">
-                        <span>Sí</span>
-                    </div>
-                    <div class="input">
-                        <input type="radio" name="tyc" id="tyc" value="0">
-                        <span>No</span>
-                    </div>
-                </div>
-            </div>
-            <div class="pp">
-                <div class="text">
-                    Acepto recibir comunicaciones publicitarias, promocionales y de mercadeo por parte de "Las Compañías", por todos los canales disponibles, incluidos medios electrónicos.*:
-                </div>
-                <div class="accept">
-                    <div class="input">
-                        <input type="radio" name="tyc" id="tyc" value="1">
-                        <span>Sí</span>
-                    </div>
-                    <div class="input">
-                        <input type="radio" name="tyc" id="tyc" value="0">
-                        <span>No</span>
-                    </div>
-                </div>
-            </div>
-            <div class="input submit">
-                <input type="submit" value="Enviar" class="btn">
-            </div>
-        </div>
-    </form>
-</section>
+        <h1 class="title">Escríbanos</h1>
+        
+        <link rel="stylesheet" type="text/css" href="/javascript/datetimepicker/jquery.datetimepicker.css">
+        <script src="/javascript/datetimepicker/jquery.datetimepicker.js"></script>
+        <script src="/javascript/validate.js"></script>
+        <style>
+        </style>
+        
+        
+        
+        
+        <div class="success_div" id="successDiv_3" style="display:none;"></div>
+        <form method="post" action="/forms/resolve_form.phtml" class="formulario" id="formulario_3" name="formulario_3" enctype="multipart/form-data">
+        <h1>Lead Contáctenos</h1>
+        <p>
+        Formulario de contacto
+        </p>
+        <input type="hidden" name="form_id" value="3">
+        <input type="hidden" name="form_url" value="/contactenos/">
+        <ul class="ul_formulario">
+            
+                    <li id="li_forma_27" class="li_forma">
+                        <div>
+                            <label id="label_27">Nombres*</label>
+                            <p id="desc_27"></p>
+                            <input type="text" id="inputtext_27" name="inputtext_27" value="">
+                        </div>
+                    </li>
+                    
+                    <li id="li_forma_28" class="li_forma">
+                        <div>
+                            <label id="label_28">Apellidos*</label>
+                            <p id="desc_28"></p>
+                            <input type="text" id="inputtext_28" name="inputtext_28" value="">
+                        </div>
+                    </li>
+                    
+                    <li id="li_forma_29" class="li_forma">
+                        <div>
+                            <label id="label_29">Teléfono*</label>
+                            <p id="desc_29"></p>
+                            <input type="text" name="phone_29" id="phone_29">
+                        </div>
+                    </li>
+                    
+                    <li id="li_forma_30" class="li_forma">
+                        <div>
+                            <label id="label_30">Correo electrónico*</label>
+                            <p id="desc_30"></p>
+                            <input type="text" name="email_30" id="email_30">
+                        </div>
+                    </li>
+                    
+                    <li id="li_forma_35" class="li_forma">
+                        <div>
+                            <label id="label_35">Ciudad</label>
+                            <p id="desc_35"></p>
+                            <select id="select_35" name="select_35"><option value="">Escoger</option><option value="Armenia|7">Armenia</option><option value="Barranquilla|8">Barranquilla</option><option value="Bogotá D.C.|1">Bogotá D.C.</option><option value="Bucaramanga|5">Bucaramanga</option><option value="Cali|2">Cali</option><option value="Cartagena|9">Cartagena</option><option value="Chia|10">Chia</option><option value="Ibague|11">Ibague</option><option value="Manizales|19">Manizales</option><option value="Medellín|6">Medellín</option><option value="Monteria|12">Monteria</option><option value="Neiva|15">Neiva</option><option value="Pasto|13">Pasto</option><option value="Pereira|14">Pereira</option><option value="Tunja|16">Tunja</option><option value="Villavicencio|17">Villavicencio</option></select>
+                        </div>
+                    </li>
+                    
+                    <li id="li_forma_33" class="li_forma">
+                        <div>
+                            <label id="label_33">Acepto*</label>
+                            <p id="desc_33">Autorizo el uso de mis datos personales para que Porsche Colombia S.A.S., su red de concesionarios autorizados en Colombia, sus matrices, filiales, y/o empresas del grupo Volkswagen y/o terceros relacionados con estos, en adelante "Las Compañías" me contacten por por todos los canales disponibles, incluidos medios electrónicos con el fin de recibir información relacionada con la cotización solicitada. Política de tratamiento de datos personales.</p>
+                            <div id="para_checkbox_33">
+                            <input type="checkbox" name="checkboxes_33" value="Acepto|1">Acepto<br>
+                            </div>
+                        </div>
+                    </li>
+                    
+                        <li id="li_forma_37" class="li_forma">
+                            <div>
+                                <label id="label_37">Comentario*</label>
+                                <p id="desc_37"></p>
+                                <textarea id="textarea_37" name="textarea_37"></textarea>
+                            </div>
+                        </li>
+                    
+                    <li id="li_forma_34" class="li_forma">
+                        <div>
+                            <label id="label_34">Pauta*</label>
+                            <p id="desc_34">Acepto recibir comunicaciones publicitarias, promocionales y de mercadeo por parte de “Las Compañías”, por todos los canales disponibles, incluidos medios electrónicos.</p>
+                            <div id="para_checkbox_34">
+                            <input type="checkbox" name="checkboxes_34" value="Acepto|1">Acepto<br>
+                            </div>
+                        </div>
+                    </li>
+                    
+            
+            <li class="li_last"><input type="submit" value="Enviar" id="submit_button_3" class="button_def form_submit"></li>
+        </ul>
+        </form>
+        <div class="error_box" id="errorDiv_3"></div>
+        
+        <script>
+        var validator = new FormValidator('formulario_3', [
+        {
+                name:'inputtext_27',
+                display:'Nombres',
+                rules:'required'
+            },
+            {
+                name:'inputtext_28',
+                display:'Apellidos',
+                rules:'required'
+            },
+            {
+                name:'phone_29',
+                display:'Teléfono',
+                rules:'required'
+            },
+            {
+                name:'email_30',
+                display:'Correo electrónico',
+                rules:'required|valid_email'
+            },
+            {
+                name:'checkboxes_33',
+                display:'Acepto',
+                rules:'required'
+            },
+            {
+                name:'textarea_37',
+                display:'Comentario',
+                rules:'required'
+            },
+            {
+                name:'checkboxes_34',
+                display:'Pauta',
+                rules:'required'
+            },
+            
+        ], function(errors, event) {
+            $('#successDiv_3').css({display: 'none'});
+            var SELECTOR_ERRORS = $('#errorDiv_3');
+            if (errors.length > 0) {
+                // Show the errors
+                SELECTOR_ERRORS.empty();
+                for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+                    SELECTOR_ERRORS.append(errors[i].message + '<br />');
+                }
+                SELECTOR_ERRORS.fadeIn(200);
+            } else {
+                    SELECTOR_ERRORS.css({ display: 'none' });
+            }
+                
+            
+            
+        });
+        validator.setMessage('required', 'El campo: %s es requerido.');
+        validator.setMessage('alpha', 'El campo: %s solo puede contener letras.');
+        validator.setMessage('valid_email', 'El campo: %s no es un email válido.');
+        
+        </script>
+        </section>
