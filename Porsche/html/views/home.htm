@@ -46,30 +46,32 @@
     <div class="selectone">
         [[box2content]]
         <script>
-            let grpContainer = document.createElement('div');
-            grpContainer.classList.add('swiper-container');
+            if (document.getElementsByClassName('container_div').lenght > 0) {
+                let grpContainer = document.createElement('div');
+                grpContainer.classList.add('swiper-container');
 
-            grpContainer.style.position = 'relative';
-            grpContainer.setAttribute('id', 'cn_slider');
-            
-            // document.getElementsByClassName('container_div')[0];
-            document.getElementsByClassName('container_div')[0].classList.add('swiper-wrapper');
-            [...document.getElementsByClassName('dpr_container')].forEach (function (el) {
-                el.classList.add('swiper-slide');
-            });
+                grpContainer.style.position = 'relative';
+                grpContainer.setAttribute('id', 'cn_slider');
+                
+                // document.getElementsByClassName('container_div')[0];
+                document.getElementsByClassName('container_div')[0].classList.add('swiper-wrapper');
+                [...document.getElementsByClassName('dpr_container')].forEach (function (el) {
+                    el.classList.add('swiper-slide');
+                });
 
-            grpContainer.appendChild(document.getElementsByClassName('container_div')[0]);
-            let swprPag =document.createElement('div');
-            swprPag.classList.add('swiper-pagination');
-            grpContainer.appendChild(swprPag);
-            swprPag =document.createElement('div');
-            swprPag.classList.add('swiper-button-next');
-            grpContainer.appendChild(swprPag);
-            swprPag =document.createElement('div');
-            swprPag.classList.add('swiper-button-prev');
-            grpContainer.appendChild(swprPag);
+                grpContainer.appendChild(document.getElementsByClassName('container_div')[0]);
+                let swprPag =document.createElement('div');
+                swprPag.classList.add('swiper-pagination');
+                grpContainer.appendChild(swprPag);
+                swprPag =document.createElement('div');
+                swprPag.classList.add('swiper-button-next');
+                grpContainer.appendChild(swprPag);
+                swprPag =document.createElement('div');
+                swprPag.classList.add('swiper-button-prev');
+                grpContainer.appendChild(swprPag);
 
-            document.getElementsByClassName('selectone')[0].appendChild(grpContainer);
+                document.getElementsByClassName('selectone')[0].appendChild(grpContainer);
+            }
 
         </script>
     </div>
@@ -77,7 +79,7 @@
     <div class="saber-mas">
         <div class="title">¿Quieres Saber más?</div>
         <div class="item asesor">
-            <a href="">
+            <a href="/cotizador">
 
                 <div class="icon">
                     <img src="[[cdn_domain]]/css/porsche/images/asesor.png" alt="Asesor">
@@ -91,7 +93,7 @@
             </a>
         </div>
         <div class="item promos">
-            <a href="">
+            <a href="/promociones">
 
                 <div class="icon">
                     <img src="[[cdn_domain]]/css/porsche/images/promos.png" alt="Promociones">
@@ -105,7 +107,7 @@
             </a>
         </div>
         <div class="item ubicacion">
-            <a href="">
+            <a href="/nuestras-sedes">
 
                 <div class="icon">
                     <img src="[[cdn_domain]]/css/porsche/images/ubicacion.png" alt="Ubicación">
@@ -119,3 +121,45 @@
         </div>
     </div>
 </section>
+
+
+<!-- Swiper JS -->
+<script>
+
+    if (document.getElementById('cn_slider')) {
+        var swiper = new Swiper('#cn_slider', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+        });
+        [document.getElementsByClassName('web_content_item')].forEach (function (el) {
+            el.classList.add("swiper-slide");
+            el.classList.add("item");
+        });
+    }
+
+
+    if (document.getElementById('info-banners')) {
+        var swiper = new Swiper('#info-banners', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+        });
+    }
+</script>

@@ -27,6 +27,7 @@ $conf_headloca_address= "Calle Falsa 123";
 $conf_headloca_city= "Bogotá";
 $conf_headloca_state= "Cundinamarca";
 $conf_store_phone = '8889912';
+$conf_store_phone = '+28889912, wa: 3007653435';
 $css_deferred = (isset($css_deferred_inn)) ? "<style>{$css_deferred_inn}</style>" : '';
 $javascript = '<script type="text/javascript" src="https://cdn.totalcode.net/javascript/slick/slick.min.js"></script>';
 
