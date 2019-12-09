@@ -36,6 +36,20 @@ section.contenido {
         }
     }
 
+    .divisor {
+        width: 100%;
+        padding: 1.5em;
+        font-size: 2.4em;
+        text-align: center;
+        font-family: $ff-main;
+        background-color: #ddd;
+
+        .text {
+            font-family: $ff-text-light;
+            padding: 1em 0;
+            font-size: .6em;
+        }
+    }
     .content {
         padding: 3em;
         font-family: $ff-text-light;
@@ -73,6 +87,12 @@ section.contenido {
             height: auto;
             padding-left: 1em;
             max-height: 350px;
+
+            &.left {
+                float: left;
+                padding-left: 0;
+                padding-right: 1em;
+            }
         }
     }
 }

@@ -1776,10 +1776,17 @@ section.blog .blog-list {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 2em;
   grid-column-gap: 2em;
+}
+
+@media (max-width: 1280px) {
+  section.blog .blog-list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 1080px) {
@@ -1907,6 +1914,21 @@ section.contenido .banner img {
   height: auto;
 }
 
+section.contenido .divisor {
+  width: 100%;
+  padding: 1.5em;
+  font-size: 2.4em;
+  text-align: center;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #ddd;
+}
+
+section.contenido .divisor .text {
+  font-family: VW Text Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em 0;
+  font-size: .6em;
+}
+
 section.contenido .content {
   padding: 3em;
   font-family: VW Text Light, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -1945,6 +1967,12 @@ section.contenido .content img {
   height: auto;
   padding-left: 1em;
   max-height: 350px;
+}
+
+section.contenido .content img.left {
+  float: left;
+  padding-left: 0;
+  padding-right: 1em;
 }
 
 #go-to-top {
