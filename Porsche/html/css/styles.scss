@@ -94,6 +94,23 @@ ul, li {
     }
 }
 
+.success_div {
+    background-color: #83f58c;
+    padding: 1em;
+    margin: .3em 0;
+    border-radius: 5px;
+    font-family: $ff-main-light;
+    font-size: 1rem;
+}
+.error_box {
+    padding: 0 1em;
+    background-color: rgba(255, 0, 0, .5);
+    border-radius: 5px;
+    margin: .5em;
+    font-family: $ff-main-light;
+    font-size: 1rem;
+}
+
 .btn-secondary {
     text-align: center;
 

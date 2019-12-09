@@ -13,16 +13,111 @@ section.escribanos-view {
     form {
         padding-left: 2em;
         padding-top: 1em;
-        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 1em;
         line-height: 1em;
+        h1 {
+            display: none;
+        }
+        >p {
+            display: none;
+        }
+
+        ul.ul_formulario {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            @media (max-width: $screen-m) {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+
+            li {
+
+                
+                input, select, textarea {
+                    padding: .5em;
+                    font-family: $ff-main-light;
+                    border-radius: 5px;
+                    border: 1px solid #dddddd;
+                    width: 80%;
+                    margin-bottom: .5em;
+                }
+                input[type=checkbox] {
+                    width: unset;
+                    margin: 0 1em;
+                }
+                input.button_def {
+                    border: 0;
+                    font-family: $ff-main;
+                    padding: 1em;
+                }
+
+                &.li_forma {
+                    grid-column: 1;
+
+                    
+                    &#li_forma_37 {
+                        grid-row: 1;
+                    }
+                    &#li_forma_33 {
+                        grid-row: 2/5;
+                    }
+                    &#li_forma_34 {
+                        grid-row: 5/7;
+                    }
+
+                    &#li_forma_33, 
+                    &#li_forma_37, 
+                    &#li_forma_34 {
+                        grid-column: 2;
+
+                        @media (max-width: $screen-m) {
+                            grid-column: unset;
+                            grid-row: unset;
+                        }
+                    } 
+                    
+                    &#li_forma_33, 
+                    &#li_forma_34 {
+                        label {
+                            display: none;
+                        }
+                        div {
+                            
+                            div {
+                                line-height: 1em;
+                                font-size: .7em;
+                                padding: .5em 0;
+                                text-align: center;
+
+                            }
+                        }
+                    } 
+
+
+                }
+
+                &.li_last {
+                    grid-column: 1/-1;
+                    text-align: center;
+                    margin-top: 1em;
+                    input {
+                        max-width: 300px;
+                    }
+                }
+
+                p {
+                    font-family: $ff-main-light;
+                    font-size: .7em;
+                    line-height: 1em;
+                    text-align: justify;
+                }
+
+            }
+        }
         
 
-        @media (max-width: $screen-m) {
-            grid-template-columns: 1fr;
-            text-align: center;
-        }
+        
 
         >div {
             .input {
