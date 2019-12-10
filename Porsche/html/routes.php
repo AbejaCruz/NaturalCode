@@ -9,6 +9,7 @@ $paths=[
     'nuestras-sedes' => 'nuestras-sedes',
     'contactanos' => 'contactanos',
     'formularios' => 'formularios',
+    'posventa' => 'posventa',
     'auto-template' => 'auto-template',
     'blog' => 'blog',
     'blog-content' => 'blog-content',

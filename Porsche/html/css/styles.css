@@ -1632,7 +1632,6 @@ section.autos-view .content .main-banner .inner-form {
           backdrop-filter: blur(15px);
   padding: 1em;
   width: 30%;
-  height: 80%;
   max-height: 80%;
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.3);
@@ -1690,6 +1689,10 @@ section.autos-view .content .main-banner .inner-form input[type="checkbox"] {
 section.autos-view .content .main-banner .inner-form .btn, section.autos-view .content .main-banner .inner-form input[type="submit"] {
   margin: 1em auto;
   border: 0;
+}
+
+section.autos-view .content .main-banner .inner-form #para_checkbox_89, section.autos-view .content .main-banner .inner-form #para_checkbox_90 {
+  text-align: center;
 }
 
 section.autos-view .content .module {

@@ -66,7 +66,7 @@ section.autos-view {
                 backdrop-filter: blur(15px);
                 padding: 1em;
                 width: 30%;
-                height: 80%;
+                // height: 80%;
                 max-height: 80%;
                 overflow-y: auto;
                 background-color: rgba(255,255,255,.3);
@@ -113,6 +113,9 @@ section.autos-view {
                 .btn, input[type="submit"] {
                     margin: 1em auto;
                     border: 0;
+                }
+                #para_checkbox_89, #para_checkbox_90 {
+                    text-align: center;
                 }
             }
 
