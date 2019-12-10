@@ -95,20 +95,22 @@ ul, li {
 }
 
 .success_div {
-    background-color: #83f58c;
+    background-color: rgba(102, 222, 52, 0.8);
     padding: 1em;
     margin: .3em 0;
     border-radius: 5px;
-    font-family: $ff-main-light;
+    font-family: $ff-text;
     font-size: 1rem;
+    line-height: 1em;
 }
 .error_box {
     padding: 0 1em;
-    background-color: rgba(255, 0, 0, .5);
+    background-color: rgba(255, 40, 40, 0.8);
     border-radius: 5px;
     margin: .5em;
-    font-family: $ff-main-light;
+    font-family: $ff-text;
     font-size: 1rem;
+    line-height: 1em;
 }
 
 .btn-secondary {
