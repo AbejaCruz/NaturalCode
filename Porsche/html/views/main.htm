@@ -389,7 +389,8 @@
                             </a>
                         </div>
                         <div class="concesionario-logo">
-                            <img src="[[cdn_domain]]/css/porsche/images/reindustrias-logo.png" alt="Reindustras Logo">
+                            <img src="[[cdn_domain]]/css/porsche/images/logo_[[site_num]].png" alt="Reindustras Logo">
+                            <!-- <img src="[[cdn_domain]]/css/porsche/images/reindustrias-logo.png" alt="Reindustras Logo"> -->
                         </div>
                         <div class="nombre">
                             Reindustras S.A.
@@ -581,13 +582,63 @@
         else {
             document.getElementById('header-cta-whatsapp').style.display = 'none';
         }
-
-
-
-
-
     </script>
-
+    <script>
+        if(document.getElementsByClassName('lm-form')[0]){
+            var site_conce = {
+            "porsche": "1",
+            "casatoro": "2",
+            "autonal": "3",
+            "colwagen": "4"
+            };
+            var site = document.location.host.split(".")[0];
+            var site_num = site_conce[site];
+            var conce_array = {
+                "1": "61",
+                "2": "46",
+                "3": "35",
+                "4": "30"
+            };
+            var conce = conce_array[site_num];
+            var cities = get_cities(conce);
+            
+            var form_id = document.getElementsByName('form_id')[0].value;
+            var select_num_array = {
+                "1": "10",
+                "2": "21",
+                "3": "35",
+                "4": "47",
+                "5": "63",
+                "6": "76",
+                "7": "91",
+                "8": "102"
+            };
+            var select_num = "select_" + select_num_array[form_id];
+            document.getElementById(select_num).innerHTML = "";
+            for(var i = 0; i < cities.length; i ++){
+                var name = cities[i].split("|")[0];
+                console.log(name);
+                if( document.getElementById(select_num) ){
+                    document.getElementById(select_num).innerHTML += "<option value = \'cities[i]\'>" + name + "</option>";                             
+                }
+            }
+        
+            function get_cities(conce){
+                if(conce == "61"){
+                    return ["Bogotá|1"];
+                }
+                if(conce == "46"){
+                    return ["Bogotá|1", "Ibague|11", "Villavicencio|17"]
+                }
+                if(conce == "35"){
+                    return ["Bogotá|1"];
+                }
+                if(conce == "30"){
+                    return ["Bogotá|1", "Chia|10", "Cali|2"];
+                }
+            } 
+        }
+    </script>
 
 	[[javascript]]
     
