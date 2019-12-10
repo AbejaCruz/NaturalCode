@@ -8,7 +8,8 @@ $paths=[
     'test-drive' => 'drive',
     'nuestras-sedes' => 'nuestras-sedes',
     'contactanos' => 'contactanos',
-    'autos' => 'autos',
+    'formularios' => 'formularios',
+    'auto-template' => 'auto-template',
     'blog' => 'blog',
     'blog-content' => 'blog-content',
 ];

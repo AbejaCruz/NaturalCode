@@ -55,7 +55,8 @@ header.main-header{
                 }
             }
 
-            &.option{
+            &.option {
+
 
                 a {
                     width: 100%;
@@ -124,6 +125,10 @@ header.main-header{
                 box-shadow: 8px 2px 20px -9px rgba(0, 0, 0, 0.5);
                 border-left: 1px solid #dddddd;
                 transition: width .5s, opacity .3s;
+
+                .children-menu {
+                    left: calc(200px + #{$header-desktop-width});
+                }
 
                 .option {
                     border-top: 1px solid #dddddd;

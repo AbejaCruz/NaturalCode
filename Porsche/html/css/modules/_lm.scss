@@ -14,6 +14,11 @@ section.lm-form {
     .banner {
         grid-row: 1/2;
         overflow-x: hidden;
+        
+        @media (max-width: $screen-m) {
+            max-height: 60vh;
+            overflow: hidden;
+        }
 
         img {
             width: auto;
