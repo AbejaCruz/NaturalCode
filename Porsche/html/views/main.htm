@@ -56,12 +56,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/cotizar-repuestos">
+                    <a href="/cotizador">
                         Cotización
                     </a>
                 </li>
                 <li>
-                    <a href="/g/promociones">
+                    <a href="/promociones">
                         Promociones
                     </a>
                 </li>
@@ -584,60 +584,166 @@
         }
     </script>
     <script>
-        if(document.getElementsByClassName('lm-form')[0]){
-            var site_conce = {
-            "porsche": "1",
-            "casatoro": "2",
-            "autonal": "3",
-            "colwagen": "4"
-            };
-            var site = document.location.host.split(".")[0];
-            var site_num = site_conce[site];
-            var conce_array = {
-                "1": "61",
-                "2": "46",
-                "3": "35",
-                "4": "30"
-            };
-            var conce = conce_array[site_num];
-            var cities = get_cities(conce);
-            
-            var form_id = document.getElementsByName('form_id')[0].value;
-            var select_num_array = {
-                "1": "10",
-                "2": "21",
-                "3": "35",
-                "4": "47",
-                "5": "63",
-                "6": "76",
-                "7": "91",
-                "8": "102"
-            };
-            var select_num = "select_" + select_num_array[form_id];
-            document.getElementById(select_num).innerHTML = "";
-            for(var i = 0; i < cities.length; i ++){
-                var name = cities[i].split("|")[0];
-                console.log(name);
-                if( document.getElementById(select_num) ){
-                    document.getElementById(select_num).innerHTML += "<option value = \'cities[i]\'>" + name + "</option>";                             
-                }
-            }
+       if(document.getElementsByClassName('lm-form')[0]){
+        var site_conce = {
+        "porsche": "1",
+        "autonal":"1",
+        "casatoro": "2",
+        "colwagen": "3",
+        "autoblitz": "4",
+        "corautos": "5",
+        "autoland": "6",
+        "automotora": "7",
+        "calimamotor": "8",
+        "loscoches": "9",
+        "promotoresdeloriente": "10",
+        "germania": "11",
+        "autoberlin": "12",
+        "motorwagen": "13",
+        "Reindustrias": "14"
+        };
+        var site = document.location.host.split(".")[0];
+        var site_num = site_conce[site];
+        var cities = get_cities(site_num);
         
-            function get_cities(conce){
-                if(conce == "61"){
-                    return ["Bogotá|1"];
-                }
-                if(conce == "46"){
-                    return ["Bogotá|1", "Ibague|11", "Villavicencio|17"]
-                }
-                if(conce == "35"){
-                    return ["Bogotá|1"];
-                }
-                if(conce == "30"){
-                    return ["Bogotá|1", "Chia|10", "Cali|2"];
-                }
-            } 
+        var form_id = document.getElementsByName('form_id')[0].value;
+        var select_num_array = {
+            "1": "10",
+            "2": "21",
+            "3": "35",
+            "4": "47",
+            "5": "63",
+            "6": "76",
+            "7": "91",
+            "8": "102"
+        };
+        var select_num = "select_" + select_num_array[form_id];
+        document.getElementById(select_num).innerHTML = "";
+        var hidden = '';
+        for(var i = 0; i < cities.length; i ++){
+            var name = cities[i].split("|")[0];
+            console.log(name);
+            if( document.getElementById(select_num) ){
+                document.getElementById(select_num).innerHTML += "<option value = '"  + cities[i]+ "' " + hidden + ">" + name + "</option>";                             
+            }
         }
+        if(cities.length <= 1)
+            document.getElementById('li_forma_' + select_num_array[form_id]).hidden = true;
+    
+        function get_cities(conce){
+            var array;
+            switch (conce) {
+                case "1":
+                    array = ["Bogotá - Avenida Boyaca|37", "Bogotá - Autopista norte|35"];
+                    break;
+                case "2":
+                    array = ["Bogotá - calle 170|1", "Bogotá - Puente Aranda|2", "Ibagué|46", "Pasto|47", "Villavicencio|39"];
+                    break;
+                case "3":
+                    array = ["Bogotá - calle 100|28", "Bogotá - calle 140|2", "Cali|73", "Chia|32"];
+                    break;
+                case "4":
+                    array = ["Bogotá - calle 109|64", "Bogotá - Morato|26", "Bogotá - Centro Mayor|27"];
+                    break;
+                case "5":
+                    array = ["Bogotá|80", "Medellin|79"];
+                    break; 
+                case "6":
+                    array = ["Bogotá|61"];
+                    break; 
+                case "7":
+                    array = [];
+                    break; 
+                case "8":
+                    array = ["Cali|18"];
+                    break; 
+                case "9":
+                    array = ["Bogotá|3", "Manizales|41", "Armenia|40", "Pereira|42"];
+                    break;  
+                case "10":
+                    array = ["Bucaramanga|83"];
+                    break;   
+                case "11":
+                    array = ["Medellin|5"];
+                    break; 
+                case "12":
+                    array = ["Barranquilla|7", "Cartagena|8"];
+                    break; 
+                case "13":
+                    array = ["Cali|19"];
+                    break; 
+                case "14":
+                    array = ["Neiva|45"];
+                    break;          
+            }
+            return array;
+        } 
+    //Validar modelos
+        var models = {
+            "cross up!": "177",
+            "gol": "178",
+            "voyage": "179",
+            "crossfox": "180",
+            "beetle": "181",
+            "golf": "182",
+            "golf gti": "183",
+            "jetta": "184",
+            "jetta gli": "185",
+            "tiguan": "186",
+            "passat": "187",
+            "saveiro plus": "188",
+            "saveiro_cs": "189",
+            "saveiro cross": "190",
+            "golf sportwagen": "191",
+            "jetta tsi": "192",
+            "fox xtreme": "193",
+            "touareg": "194",
+            "virtus": "195",
+            "t cross": "196",
+            "Polo": "197"
+        };
+        
+        var show = '';
+        var search = document.location.pathname.split("/p/")[1];        
+        if(search){
+            search = search.replace("/", "").replace(/-/g, " ");
+            search = search.replace(/[0-9]+/, "");
+            search = search.trim();
+            search = search.toLowerCase();
+            var patron = search.replace(" ", ")|(");
+            var select_models_array = {
+                "1": "6",
+                "2": "17",
+                "3": "31",
+                "4": "43",
+                "5": "59",
+                "6": "72",
+                "7": "87",
+                "8": "98"
+            };
+            var select_num = "select_" + select_models_array[form_id];
+            document.getElementById(select_num).innerHTML = "";
+            var hidden = '';
+            var cont = 0;
+            var show = '';
+            for (const property in models) {
+                cont ++;
+                var ExpReg = new RegExp(".*(" + patron + ").*");
+                if(property.search(ExpReg) >= 0){
+                    show = property + "|" + models[property];
+                    console.log(show);
+                    if(document.getElementById(select_num)){
+                        document.getElementById(select_num).innerHTML += "<option value = '"  + show + "'>" + property + "</option>"; 
+                    }
+                }                
+            }
+            console.log(cont);
+            if(cont <= 1)
+                document.getElementById('li_forma_' + select_models_array[form_id]).hidden = true;
+            
+            console.log(show);
+        }
+    }
     </script>
 
 	[[javascript]]
