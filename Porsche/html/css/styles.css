@@ -1083,9 +1083,10 @@ main#main-content section.home-header .concesionario .logo img {
 
 @media (max-width: 720px) {
   main#main-content section.home-header .concesionario .logo img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     margin: auto;
+    max-height: 60px;
   }
 }
 

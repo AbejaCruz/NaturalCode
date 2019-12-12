@@ -305,9 +305,10 @@ main#main-content {
                     display: block;
 
                     @media (max-width: $screen-m) {
-                        width: 100%;
-                        height: auto;
+                        width: auto;
+                        height: 100%;
                         margin: auto;
+                        max-height: 60px;
                     }
                 }
                 .nombre {
