@@ -376,7 +376,6 @@
                     <ul class="children-menu" id="ver-mas-menu"></ul>
                 </li>
             </ul>
-            <div class="vm">Hola</div>
         </header>
         <main id="main-content">
             <div id="page-top"></div>
@@ -545,7 +544,7 @@
                     
                     console.log(headElementsQty);
                     console.log(head.childNodes[(headElementsQty)]);
-                    $('#ver-mas-menu').append( head.children[(headElementsQty -2)]  );
+                    $('#ver-mas-menu').prepend( head.children[(headElementsQty -2)]  );
                 }
             }
         // });
