@@ -271,6 +271,14 @@ header.main-header ul li:hover .children-menu {
   opacity: 1;
 }
 
+header.main-header ul li.option#ver-mas-option {
+  display: none;
+}
+
+header.main-header ul li.option#ver-mas-option.active {
+  display: block;
+}
+
 header.main-header ul li.option a {
   width: 100%;
   height: 100%;
@@ -347,8 +355,17 @@ header.main-header ul li .children-menu {
   transition: width .5s, opacity .3s;
 }
 
-header.main-header ul li .children-menu .children-menu {
+header.main-header ul li .children-menu li .children-menu {
   left: calc(200px + 100px);
+  max-width: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+}
+
+header.main-header ul li .children-menu li:hover .children-menu {
+  max-width: 200px;
+  opacity: 1;
 }
 
 header.main-header ul li .children-menu .option {

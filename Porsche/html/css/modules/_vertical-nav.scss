@@ -56,7 +56,13 @@ header.main-header{
             }
 
             &.option {
+                &#ver-mas-option {
+                    display: none;
 
+                    &.active {
+                        display: block;
+                    }
+                }
 
                 a {
                     width: 100%;
@@ -126,8 +132,24 @@ header.main-header{
                 border-left: 1px solid #dddddd;
                 transition: width .5s, opacity .3s;
 
-                .children-menu {
-                    left: calc(200px + #{$header-desktop-width});
+               
+
+               
+                li {
+                    .children-menu {
+                        left: calc(200px + #{$header-desktop-width});
+                        max-width: 0;
+                        transition: .3s;
+                        opacity: 0;
+
+                    }
+
+                    &:hover {
+                        .children-menu {
+                            max-width: 200px;
+                            opacity: 1;
+                        }
+                    } 
                 }
 
                 .option {

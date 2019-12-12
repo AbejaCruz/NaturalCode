@@ -360,7 +360,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="option">
+                <li class="option" id="ver-mas-option">
                     <a href="">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 32.055 32.055" style="enable-background:new 0 0 32.055 32.055;" xml:space="preserve">
@@ -526,8 +526,6 @@
     </div>
 
     <script>
-        // $( document ).ready(function() {
-
 
             $( window ).resize( resizeMenu );
             $().ready(resizeMenu);
@@ -536,18 +534,31 @@
                 var head = document.getElementById("main-header-ul");
                 var headElementsQty = head.childElementCount;
 
-                let menuHeight = ((headElementsQty - 2) * 75 + 200);
-                // $( "#log" ).append( "<div>Handler for .resize() called.</div>" );
-                if ($(window).height() < menuHeight) {
-                    console.log (head.childs);
-                    console.log(menuHeight);
-                    
-                    console.log(headElementsQty);
-                    console.log(head.childNodes[(headElementsQty)]);
-                    $('#ver-mas-menu').prepend( head.children[(headElementsQty -2)]  );
+                let menuHeight = $('#main-header-ul').height();
+                let windowHeight = $(window).height();
+                let verMasMenu = document.getElementById('ver-mas-menu');
+
+                console.log(windowHeight - menuHeight);
+
+                while (menuHeight > windowHeight) {
+                    document.getElementById('ver-mas-option').classList.add('active');
+                    $('#ver-mas-menu').prepend( head.children[(head.childElementCount -2)]  );
+                    windowHeight = $(window).height();
+                    menuHeight = $('#main-header-ul').height();
+                }
+                while ((windowHeight - menuHeight) >= 75 && document.getElementById('ver-mas-menu').childElementCount > 0) {
+                    if ( verMasMenu.childElementCount > 0) {
+                        document.getElementById('main-header-ul').insertBefore(
+                        verMasMenu.children[0], document.getElementById('main-header-ul').children[(head.childElementCount -1)]);
+                    }
+                    windowHeight = $(window).height();
+                    menuHeight = $('#main-header-ul').height();
+                }
+
+                if ( verMasMenu.childElementCount == 0) {
+                    document.getElementById('ver-mas-option').classList.remove('active');
                 }
             }
-        // });
         
     </script>
 
@@ -586,21 +597,21 @@
     <script>
        if(document.getElementsByClassName('lm-form')[0]){
         var site_conce = {
-        "porsche": "1",
-        "autonal":"1",
-        "casatoro": "2",
-        "colwagen": "3",
-        "autoblitz": "4",
-        "corautos": "5",
-        "autoland": "6",
-        "automotora": "7",
-        "calimamotor": "8",
-        "loscoches": "9",
-        "promotoresdeloriente": "10",
-        "germania": "11",
-        "autoberlin": "12",
-        "motorwagen": "13",
-        "Reindustrias": "14"
+            "porsche": "1",
+            "autonal":"1",
+            "casatoro": "2",
+            "colwagen": "3",
+            "autoblitz": "4",
+            "corautos": "5",
+            "autoland": "6",
+            "automotora": "7",
+            "calimamotor": "8",
+            "loscoches": "9",
+            "promotoresdeloriente": "10",
+            "germania": "11",
+            "autoberlin": "12",
+            "motorwagen": "13",
+            "Reindustrias": "14"
         };
         var site = document.location.host.split(".")[0];
         var site_num = site_conce[site];
