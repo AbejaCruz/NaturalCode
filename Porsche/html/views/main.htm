@@ -46,7 +46,7 @@
 </head>
 
 <body>
-    <div class="spin-wrapper">
+    <div id="laoder-spinner" class="spin-wrapper" style="background-image: url(/css/porsche/images/vw-logo.png);">
         <div class="spinner">
         </div>
     </div>
@@ -1422,7 +1422,13 @@
 
         </script>
 
-	[[javascript]]
+    [[javascript]]
+    
+    <script>
+        $( document ).ready ( function () {
+            document.getElementById('laoder-spinner').style.display = 'none';
+        } );
+    </script>
     
 </body>
 
