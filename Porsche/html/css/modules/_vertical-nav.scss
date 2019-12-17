@@ -36,6 +36,7 @@ header.main-header{
             padding: 0;
             border-top: 1px solid #dddddd;
 
+
             &.main-logo {
                 border-top: 0;
                 height: 126px;
@@ -56,6 +57,8 @@ header.main-header{
             }
 
             &.option {
+                display: none;
+
                 &#ver-mas-option {
                     display: none;
 

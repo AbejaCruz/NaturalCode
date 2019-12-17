@@ -93,7 +93,6 @@
                 <div class="text">¿Cómo llegar?</div>
                 <div class="link">
                     Ubicación
-                    [[html_block(maikitol)]]
                 </div>
             </a>
         </div>
@@ -118,8 +117,8 @@
         }
         });
         [document.getElementsByClassName('web_content_item')].forEach (function (el) {
-            el.classList.add("swiper-slide");
-            el.classList.add("item");
+            el[0].classList.add("swiper-slide");
+            el[0].classList.add("item");
         });
     }
 

@@ -346,6 +346,10 @@ header.main-header ul li:hover .children-menu {
   opacity: 1;
 }
 
+header.main-header ul li.option {
+  display: none;
+}
+
 header.main-header ul li.option#ver-mas-option {
   display: none;
 }
@@ -1111,7 +1115,7 @@ main#main-content section.home-header .concesionario .logo {
   background-color: #ffffff;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 86px;
+  height: 50px;
   padding: .1em 1em;
   padding-top: 9px;
 }
@@ -1144,12 +1148,19 @@ main#main-content section.home-header .concesionario .logo .vw-logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 main#main-content section.home-header .concesionario .logo img {
   width: auto;
-  height: 70px;
+  height: 59px;
   padding: .2em;
   text-align: left;
   margin: 0 auto;
@@ -1159,9 +1170,9 @@ main#main-content section.home-header .concesionario .logo img {
 @media (max-width: 720px) {
   main#main-content section.home-header .concesionario .logo img {
     width: auto;
-    height: 100%;
+    height: 80%;
     margin: auto;
-    max-height: 60px;
+    max-height: 43px;
   }
 }
 
@@ -1734,7 +1745,7 @@ section.autos-view .content .main-banner .inner-form {
   section.autos-view .content .main-banner .inner-form {
     position: relative;
     left: 0;
-    width: 80%;
+    width: 100%;
     padding: 3em;
     max-height: unset;
   }
@@ -1751,6 +1762,7 @@ section.autos-view .content .main-banner .inner-form li {
 section.autos-view .content .main-banner .inner-form p {
   font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 1em;
+  font-size: .7em;
 }
 
 section.autos-view .content .main-banner .inner-form input,
@@ -1769,7 +1781,7 @@ section.autos-view .content .main-banner .inner-form select {
 @media (max-width: 720px) {
   section.autos-view .content .main-banner .inner-form input,
   section.autos-view .content .main-banner .inner-form select {
-    margin: 0 auto;
+    margin: 0;
   }
 }
 

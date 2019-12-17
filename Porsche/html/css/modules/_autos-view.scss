@@ -74,7 +74,7 @@ section.autos-view {
                 @media (max-width: $screen-m) {
                     position: relative;
                     left: 0;
-                    width: 80%;
+                    width: 100%;
                     padding: 3em;
                     max-height: unset;
                 }
@@ -88,11 +88,12 @@ section.autos-view {
                 p {
                     font-family: $ff-main-light;
                     line-height: 1em;
+                    font-size: .7em;
                 }
                 input,
                 select {
                     @media (max-width: $screen-m) {
-                        margin: 0 auto;
+                        margin: 0;
                     }
 
                     font-size: inherit;
