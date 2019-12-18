@@ -24,16 +24,19 @@ section.lm-form {
     .banner {
         grid-row: 1/2;
         overflow: hidden;
-        display: none;
         width: 100%;
+
         @media(max-width: $screen-m) {
             display: block;
             width: 100%;
         }
 
         img {
+            position: absolute;
+            width: 100%;
+            height: auto;
             @media(max-width: $screen-m) {
-                width: 100%;
+                position: relative;
                 height: auto;
                 display: block;
                 max-height: 75vh;
@@ -51,7 +54,7 @@ section.lm-form {
             grid-row: 2;
             // text-align: center;
             input {
-                // margin: 0 auto;
+                margin: 0 auto;
             }
         }
         @media (max-width: $screen-m) {
@@ -91,10 +94,11 @@ section.lm-form {
 
                 p {
                     font-family: $ff-text-light;
-                    font-size: .9em;
+                    font-size: .75em;
                     line-height: 1em;
                     // margin-bottom: 1em;
                     text-align: justify;
+                    margin: .5em;
                 }
 
                 label {
