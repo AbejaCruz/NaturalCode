@@ -792,7 +792,6 @@ section.lm-form .banner {
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   overflow: hidden;
-  display: none;
   width: 100%;
 }
 
@@ -803,9 +802,15 @@ section.lm-form .banner {
   }
 }
 
+section.lm-form .banner img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 720px) {
   section.lm-form .banner img {
-    width: 100%;
+    position: relative;
     height: auto;
     display: block;
     max-height: 75vh;
@@ -825,6 +830,9 @@ section.lm-form .formulario {
     grid-column: 1;
     -ms-grid-row: 2;
     grid-row: 2;
+  }
+  section.lm-form .formulario input {
+    margin: 0 auto;
   }
 }
 
@@ -1115,7 +1123,7 @@ main#main-content section.home-header .concesionario .logo {
   background-color: #ffffff;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 50px;
+  height: 87px;
   padding: .1em 1em;
   padding-top: 9px;
 }
