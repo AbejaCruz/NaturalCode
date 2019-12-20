@@ -83,6 +83,11 @@ ul, li {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.btn.block, .button_def.block {
+  display: block;
+  margin: 0 auto;
+}
+
 .btn:hover, .button_def:hover {
   border: 1px solid #0068aa;
   background-color: #0068aa;
@@ -803,9 +808,10 @@ section.lm-form .banner {
 }
 
 section.lm-form .banner img {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: auto;
+  z-index: -1;
 }
 
 @media (max-width: 720px) {
@@ -813,7 +819,8 @@ section.lm-form .banner img {
     position: relative;
     height: auto;
     display: block;
-    max-height: 75vh;
+    max-height: 60vh;
+    z-index: unset;
   }
 }
 
@@ -872,6 +879,8 @@ section.lm-form .formulario form {
 @media (max-width: 720px) {
   section.lm-form .formulario form {
     width: 95%;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
 }
 
@@ -881,9 +890,10 @@ section.lm-form .formulario form .li_forma {
 
 section.lm-form .formulario form .li_forma p {
   font-family: VW Text Light, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .9em;
+  font-size: .75em;
   line-height: 1em;
   text-align: justify;
+  margin: .5em;
 }
 
 section.lm-form .formulario form .li_forma label {
@@ -956,6 +966,7 @@ footer#main-footer {
   max-width: 1280px;
   margin: 0 auto;
   font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
 }
 
 @media (max-width: 720px) {
@@ -1107,15 +1118,15 @@ main#main-content section.home-header .concesionario {
   text-align: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 350px auto 25%;
-      grid-template-columns: 350px auto 25%;
+  -ms-grid-columns: 380px auto 25%;
+      grid-template-columns: 380px auto 25%;
   grid-column-gap: 2em;
 }
 
 @media (max-width: 850px) {
   main#main-content section.home-header .concesionario {
-    -ms-grid-columns: 350px auto;
-        grid-template-columns: 350px auto;
+    -ms-grid-columns: 380px auto;
+        grid-template-columns: 380px auto;
   }
 }
 
