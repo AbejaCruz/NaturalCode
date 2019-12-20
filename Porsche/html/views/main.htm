@@ -412,10 +412,10 @@
                     </div>
                     <div class="locacion">
                         <div class="direccion">
-                            [[conf_headloca_address]]
+                                [[html_block(__concesionario_direccion)]]
                         </div>
                         <div class="ciudad">
-                            [[conf_headloca_city]], [[conf_headloca_state]]
+                                [[html_block(__concesionario_ciudad)]]
                         </div>
                     </div>
                     <div class="contacto">
@@ -444,16 +444,16 @@
                                     </svg>
                             </div>
                             <div class="texto">
-                                WhatsApp
+                                [[html_block(__concesionario_whatsapp)]]
                             </div>
                         </a>
-                        <a href="tel:" class="btn-secondary" id="header-cta-phone">
+                        <a href="tel:[[html_block(telefono)]]" class="btn-secondary" id="header-cta-phone">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
                             </div>
 
                             <div class="texto">
-                                [[html_block(telefono)]]
+                                [[html_block(__concesionario_telefono)]]
                             </div>
                         </a>
                     </div>
@@ -512,9 +512,6 @@
                 let menuHeight = $('#main-header-ul').height();
                 let windowHeight = $(window).height();
                 let verMasMenu = document.getElementById('ver-mas-menu');
-        
-                console.log(menuHeight);
-
         
                 while (menuHeight > windowHeight) {
                     document.getElementById('ver-mas-option').classList.add('active');
@@ -1248,10 +1245,14 @@
                 document.getElementById('header-cta-whatsapp').setAttribute('href', 'https://api.whatsapp.com/send?phone=+57' + siteInfo.whatsapp + '&text=');
                 document.getElementById('header-cta-whatsapp').style.display = 'block';
             }
-            if (siteInfo.telefono) {
-                document.getElementById('header-cta-phone').setAttribute('href', 'tel:' + siteInfo.telefono);
-                document.getElementById('header-cta-phone').style.display = 'block';
-                document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML = siteInfo.telefono;
+            if (document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML) {
+            // if (siteInfo.telefono) {
+                // document.getElementById('header-cta-phone').setAttribute('href', 'tel:' + siteInfo.telefono);
+                // document.getElementById('header-cta-phone').style.display = 'block';
+                // document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML = siteInfo.telefono;
+
+                document.getElementById('header-cta-phone').setAttribute('href', 'tel:' + document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML);
+                document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML
             }
             else {
                 document.getElementById('header-cta-phone').style.display = 'none';
