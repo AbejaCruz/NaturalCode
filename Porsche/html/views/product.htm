@@ -1,4 +1,12 @@
 <section class="autos-view">
+    
+    <script src="/css/porsche/lg/js/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="/css/porsche/lg/js/lg-thumbnail.min.js"></script>
+    <script src="/css/porsche/lg/js/lg-fullscreen.min.js"></script>
+
+
     <div class="autos-header">
         <h1>[[product_name]]</h1>
         <nav>
@@ -29,3 +37,7 @@
     </div>
     [[product_specs]]
 </section>
+<script type="text/javascript">
+    if (document.getElementById('galeria-exterior')) lightGallery(document.getElementById('galeria-exterior')); 
+    if (document.getElementById('galeria-interior')) lightGallery(document.getElementById('galeria-interior')); 
+</script>
