@@ -772,13 +772,6 @@ header.main-header ul li .children-menu .option {
   margin-top: 1em;
 }
 
-.pr_slides .slick-slider {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  margin: 0 auto;
-}
-
 .pr_slides .slick-slide {
   text-align: center;
   max-width: 300px;
