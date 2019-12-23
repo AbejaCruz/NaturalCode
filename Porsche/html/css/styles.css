@@ -173,6 +173,7 @@ ul, li {
   position: fixed;
   overflow: scroll;
   font-size: 1.2em;
+  z-index: 9999;
 }
 
 @media (max-width: 720px) {
@@ -1460,6 +1461,41 @@ section.home-content .main-banner img {
   height: auto;
 }
 
+section.home-content #home_small_banners {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-column-gap: 2em;
+  margin: 3em 0;
+}
+
+section.home-content #home_small_banners a {
+  padding: 1em;
+  text-align: center;
+  padding: 1em;
+  text-align: center;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+section.home-content #home_small_banners a:hover {
+  -webkit-box-shadow: 0 0 2px 2px rgba(77, 168, 226, 0.3);
+          box-shadow: 0 0 2px 2px rgba(77, 168, 226, 0.3);
+}
+
+section.home-content #home_small_banners a img {
+  width: 100%;
+  height: auto;
+}
+
+section.home-content #home_small_banners a .banner-text {
+  font-size: 1.4em;
+  line-height: 1em;
+}
+
 section.home-content .page-content {
   margin: 0 auto;
   max-width: 1180px;
@@ -1516,6 +1552,10 @@ section.home-content .page-content .formulario-contacto-home form ul.ul_formular
   padding: .3em;
 }
 
+section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li input[type=checkbox] {
+  margin: 0 1em;
+}
+
 @media (max-width: 720px) {
   section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li input[type=text], section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li select {
     width: 80%;
@@ -1536,6 +1576,11 @@ section.home-content .page-content .formulario-contacto-home form ul.ul_formular
 section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li #para_checkbox_8,
 section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li #para_checkbox_9 {
   text-align: center;
+}
+
+section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li.li_last input {
+  display: block;
+  margin: .3em auto;
 }
 
 section.home-content .page-content .formulario-contacto-home form input, section.home-content .page-content .formulario-contacto-home form select {
@@ -1703,6 +1748,7 @@ section.home-content .saber-mas .item .link {
   margin-top: 2em;
   margin-bottom: 1em;
   line-height: 1em;
+  color: #0099da;
 }
 
 @media (max-width: 720px) {
@@ -1810,12 +1856,6 @@ section.autos-view .autos-header nav {
   display: block;
 }
 
-@media (max-width: 720px) {
-  section.autos-view .autos-header nav {
-    display: none;
-  }
-}
-
 section.autos-view .autos-header nav ul {
   width: 100%;
 }
@@ -1834,6 +1874,12 @@ section.autos-view .autos-header nav ul li a {
 
 section.autos-view .autos-header nav ul li:hover {
   color: #ffffff;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .autos-header nav ul li:hover {
+    color: #0099da;
+  }
 }
 
 section.autos-view .content {
@@ -1874,6 +1920,9 @@ section.autos-view .content .main-banner .inner-form {
     width: 100%;
     padding: 3em;
     max-height: unset;
+    background: #ffffff;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
 }
 

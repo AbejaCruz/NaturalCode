@@ -23,7 +23,6 @@ section.autos-view {
             display: block;
 
             @media (max-width: $screen-m) {
-                display: none;
             }
 
             ul {
@@ -40,8 +39,14 @@ section.autos-view {
                         display: inherit;
                     }
 
+
+
                     &:hover {
                         color: $font-contrast-color;
+
+                        @media(max-width: $screen-m) {
+                            color: $color-main;
+                        }
                     }
                 }
             }
@@ -81,6 +86,8 @@ section.autos-view {
                     width: 100%;
                     padding: 3em;
                     max-height: unset;
+                    background: #ffffff;
+                    backdrop-filter: none;
                 }
                 h1 {
                     line-height: 1em;

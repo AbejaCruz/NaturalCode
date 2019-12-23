@@ -76,7 +76,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/concesionario" id="mobile-menu-concesionario">
+                    <a href="#" id="mobile-menu-concesionario">
                         Concesionario
                     </a>
                     <ul>
@@ -1249,18 +1249,39 @@
                 if (document.getElementById('mobile-menu-pagos')) document.getElementById('mobile-menu-pagos').setAttribute('href', siteInfo.menuItems.pagos);
             }
 
-            if (siteInfo.whatsapp) {
+            if (siteInfo.whatsapp && !document.getElementById('header-cta-whatsapp').getElementsByClassName('texto')[0].innerHTML.trim()) {
                 document.getElementById('header-cta-whatsapp').setAttribute('href', 'https://api.whatsapp.com/send?phone=+57' + siteInfo.whatsapp + '&text=');
                 document.getElementById('header-cta-whatsapp').style.display = 'block';
             }
-            if (document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML) {
-            // if (siteInfo.telefono) {
-                // document.getElementById('header-cta-phone').setAttribute('href', 'tel:' + siteInfo.telefono);
-                // document.getElementById('header-cta-phone').style.display = 'block';
-                // document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML = siteInfo.telefono;
+            else if (document.getElementById('header-cta-whatsapp').getElementsByClassName('texto')[0].innerHTML) {
+                var elx = $("#header-cta-whatsapp .texto")
+                .clone() 
+                .remove()   
+                .text().trim();
+                document.getElementById('header-cta-whatsapp').setAttribute('href', 'https://api.whatsapp.com/send?phone=+57' + elx + '&text=');
+                document.getElementById('header-cta-whatsapp').getElementsByClassName('texto').innerHTML = 'WhatsApp';
 
-                document.getElementById('header-cta-phone').setAttribute('href', 'tel:' + document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML);
-                document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML
+
+            }
+            else {
+                document.getElementById('header-cta-whatsapp').style.display = 'none';
+            }
+
+
+            if (siteInfo.phone && !document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML.trim()) {
+                document.getElementById('header-cta-phone').setAttribute('href', 'tel:' + siteInfo.phone );
+                document.getElementById('header-cta-phone').style.display = 'block';
+            }
+            else if (document.getElementById('header-cta-phone').getElementsByClassName('texto')[0].innerHTML) {
+                var elx = $("#header-cta-phone .texto")
+                .clone() 
+                .remove()   
+                .text().trim();
+                document.getElementById('header-cta-phone').setAttribute('href', 'tel:' + elx);
+                document.getElementById('header-cta-phone').getElementsByClassName('texto').innerHTML = elx;
+                document.getElementById('header-cta-phone').style.display = 'block';
+
+
             }
             else {
                 document.getElementById('header-cta-phone').style.display = 'none';
