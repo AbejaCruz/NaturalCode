@@ -600,6 +600,9 @@ header.main-header ul li .children-menu .option {
   .slick-prev, .slick-next {
     opacity: .7;
   }
+  .slick-prev:hover, .slick-prev:active, .slick-next:hover, .slick-next:active {
+    opacity: 1;
+  }
 }
 
 .destacados .slick-prev, .destacados .slick-next {
@@ -787,6 +790,7 @@ header.main-header ul li .children-menu .option {
 .pr_slides .slick-slide:hover, .pr_slides .slick-slide:active {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 .pr_slides .slick-slide .in_stock {

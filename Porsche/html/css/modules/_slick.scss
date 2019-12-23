@@ -110,6 +110,10 @@
 
     @media (max-width: $screen-m) {
         opacity: .7;
+
+        &:hover, &:active {
+            opacity: 1;
+        }
     }
 }
 
@@ -293,6 +297,7 @@
 
         &:hover, &:active {
             box-shadow: none;
+            outline: none;
         }
 
         .in_stock {
