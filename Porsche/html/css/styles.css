@@ -772,6 +772,13 @@ header.main-header ul li .children-menu .option {
   margin-top: 1em;
 }
 
+.pr_slides .slick-slider {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 0 auto;
+}
+
 .pr_slides .slick-slide {
   text-align: center;
   max-width: 300px;
@@ -779,6 +786,14 @@ header.main-header ul li .children-menu .option {
   -webkit-box-shadow: rgba(148, 148, 148, 0.2) 0px 0px 10px 3px;
           box-shadow: rgba(148, 148, 148, 0.2) 0px 0px 10px 3px;
   border-radius: 12px;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding: 1em .5em;
+}
+
+.pr_slides .slick-slide:hover, .pr_slides .slick-slide:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .pr_slides .slick-slide .in_stock {
@@ -792,7 +807,7 @@ header.main-header ul li .children-menu .option {
 }
 
 .pr_slides .slick-slide .product-name {
-  font-size: 1.1em;
+  font-size: 1.3em;
   line-height: 1em;
   padding: .3em 0;
 }
@@ -1502,6 +1517,8 @@ section.home-content .page-content .formulario-contacto-home form ul.ul_formular
 section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li p {
   font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: .5em 0;
+  font-size: .75em;
+  line-height: 1em;
 }
 
 section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li #label_8, section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li #label_9 {
