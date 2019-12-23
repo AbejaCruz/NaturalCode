@@ -124,11 +124,21 @@ ul, li {
         height: 3em;
         margin: auto;
         transition: .3s;
+
+        @media (max-width: $screen-m) {
+            padding: .5em;
+            width: 2em;
+            height: 2em;
+        }
+
         svg {
             
             height: 1.5em;
             width: auto;
             fill: $font-contrast-color;
+            @media (max-width: $screen-m) {
+                height: 1em;
+            }
         }
     }
     
@@ -285,7 +295,7 @@ main#main-content {
         position: relative;
 
         @media (max-width: $screen-m) {
-            padding-top: 154px;
+            padding-top: 99px;
         }
 
         >section {
@@ -335,7 +345,8 @@ main#main-content {
                     grid-column: 1/-1;
                     display: grid;
                     grid-template-columns: 60px auto 60px;
-                    width: 100vw;                    
+                    width: 100vw;
+                    height: 60px;             
                 }
                 
 
@@ -488,11 +499,15 @@ main#main-content {
                 background-color: $color-main;
                 font-family: $ff-main-light;
                 line-height: 1.4em;
+                width: 100vw;
 
                 @media (max-width: $screen-m) {
                     padding: .7em 0;
                     grid-column: 1/-1;
 
+                    .texto {
+                        display: none;
+                    }
                 }
             }
         }

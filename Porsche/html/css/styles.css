@@ -131,10 +131,24 @@ ul, li {
   transition: .3s;
 }
 
+@media (max-width: 720px) {
+  .btn-secondary .icon {
+    padding: .5em;
+    width: 2em;
+    height: 2em;
+  }
+}
+
 .btn-secondary .icon svg {
   height: 1.5em;
   width: auto;
   fill: #ffffff;
+}
+
+@media (max-width: 720px) {
+  .btn-secondary .icon svg {
+    height: 1em;
+  }
 }
 
 .btn-secondary:hover .icon, .btn-secondary:active .icon {
@@ -577,6 +591,12 @@ header.main-header ul li .children-menu .option {
   z-index: 99;
 }
 
+@media (max-width: 720px) {
+  .slick-prev, .slick-next {
+    opacity: .7;
+  }
+}
+
 .destacados .slick-prev, .destacados .slick-next {
   top: 40%;
 }
@@ -743,12 +763,12 @@ header.main-header ul li .children-menu .option {
 }
 
 .pr-slides .product-carousel-item.slick-slide.slick-active {
-  text-align: center;
   border-radius: 10px;
   margin-top: 1em;
 }
 
 .pr-slides .slick-slide {
+  text-align: center;
   max-width: 300px;
   margin: 1em;
   -webkit-box-shadow: rgba(148, 148, 148, 0.2) 0px 0px 10px 3px;
@@ -756,9 +776,47 @@ header.main-header ul li .children-menu .option {
   border-radius: 12px;
 }
 
+.pr-slides .slick-slide .in_stock {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .pr-slides .slick-slide {
+    padding: 1em;
+  }
+}
+
+.pr-slides .slick-slide .product-name {
+  font-size: 1.1em;
+  line-height: 1em;
+  padding: .3em 0;
+}
+
+.pr-slides .slick-slide .in_stock {
+  display: none;
+}
+
+.pr-slides .slick-slide .product-price {
+  color: #999;
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.pr-slides .slick-slide .product-price::before {
+  content: 'Desde: ';
+}
+
 .slick-slide img {
   width: 100%;
   height: auto;
+}
+
+@media (720px) {
+  .slick-arrow .slick-prev {
+    left: 0;
+  }
+  .slick-arrow .slick-next {
+    right: 0;
+  }
 }
 
 section.lm-form {
@@ -881,9 +939,10 @@ section.lm-form .formulario form .li_forma {
 
 section.lm-form .formulario form .li_forma p {
   font-family: VW Text Light, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .9em;
+  font-size: .75em;
   line-height: 1em;
   text-align: justify;
+  margin: .5em;
 }
 
 section.lm-form .formulario form .li_forma label {
@@ -1076,7 +1135,7 @@ main#main-content > #web-content {
 
 @media (max-width: 720px) {
   main#main-content > #web-content {
-    padding-top: 154px;
+    padding-top: 99px;
   }
 }
 
@@ -1138,6 +1197,7 @@ main#main-content section.home-header .concesionario .logo {
     -ms-grid-columns: 60px auto 60px;
         grid-template-columns: 60px auto 60px;
     width: 100vw;
+    height: 60px;
   }
 }
 
@@ -1343,12 +1403,16 @@ main#main-content section.home-header .concesionario .contacto {
   background-color: #0099da;
   font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 1.4em;
+  width: 100vw;
 }
 
 @media (max-width: 720px) {
   main#main-content section.home-header .concesionario .contacto {
     padding: .7em 0;
     grid-column: 1/-1;
+  }
+  main#main-content section.home-header .concesionario .contacto .texto {
+    display: none;
   }
 }
 
@@ -1405,9 +1469,24 @@ section.home-content .page-content .formulario-contacto-home form ul.ul_formular
       justify-content: space-around;
 }
 
+@media (max-width: 720px) {
+  section.home-content .page-content .formulario-contacto-home form ul.ul_formulario {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li {
   text-align: left;
   padding: .3em;
+}
+
+@media (max-width: 720px) {
+  section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li input[type=text], section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li select {
+    width: 80%;
+  }
 }
 
 section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li p {
@@ -1581,12 +1660,14 @@ section.home-content .saber-mas .item .title {
   font-weight: bold;
   padding-top: .5em;
   padding-bottom: .3em;
+  line-height: 1em;
 }
 
 section.home-content .saber-mas .item .link {
   font-size: 1.3em;
   margin-top: 2em;
   margin-bottom: 1em;
+  line-height: 1em;
 }
 
 @media (max-width: 720px) {
@@ -1602,11 +1683,11 @@ section.home-content .saber-mas .item .link {
     -ms-grid-row-span: 3;
     grid-row: 1/4;
     max-width: 100px;
-    margin-right: 10px;
-    margin-left: auto;
+    margin: auto;
   }
   section.home-content .saber-mas .item .link {
     margin-top: 0;
+    color: #0099da;
   }
   section.home-content .saber-mas .item .link, section.home-content .saber-mas .item .title, section.home-content .saber-mas .item .text {
     text-align: left;
