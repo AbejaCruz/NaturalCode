@@ -767,12 +767,12 @@ header.main-header ul li .children-menu .option {
   text-align: center;
 }
 
-.pr-slides .product-carousel-item.slick-slide.slick-active {
+.pr_slides .product-carousel-item.slick-slide.slick-active {
   border-radius: 10px;
   margin-top: 1em;
 }
 
-.pr-slides .slick-slide {
+.pr_slides .slick-slide {
   text-align: center;
   max-width: 300px;
   margin: 1em;
@@ -781,32 +781,32 @@ header.main-header ul li .children-menu .option {
   border-radius: 12px;
 }
 
-.pr-slides .slick-slide .in_stock {
+.pr_slides .slick-slide .in_stock {
   display: none;
 }
 
 @media (max-width: 720px) {
-  .pr-slides .slick-slide {
+  .pr_slides .slick-slide {
     padding: 1em;
   }
 }
 
-.pr-slides .slick-slide .product-name {
+.pr_slides .slick-slide .product-name {
   font-size: 1.1em;
   line-height: 1em;
   padding: .3em 0;
 }
 
-.pr-slides .slick-slide .in_stock {
+.pr_slides .slick-slide .in_stock {
   display: none;
 }
 
-.pr-slides .slick-slide .product-price {
+.pr_slides .slick-slide .product-price {
   color: #999;
   font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.pr-slides .slick-slide .product-price::before {
+.pr_slides .slick-slide .product-price::before {
   content: 'Desde: ';
 }
 
