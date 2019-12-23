@@ -280,9 +280,9 @@
         border-radius: 10px;
         margin-top: 1em;
     }
-    .slick-slider {
-        // max-width: max-content;
-        // margin: 0 auto;
+    .slick-track {
+        display: flex;
+        justify-content: center;
     }
     .slick-slide {
         text-align: center;
