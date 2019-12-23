@@ -158,9 +158,9 @@ ul, li {
 #hidden-hamburger-menu {
     display: none;
     position: fixed;
-    z-index: 1300;
     font-size: 1.5em;
-    top: 86px;
+    line-height: 1em;
+    top: 60px;
     opacity: 0;
     transition: .3s;
     position: fixed;
@@ -192,7 +192,8 @@ ul, li {
         color: $color-font-subtext;
         transition: width .3s;
         overflow-y: scroll;
-        height: 80vh;
+        // height: 80vh;
+        min-height: 60vh;
 
         li {
             border-top: 1px solid #dfdfdf;
@@ -201,7 +202,7 @@ ul, li {
             a {
                 width: 100%;
                 display: block;
-                padding: .7em 0 .5em 2em;
+                padding: .7em 0 .5em 1.5em;
                 border-bottom: 4px solid transparent;
                 transition: .3s;
 
@@ -387,6 +388,7 @@ main#main-content {
                 }
                 .nombre {
                     font-size: 1.4em;
+                    line-height: 1em;
                     background-color: #fff;
                     color: $color-font-main;
                     text-align: center;
@@ -503,11 +505,14 @@ main#main-content {
                 background-color: $color-main;
                 font-family: $ff-main-light;
                 line-height: 1.4em;
-                width: 100vw;
+                width: 100%;
+                // width: calc(100% - 120px);
 
                 @media (max-width: $screen-m) {
                     padding: .7em 0;
                     grid-column: 1/-1;
+                    width: 100vw;
+
 
                     .texto {
                         display: none;
@@ -535,6 +540,7 @@ main#main-content {
         margin: 0 auto;
         padding: 1em;
         font-size: 1.2em;
+        line-height: 1em;
     }
 }
 
@@ -550,6 +556,7 @@ main#main-content {
     }
     .ns-title {
         font-size: 3em;
+        line-height: 1em;
         font-family: $ff-main;
         padding: .6em 1em;
     }
@@ -575,10 +582,14 @@ main#main-content {
 
             .title {
                 font-size: 1.4em;
+                line-height: 1em;
+
             }
             .items {
                 font-family: $ff-text;
                 font-size: 1.1em;
+                line-height: 1em;
+
             }
         }
         .mapa {

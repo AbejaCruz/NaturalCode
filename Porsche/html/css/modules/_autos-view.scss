@@ -8,12 +8,16 @@ section.autos-view {
             background-color: $color-autos-header;
             color: $color-font-main;
             font-size: 2em;
+            line-height: 1em;
+
             padding: 1em 0 1em $left-padding;
             width: 100%;
         }
         nav {
             padding: .5em 0 .5em $left-padding;
             font-size: 1.2em;
+            line-height: 1em;
+
             width: 100%;
             background-color: $color-font-subtext;
             display: block;
@@ -87,8 +91,8 @@ section.autos-view {
                 }
                 p {
                     font-family: $ff-main-light;
-                    line-height: 1em;
                     font-size: .7em;
+                    line-height: 1em;
                 }
                 input,
                 select {
@@ -97,6 +101,8 @@ section.autos-view {
                     }
 
                     font-size: inherit;
+                    line-height: 1em;
+
                     font-family: $ff-main-light;
                     display: block;
                     margin-top: .3em;
@@ -215,6 +221,8 @@ section.autos-view {
                         font-family: $ff-main-light;
                         font-size: 1.3em;
                         text-align: center;
+                        line-height: 1em;
+
                         color: $color-font-subtext;
                     }
                 }

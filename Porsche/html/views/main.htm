@@ -1222,9 +1222,12 @@
                         valuex = 'flex';
                         valuexm = 'block'; 
                     }
-                    else valuex = 'none';
+                    else  {
+                        valuex = 'none';
+                        valuexm = 'none';
+                    }
                     if (document.getElementById('desktop-menu-'+ menuItemIndex) && menuItemIndex != 'posventa') document.getElementById('desktop-menu-'+ menuItemIndex).closest('li').style.display = valuex;
-                    if (document.getElementById('mobile-menu-'+ menuItemIndex)) document.getElementById('mobile-menu-'+ menuItemIndex).closest('li').style.display = 'block';
+                    if (document.getElementById('mobile-menu-'+ menuItemIndex)) document.getElementById('mobile-menu-'+ menuItemIndex).closest('li').style.display = valuexm;
                     if ((menuItemIndex == 'nuestrasSedes' || menuItemIndex == 'retoma' || menuItemIndex == 'separacion' || menuItemIndex == 'pagos') && menuItemValue ) {
                         if (document.getElementById('desktop-menu-concesionario')) document.getElementById('desktop-menu-concesionario').closest('li').style.display = 'flex';
                         if (document.getElementById('mobile-menu-concesionario')) document.getElementById('mobile-menu-concesionario').closest('li').style.display = 'block';

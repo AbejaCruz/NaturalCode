@@ -34,6 +34,8 @@ section.blog {
             text-align: center;
             font-family: $ff-text;
             font-size: 1.2em;
+            line-height: 1em;
+
             border: 1px solid transparent;
             transition: .3s;
             padding: 1em;
@@ -76,6 +78,8 @@ section.blog {
         .web_content_paginate {
             grid-column: 1/-1;
             font-size: 1.5em;
+            line-height: 1em;
+
             padding-top: 1em;
             line-height: 1em;
             display: flex;
@@ -84,6 +88,7 @@ section.blog {
             select {
                 font-family: $ff-text, Helvetica;
                 font-size: .9em;
+                line-height: 1em;
                 margin-left: 1em;
             }
         }

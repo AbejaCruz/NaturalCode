@@ -21,11 +21,14 @@ section.contenido {
             background-color: transparent;
             color: #fff;
             font-size: 3em;
+            line-height: 1em;
 
             @media (max-width: $screen-l) {
+                line-height: 1em;
                 font-size: 2.6em;
             }
             @media (max-width: $screen-m) {
+                line-height: 1em;
                 font-size: 1.6em;
             }
         }
@@ -40,6 +43,8 @@ section.contenido {
         width: 100%;
         padding: 1.5em;
         font-size: 2.4em;
+        line-height: 1em;
+
         text-align: center;
         font-family: $ff-main;
         background-color: #ddd;
@@ -48,6 +53,8 @@ section.contenido {
             font-family: $ff-text-light;
             padding: 1em 0;
             font-size: .6em;
+            line-height: 1em;
+
         }
     }
     .content {
@@ -62,8 +69,8 @@ section.contenido {
             display: table;
         }
         .title {
-            line-height: 1em;
             font-size: 1.2em;
+            line-height: 1em;
             padding: .5em 0;
             margin: 0;
             background-color: unset;
