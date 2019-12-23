@@ -1251,6 +1251,7 @@
 
             if (siteInfo.whatsapp && !document.getElementById('header-cta-whatsapp').getElementsByClassName('texto')[0].innerHTML.trim()) {
                 document.getElementById('header-cta-whatsapp').setAttribute('href', 'https://api.whatsapp.com/send?phone=+57' + siteInfo.whatsapp + '&text=');
+                document.getElementById('header-cta-whatsapp').getElementsByClassName('texto')[0].innerHTML = 'WhatsApp';
                 document.getElementById('header-cta-whatsapp').style.display = 'block';
             }
             else if (document.getElementById('header-cta-whatsapp').getElementsByClassName('texto')[0].innerHTML) {
@@ -1259,7 +1260,7 @@
                 .remove()   
                 .text().trim();
                 document.getElementById('header-cta-whatsapp').setAttribute('href', 'https://api.whatsapp.com/send?phone=+57' + elx + '&text=');
-                document.getElementById('header-cta-whatsapp').getElementsByClassName('texto').innerHTML = 'WhatsApp';
+                document.getElementById('header-cta-whatsapp').getElementsByClassName('texto')[0].innerHTML = 'WhatsApp';
 
 
             }

@@ -22,8 +22,15 @@
 
     <div class="selectone" id="selectOne">
         [[box2content]]
+
+
+
         <script>
             if ((document.getElementById('selectOne').getElementsByClassName('container_div'))[0] ) {
+
+
+                // if (document.getElementsByClassName('pr_resp')) $('.container_div.swiper-wrapper').append(document.getElementsByClassName('pr_resp')[0]);
+
                 let grpContainer = document.createElement('div');
                 grpContainer.classList.add('swiper-container');
 
@@ -117,8 +124,10 @@
         }
         });
         [document.getElementsByClassName('web_content_item')].forEach (function (el) {
-            el[0].classList.add("swiper-slide");
-            el[0].classList.add("item");
+            if (el) {
+                el[0].classList.add("swiper-slide");
+                el[0].classList.add("item");
+            }
         });
     }
 

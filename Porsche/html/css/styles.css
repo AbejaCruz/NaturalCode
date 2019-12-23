@@ -1665,6 +1665,47 @@ section.home-content .selectone {
   padding: 3em 1em;
 }
 
+section.home-content .selectone .pr_resp {
+  width: 100%;
+}
+
+section.home-content .selectone .pr_resp .container_div {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  position: relative;
+  text-align: center;
+}
+
+section.home-content .selectone .pr_resp .container_div .dpr_container {
+  padding: 1em;
+  text-align: center;
+}
+
+section.home-content .selectone .pr_resp .container_div .dpr_container img {
+  width: 100%;
+  height: auto;
+}
+
+section.home-content .selectone .pr_resp .container_div .dpr_container .dpr_in_stock {
+  display: none;
+}
+
+section.home-content .selectone .pr_resp .container_div .dpr_container .dpr_product-name {
+  font-size: 1.3em;
+  line-height: 1em;
+}
+
+section.home-content .selectone .pr_resp .container_div .dpr_container .dpr_in_stock {
+  color: #ccc;
+}
+
+section.home-content .selectone .pr_resp .container_div .dpr_container .dpr_in_stock::before {
+  content: 'Desde: ';
+}
+
 section.home-content .selectone .title {
   text-align: center;
   font-size: 3em;

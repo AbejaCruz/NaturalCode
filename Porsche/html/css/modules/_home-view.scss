@@ -195,6 +195,42 @@ section.home-content {
         background-color: #EEEEEE;
         padding: 3em 1em;
 
+        .pr_resp {
+            width: 100%;
+            .container_div {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                position: relative;
+                text-align: center;
+
+                .dpr_container {
+                    padding: 1em;
+                    text-align: center;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .dpr_in_stock {
+                        display: none;
+                    }
+                    .dpr_product-name {
+                        font-size: 1.3em;
+                        line-height: 1em;
+                    }
+                    .dpr_in_stock {
+                        color: #ccc;
+
+                        &::before{
+                            content: 'Desde: ';
+                        }
+                    }
+                }
+            }
+        }
+
         .title {
             text-align: center;
             font-size: 3em;
