@@ -19,6 +19,11 @@ section.home-content {
         grid-column-gap: 2em;
         margin: 3em 0;
 
+        img {
+            width: 100%;
+            height: auto;
+        }
+
         a {
             padding: 1em;
             text-align:center;
@@ -31,10 +36,7 @@ section.home-content {
                 box-shadow: 0 0 2px 2px rgba(77, 168, 226, 0.3);
             }
 
-            img {
-                width: 100%;
-                height: auto;
-            }
+          
             .banner-text {
                 font-size: 1.4em;
                 line-height: 1em;
@@ -45,7 +47,7 @@ section.home-content {
 
     .page-content {
         margin: 0 auto;
-        max-width: 1180px;
+        max-width: 1280px;
         padding: 0 20px;
         .formulario-contacto-home {
             padding: 1em 0;
@@ -90,7 +92,7 @@ section.home-content {
                         input[type=text], select {
 
                             @media (max-width: $screen-m) {
-                                width: 80%;
+                                width: 100%;
                             }
                         }
                         
@@ -110,9 +112,12 @@ section.home-content {
                         }
 
                         &.li_last {
+                            width: 100%;
+
                             input {
                                 display: block;
                                 margin: .3em auto;
+                                width: 100%;
                             }
                         }
                     }
@@ -197,37 +202,19 @@ section.home-content {
 
         .pr_resp {
             width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+
             .container_div {
                 width: 100%;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
                 position: relative;
-                text-align: center;
+                grid-column-gap: 2em;
 
-                .dpr_container {
-                    padding: 1em;
-                    text-align: center;
 
-                    img {
-                        width: 100%;
-                        height: auto;
-                    }
+              
 
-                    .dpr_in_stock {
-                        display: none;
-                    }
-                    .dpr_product-name {
-                        font-size: 1.3em;
-                        line-height: 1em;
-                    }
-                    .dpr_in_stock {
-                        color: #ccc;
-
-                        &::before{
-                            content: 'Desde: ';
-                        }
-                    }
-                }
             }
         }
 
@@ -326,6 +313,7 @@ section.home-content {
 
                 .link, .title, .text {
                     text-align: left;
+                    padding: .15em 0;
                 }
 
             }

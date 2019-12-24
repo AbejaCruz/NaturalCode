@@ -1471,6 +1471,11 @@ section.home-content #home_small_banners {
   margin: 3em 0;
 }
 
+section.home-content #home_small_banners img {
+  width: 100%;
+  height: auto;
+}
+
 section.home-content #home_small_banners a {
   padding: 1em;
   text-align: center;
@@ -1486,11 +1491,6 @@ section.home-content #home_small_banners a:hover {
           box-shadow: 0 0 2px 2px rgba(77, 168, 226, 0.3);
 }
 
-section.home-content #home_small_banners a img {
-  width: 100%;
-  height: auto;
-}
-
 section.home-content #home_small_banners a .banner-text {
   font-size: 1.4em;
   line-height: 1em;
@@ -1498,7 +1498,7 @@ section.home-content #home_small_banners a .banner-text {
 
 section.home-content .page-content {
   margin: 0 auto;
-  max-width: 1180px;
+  max-width: 1280px;
   padding: 0 20px;
 }
 
@@ -1558,7 +1558,7 @@ section.home-content .page-content .formulario-contacto-home form ul.ul_formular
 
 @media (max-width: 720px) {
   section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li input[type=text], section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li select {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -1578,9 +1578,14 @@ section.home-content .page-content .formulario-contacto-home form ul.ul_formular
   text-align: center;
 }
 
+section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li.li_last {
+  width: 100%;
+}
+
 section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li.li_last input {
   display: block;
   margin: .3em auto;
+  width: 100%;
 }
 
 section.home-content .page-content .formulario-contacto-home form input, section.home-content .page-content .formulario-contacto-home form select {
@@ -1667,6 +1672,8 @@ section.home-content .selectone {
 
 section.home-content .selectone .pr_resp {
   width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 section.home-content .selectone .pr_resp .container_div {
@@ -1676,34 +1683,7 @@ section.home-content .selectone .pr_resp .container_div {
   -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   position: relative;
-  text-align: center;
-}
-
-section.home-content .selectone .pr_resp .container_div .dpr_container {
-  padding: 1em;
-  text-align: center;
-}
-
-section.home-content .selectone .pr_resp .container_div .dpr_container img {
-  width: 100%;
-  height: auto;
-}
-
-section.home-content .selectone .pr_resp .container_div .dpr_container .dpr_in_stock {
-  display: none;
-}
-
-section.home-content .selectone .pr_resp .container_div .dpr_container .dpr_product-name {
-  font-size: 1.3em;
-  line-height: 1em;
-}
-
-section.home-content .selectone .pr_resp .container_div .dpr_container .dpr_in_stock {
-  color: #ccc;
-}
-
-section.home-content .selectone .pr_resp .container_div .dpr_container .dpr_in_stock::before {
-  content: 'Desde: ';
+  grid-column-gap: 2em;
 }
 
 section.home-content .selectone .title {
@@ -1813,6 +1793,7 @@ section.home-content .saber-mas .item .link {
   }
   section.home-content .saber-mas .item .link, section.home-content .saber-mas .item .title, section.home-content .saber-mas .item .text {
     text-align: left;
+    padding: .15em 0;
   }
 }
 
@@ -2659,44 +2640,56 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
       justify-content: space-around;
 }
 
-#cn_slider {
-  position: relative;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-#cn_slider .dpr_container {
+.dpr_container {
+  padding: 1em;
   text-align: center;
+  text-align: center;
+  -webkit-box-shadow: rgba(148, 148, 148, 0.2) 0px 0px 10px 3px;
+          box-shadow: rgba(148, 148, 148, 0.2) 0px 0px 10px 3px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding: 1em .5em;
 }
 
-#cn_slider .dpr_container .dpr_imagen_thumb {
-  padding: .5em;
+.dpr_container:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-#cn_slider .dpr_container .dpr_imagen_thumb img {
+.dpr_container img {
   width: 100%;
   height: auto;
 }
 
-#cn_slider .dpr_container .dpr_product-name {
-  font-size: 1.5em;
+.dpr_container .dpr_in_stock {
+  display: none;
+}
+
+.dpr_container .dpr_product-name {
+  font-size: 1.3em;
   line-height: 1em;
 }
 
-#cn_slider .dpr_container .dpr_listprice {
+.dpr_container .dpr_in_stock {
+  color: #ccc;
+}
+
+.dpr_container .dpr_listprice {
   font-size: 1.3em;
   line-height: 1em;
   font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #808890;
 }
 
-#cn_slider .dpr_container .price_per_unit,
-#cn_slider .dpr_container .dpr_in_stock {
-  display: none;
+.dpr_container .dpr_listprice::before {
+  content: 'Desde: ';
 }
 
-#cn_slider .dpr_container .swiper-pagination {
-  bottom: 0;
+#cn_slider {
+  position: relative;
+  max-width: 1080px;
+  margin: 2em auto;
 }
 
 #cn_slider .container_div.swiper-wrapper {
