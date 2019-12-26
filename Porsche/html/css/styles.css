@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -1867,6 +1871,7 @@ section.modelos-view .container_div .dpr_container .dpr_listprice {
   color: #808890;
   font-size: 1.2em;
   padding-top: .5em;
+  line-height: 1em;
 }
 
 section.modelos-view .container_div .dpr_container .dpr_listprice::before {
