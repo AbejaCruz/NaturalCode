@@ -111,17 +111,25 @@
 <script>
     if (document.getElementById('cn_slider')) {
         var swiper = new Swiper('#cn_slider', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                720: {
+                    slidesPerView: 3
+                },
+                1080: {
+                    slidesPerView: 4
+                }
+            }
         });
         [document.getElementsByClassName('web_content_item')].forEach (function (el) {
             if (el) {
@@ -134,17 +142,25 @@
 
     if (document.getElementById('info-banners')) {
         var swiper = new Swiper('#info-banners', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                720: {
+                    slidesPerView: 3
+                },
+                1080: {
+                    slidesPerView: 4
+                }
+            }
         });
     }
 </script>

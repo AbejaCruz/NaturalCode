@@ -165,6 +165,14 @@ ul, li {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.swiper-button-next, .swiper-button-prev {
+  opacity: .6;
+}
+
+.swiper-button-next:active, .swiper-button-prev:active {
+  outline: none;
+}
+
 #hidden-hamburger-menu {
   display: none;
   position: fixed;
@@ -2668,14 +2676,13 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
 }
 
 .dpr_container {
-  padding: 1em;
   text-align: center;
   -webkit-box-shadow: rgba(148, 148, 148, 0.2) 0px 0px 10px 3px;
           box-shadow: rgba(148, 148, 148, 0.2) 0px 0px 10px 3px;
   border-radius: 12px;
   background-color: #ffffff;
   overflow: hidden;
-  padding: 1em .5em;
+  padding: 2em 1em;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -2705,7 +2712,7 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
 
 .dpr_container .dpr_listprice {
   font-size: 1.3em;
-  line-height: 1em;
+  line-height: 1.6em;
   font-family: VW Text, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #808890;
 }

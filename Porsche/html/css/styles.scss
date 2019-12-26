@@ -157,7 +157,13 @@ ul, li {
     }
     margin: auto;
 }
-
+.swiper-button-next, .swiper-button-prev {
+    opacity: .6;
+    
+    &:active {
+        outline: none;
+    }
+}
 #hidden-hamburger-menu {
     display: none;
     position: fixed;
@@ -640,13 +646,12 @@ main#main-content > #web-content > section.blank-view {
 
 
 .dpr_container {
-    padding: 1em;
     text-align: center;
     box-shadow: rgba(148, 148, 148, 0.2) 0px 0px 10px 3px;
     border-radius: 12px;
     background-color: #ffffff;
     overflow: hidden;
-    padding: 1em .5em;
+    padding: 2em 1em;
     transition: .3s;
 
 
@@ -672,7 +677,7 @@ main#main-content > #web-content > section.blank-view {
     }
     .dpr_listprice {
         font-size: 1.3em;
-        line-height: 1em;
+        line-height: 1.6em;
         font-family: $ff-text;
         color: #808890;
         &::before{
