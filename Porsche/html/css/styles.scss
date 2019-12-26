@@ -639,14 +639,12 @@ main#main-content > #web-content > section.blank-view {
 .dpr_container {
     padding: 1em;
     text-align: center;
-
-    
-    text-align: center;
     box-shadow: rgba(148, 148, 148, 0.2) 0px 0px 10px 3px;
     border-radius: 12px;
     background-color: #ffffff;
     overflow: hidden;
     padding: 1em .5em;
+    transition: .3s;
 
 
     &:hover {
@@ -672,7 +670,7 @@ main#main-content > #web-content > section.blank-view {
     .dpr_listprice {
         font-size: 1.3em;
         line-height: 1em;
-        font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: $ff-text;
         color: #808890;
         &::before{
             content: 'Desde: ';
