@@ -742,7 +742,7 @@ header.main-header ul li .children-menu .option {
 
 .slick-dots li.slick-active {
   border: 1px solid transparent;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(40, 40, 255, 0.5);
 }
 
 .slick-dots li:hover, .slick-dots li:focus {
@@ -1520,6 +1520,13 @@ section.home-content .page-content .formulario-contacto-home form {
   line-height: 1em;
 }
 
+@media (max-width: 720px) {
+  section.home-content .page-content .formulario-contacto-home form {
+    padding: 0;
+    font-size: 1.5em;
+  }
+}
+
 section.home-content .page-content .formulario-contacto-home form h1 {
   display: none;
 }
@@ -1559,6 +1566,7 @@ section.home-content .page-content .formulario-contacto-home form ul.ul_formular
 @media (max-width: 720px) {
   section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li input[type=text], section.home-content .page-content .formulario-contacto-home form ul.ul_formulario li select {
     width: 100%;
+    font-size: 1em;
   }
 }
 

@@ -65,6 +65,11 @@ section.home-content {
                 font-size: 1.1em;
                 line-height: 1em;
 
+                @media (max-width: $screen-m) {
+                    padding: 0;
+	                font-size: 1.5em;
+                }
+
                 h1 {
                     display: none;
                 }
@@ -93,6 +98,7 @@ section.home-content {
 
                             @media (max-width: $screen-m) {
                                 width: 100%;
+                                font-size: 1em;
                             }
                         }
                         
