@@ -1239,7 +1239,6 @@ main#main-content section.home-header .concesionario .logo {
   overflow-y: hidden;
   height: 87px;
   padding: .1em 1em;
-  padding-top: 9px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1270,14 +1269,24 @@ main#main-content section.home-header .concesionario .logo {
 }
 
 main#main-content section.home-header .concesionario .logo .vw-logo {
-  padding: .7em;
   display: none;
-  vertical-align: bottom;
+}
+
+main#main-content section.home-header .concesionario .logo .vw-logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 720px) {
   main#main-content section.home-header .concesionario .logo .vw-logo {
-    text-align: left;
     width: auto;
     height: 100%;
     display: block;
@@ -1296,9 +1305,7 @@ main#main-content section.home-header .concesionario .logo .vw-logo {
 
 main#main-content section.home-header .concesionario .logo img {
   width: auto;
-  height: 59px;
-  padding: .2em;
-  text-align: left;
+  height: 60px;
   margin: 0 auto;
   display: block;
 }
@@ -1361,6 +1368,7 @@ main#main-content section.home-header .concesionario .logo #hamburger-button {
       -ms-user-select: none;
           user-select: none;
   margin: auto;
+  padding-right: 2em;
 }
 
 @media (max-width: 720px) {
@@ -1871,11 +1879,11 @@ section.modelos-view .container_div .dpr_container {
 }
 
 section.modelos-view .container_div .dpr_container:hover {
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 13px 2px rgba(0, 153, 218, 0.3);
+          box-shadow: 0 0 13px 2px rgba(0, 153, 218, 0.3);
 }
 
-section.modelos-view .container_div .dpr_container:hover .dpr_product {
+section.modelos-view .container_div .dpr_container:hover .dpr_product-name {
   color: #0099da;
 }
 
@@ -1890,6 +1898,10 @@ section.modelos-view .container_div .dpr_container .dpr_listname .dpr_imagen_thu
 section.modelos-view .container_div .dpr_container .dpr_listname .dpr_imagen_thumb img {
   width: 100%;
   height: auto;
+}
+
+section.modelos-view .container_div .dpr_container .dpr_listname .dpr_imagen_thumb img:active {
+  outline: none;
 }
 
 section.modelos-view .container_div .dpr_container .dpr_listname .dpr_product-name {
@@ -1911,7 +1923,8 @@ section.modelos-view .container_div .dpr_container .dpr_listprice::before {
 }
 
 section.modelos-view .container_div .dpr_container .dpr_in_stock,
-section.modelos-view .container_div .dpr_container .dpr_product-list-add-button {
+section.modelos-view .container_div .dpr_container .dpr_product-list-add-button,
+section.modelos-view .container_div .dpr_container .price_per_unit {
   display: none;
 }
 

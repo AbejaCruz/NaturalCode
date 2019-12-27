@@ -60,7 +60,6 @@ ul, li {
     font-family: $ff-main;
 
     transition: background-color .2s, border .2s;
-    // min-height: 42px;
     padding: 4px 9px;
     border-radius: 4px;
     vertical-align: middle;
@@ -351,7 +350,6 @@ main#main-content {
                 overflow-y: hidden;
                 height: 87px;
                 padding: .1em 1em;
-                padding-top: 9px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -369,12 +367,15 @@ main#main-content {
                 
 
                 .vw-logo {
-                    padding: .7em;
                     display: none;
-                    vertical-align: bottom;
+
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
 
                     @media (max-width: $screen-m) {
-                        text-align: left;
                         width: auto;
                         height: 100%;
                         display: block;
@@ -386,9 +387,7 @@ main#main-content {
                 
                 img {
                     width: auto;
-                    height: 59px;
-                    padding: .2em;
-                    text-align: left;
+                    height: 60px;
                     margin: 0 auto;
                     display: block;
 
@@ -426,6 +425,7 @@ main#main-content {
                     justify-content: center;
                     user-select: none;
                     margin: auto;
+                    padding-right: 2em;
 
                     @media (max-width: $screen-m) {
                         display: flex;

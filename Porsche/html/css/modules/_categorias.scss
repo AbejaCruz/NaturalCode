@@ -21,9 +21,9 @@ section.modelos-view {
             box-shadow: none;
 
             &:hover {
-                box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
+                box-shadow: 0 0 13px 2px rgba(0, 153, 218, 0.3);
 
-                .dpr_product {
+                .dpr_product-name {
                     color: $color-main;
                 }
             }
@@ -37,6 +37,10 @@ section.modelos-view {
                     img {
                         width: 100%;
                         height: auto;
+
+                        &:active {
+                            outline: none;
+                        }
                     }
                 }
 
@@ -58,7 +62,8 @@ section.modelos-view {
                 }
             }
             .dpr_in_stock,
-            .dpr_product-list-add-button {
+            .dpr_product-list-add-button,
+            .price_per_unit {
                 display: none;
             }
         }
