@@ -962,17 +962,28 @@ section.lm-form .formulario form {
   margin: 0 auto;
   font-size: 1.5em;
   line-height: 1em;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
   background-color: rgba(255, 255, 255, 0.3);
+  padding: 1em;
+}
+
+section.lm-form .formulario form::before {
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  content: '';
+  margin: -35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(20px);
+  z-index: -1;
   padding: 1em;
 }
 
 @media (max-width: 720px) {
   section.lm-form .formulario form {
     width: 95%;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
   }
 }
 
@@ -1229,6 +1240,16 @@ main#main-content section.home-header .concesionario .logo {
   height: 87px;
   padding: .1em 1em;
   padding-top: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 720px) {
@@ -1242,6 +1263,9 @@ main#main-content section.home-header .concesionario .logo {
         grid-template-columns: 60px auto 60px;
     width: 100vw;
     height: 60px;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
 }
 
@@ -1961,13 +1985,25 @@ section.autos-view .content .main-banner .inner-form {
   position: absolute;
   right: 10px;
   top: 2em;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
   padding: 1em;
   width: 30%;
   max-height: 80%;
   overflow-y: auto;
-  background-color: rgba(255, 255, 255, 0.3);
+}
+
+section.autos-view .content .main-banner .inner-form::before {
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  content: 'as';
+  margin: -35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(20px);
+  z-index: -1;
+  padding: 1em;
 }
 
 @media (max-width: 720px) {
@@ -2388,7 +2424,10 @@ section.contenido .content img.left {
   display: none;
   text-align: right;
   grid-column: 1/-1;
-  background-color: #dde0e2;
+  background-color: #0099da;
+  color: #ffffff;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 #go-to-top > div {

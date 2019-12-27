@@ -83,13 +83,25 @@ section.lm-form {
             font-size: 1.5em;
             line-height: 1em;
 
-            backdrop-filter: blur(15px);
             background-color: rgba(255,255,255,.3);
             padding: 1em;
 
+            &::before {
+                filter: blur(20px);
+                content: '';
+                margin: -35px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                filter: blur(20px);
+                z-index: -1;
+                padding: 1em;
+            }
+
             @media (max-width: $screen-m) {
                 width: 95%;
-                backdrop-filter: none;
             }
 
             .li_forma {
