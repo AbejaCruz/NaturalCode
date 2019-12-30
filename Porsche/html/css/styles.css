@@ -241,6 +241,26 @@ ul, li {
   margin: auto;
 }
 
+img.banner-desktop {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  img.banner-desktop {
+    display: block;
+  }
+}
+
+img.banner-mobile {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  img.banner-mobile {
+    display: block;
+  }
+}
+
 .spin-wrapper {
   position: fixed;
   width: 100%;
@@ -1996,8 +2016,8 @@ section.autos-view .content .main-banner .inner-form {
   max-height: 80%;
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   overflow-x: hidden;
 }
 
@@ -2115,6 +2135,8 @@ section.autos-view .content .module .galeria {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  margin-top: 2em;
 }
 
 @media (max-width: 720px) {
@@ -2124,9 +2146,33 @@ section.autos-view .content .module .galeria {
   }
 }
 
+section.autos-view .content .module .galeria .interior::after {
+  content: 'Interior';
+}
+
+section.autos-view .content .module .galeria .exterior::after {
+  content: 'Exterior';
+}
+
 section.autos-view .content .module .galeria .interior,
 section.autos-view .content .module .galeria .exterior {
   padding: 1em;
+  position: relative;
+}
+
+section.autos-view .content .module .galeria .interior::after,
+section.autos-view .content .module .galeria .exterior::after {
+  position: absolute;
+  font-size: 2em;
+  line-height: 1em;
+  color: #ffffff;
+  border: 3px solid #fff;
+  padding: .2em .5em;
+  bottom: 1em;
+  background-color: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  border-radius: 5px;
+  right: 1em;
 }
 
 section.autos-view .content .module .galeria .interior img,
