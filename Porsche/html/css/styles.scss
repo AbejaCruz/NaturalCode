@@ -230,6 +230,20 @@ ul, li {
     }
 }
 
+img.banner-desktop {
+    display: none;
+    @media(min-width: $screen-m) {
+        display: block;
+    }
+}
+
+img.banner-mobile {
+    display: none;
+    @media(max-width: $screen-m) {
+        display: block;
+    }
+}
+
 
 .spin-wrapper{
     position: fixed;
