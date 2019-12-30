@@ -445,7 +445,7 @@ main#main-content {
                         /* hide this */
                         z-index: 2;
                         /* and place it over the hamburger */
-                    
+
                         -webkit-touch-callout: none;
                     }
 
@@ -674,12 +674,13 @@ main#main-content > #web-content > section.blank-view {
         height: auto;
     }
 
-    .dpr_in_stock, .price_per_unit {
+    .dpr_in_stock, .price_per_unit, .dpr_out_of_stock {
         display: none;
     }
     .dpr_product-name {
         font-size: 1.3em;
         line-height: 1em;
+        transition: .3s;
     }
     .dpr_in_stock {
         color: #ccc;
