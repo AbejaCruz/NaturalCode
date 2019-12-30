@@ -459,7 +459,7 @@ main#main-content {
                         /* hide this */
                         z-index: 2;
                         /* and place it over the hamburger */
-                    
+
                         -webkit-touch-callout: none;
                     }
 
@@ -694,6 +694,7 @@ main#main-content > #web-content > section.blank-view {
     .dpr_product-name {
         font-size: 1.3em;
         line-height: 1em;
+        transition: .3s;
     }
     .dpr_in_stock {
         color: #ccc;
