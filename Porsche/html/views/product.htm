@@ -3,8 +3,8 @@
     <script src="/css/porsche/lg/js/lightgallery.min.js"></script>
 
     <!-- lightgallery plugins -->
-    <script src="/css/porsche/lg/js/lg-thumbnail.min.js"></script>
-    <script src="/css/porsche/lg/js/lg-fullscreen.min.js"></script>
+    <!-- <script src="/css/porsche/lg/js/lg-thumbnail.min.js"></script>
+    <script src="/css/porsche/lg/js/lg-fullscreen.min.js"></script> -->
 
 
     <div class="autos-header">
@@ -26,9 +26,6 @@
                 <li>
                     <a href="#tecnologia">Tecnología</a>
                 </li>
-                <li>
-                    <a href="#versiones">Versiones</a>
-                </li>
             </ul>
         </nav>
     </div>
@@ -40,4 +37,29 @@
 <script type="text/javascript">
     if (document.getElementById('vw-galeria-exterior')) lightGallery(document.getElementById('vw-galeria-exterior')); 
     if (document.getElementById('vw-galeria-interior')) lightGallery(document.getElementById('vw-galeria-interior')); 
+
+    if (document.getElementById('galeria-colores')) {
+        var swiperColores = new Swiper('#galeria-colores', {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            breakpoints: {
+                720: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    }
 </script>

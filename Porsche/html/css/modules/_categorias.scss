@@ -2,6 +2,10 @@
 section.modelos-view {
     padding: 1em 2em;
 
+    @media(max-width: $screen-m) {
+        padding: 1em .3em;
+    }
+
     .container_div {
         width: 100%;
         display: grid;

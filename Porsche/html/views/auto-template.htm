@@ -1,61 +1,128 @@
 <div class="content">
     <div class="main-banner">
-        <img src="[[cdn_url]]/web_content/assets/gol-volkswagen-colombia.jpg">
-        <div class="inner-form">
-            [[formulario(7)]]
-        </div>
+        <img class="banner-desktop" src="[[cdn_url]]/web_content/assets/banner golf r.jpg" />
+        <img class="banner-mobile" src="[[cdn_url]]/web_content/assets/banner golf r.jpg" />
+        <div class="inner-form">[[formulario(7)]]</div>
     </div>
     <div class="module">
-        <div class="title">Colores</div>
-        <div class="carousel">
-            <img src="[[cdn_url]]/web_content/assets/volkswagen-gol-colombia-blanco.jpg" alt="">
+        <div class="title" id="colores">Colores</div>
+        <div class="colores swiper-container" id="galeria-colores">
+            <div class="swiper-wrapper">
+                <!-- Imágenes de colores vehículos -->
+                <img class="swiper-slide" src="[[cdn_url]]/web_content/assets/blancopuro-golfgti-volkswagen-colombia.jpg" data-hexColor="#ffffff" data-nombreColor="Blanco Puro"/>
+                <img class="swiper-slide" src="[[cdn_url]]/web_content/assets/azulhierro-golfgti-volkswagen-colombia.jpg" data-hexColor="#182338" data-nombreColor="Azul Hierro"/>
+                <img class="swiper-slide" src="[[cdn_url]]/web_content/assets/negroprofundogolfgti-volkswagen-colombia.jpg" data-hexColor="#010101" data-nombreColor="Negro Profundo"/>
+                <img class="swiper-slide" src="[[cdn_url]]/web_content/assets/rojotornadogolfgti-volkswagen-colombia.jpg" data-hexColor="#de1414" data-nombreColor="Rojo Tornado"/>
+            </div>
+
+            <!-- Botones para deslizar -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Imágenes previas carrusel colores -->
+<!-- 
+            <div class="swiper-wrapper gallery-thumbs">
+                <img class="swiper-slide" src="[[cdn_url]]/web_content/assets/blancopuro-golfgti-volkswagen-colombia.jpg" data-hexColor="#ffffff" data-nombreColor="Blanco Puro"/>
+                <img class="swiper-slide" src="[[cdn_url]]/web_content/assets/azulhierro-golfgti-volkswagen-colombia.jpg" data-hexColor="#182338" data-nombreColor="Azul Hierro"/>
+                <img class="swiper-slide" src="[[cdn_url]]/web_content/assets/negroprofundogolfgti-volkswagen-colombia.jpg" data-hexColor="#010101" data-nombreColor="Negro Profundo"/>
+                <img class="swiper-slide" src="[[cdn_url]]/web_content/assets/rojotornadogolfgti-volkswagen-colombia.jpg" data-hexColor="#de1414" data-nombreColor="Rojo Tornado"/>
+            </div> -->
         </div>
         <div class="galeria">
-            <div class="exterior" id="vw-galeria-exterior">
-                <img src="[[cdn_url]]/web_content/assets/gol-galeria-exterior.jpg" alt="">
+            <div class="title">Galería</div>
+            <div id="vw-galeria-exterior" class="exterior">
+                <a href="[[cdn_url]]/web_content/assets/Golf R 07.jpg">
+                    <img class="thumbnail" src="[[cdn_url]]/web_content/assets/01.jpg"/>
+                </a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 07.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 01.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 02.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 03.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 04.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 05.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 06.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 07.jpg"></a>
             </div>
-            <div class="interior" id="vw-galeria-interior">
-                <img src="[[cdn_url]]/web_content/assets/gol-galeria-interior.jpg" alt="">
+            <div id="vw-galeria-interior" class="interior">
+                <a href="[[cdn_url]]/web_content/assets/Golf R 08.jpg">
+                    <img class="thumbnail" src="[[cdn_url]]/web_content/assets/Golf R 09.jpg" />
+                </a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 08.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 09.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 10.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 11.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 12.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 13.jpg"></a>
+                <a href="[[cdn_url]]/web_content/assets/Golf R 14.jpg"></a>
             </div>
         </div>
     </div>
-    <div class="module seguridad">
+    <div class="module seguridad" id="seguridad">
         <div class="title">Seguridad</div>
     </div>
-    <div class="module exterior">
-        <div class="title">Exterior</div>
-        <div class="img">
-            <img src="[[cdn_url]]/web_content/assets/gol-volkswagen-colombia-frontal-blanco.jpg" alt="">
-        </div>
-        <div class="text">
-            Las líneas horizontales y los trazos tridimensionales resaltan en el Volkswagen Gol un estilo renovado.
-            <br><br>
-            La parrilla frontal del vehículo cuenta con un nuevo diseño dándole una presencia más robusta y deportiva. En su parte trasera cuenta con una nueva línea horizontal que demuestra mayor amplitud y a su vez brinda una sensación de mayor longitud. 
-        </div>
-    </div>
-    <div class="module interior">
-        <div class="title">Interior</div>
-        <div class="img">
-            <img src="[[cdn_url]]/web_content/assets/gol-interior-panel-frontal-volkswagen-colombia-asientos.jpg" alt="">
-        </div>
-        <div class="text">
-            Gol llega con una cabina totalmente rediseñada que junto a sus tecnologías mejoran la experiencia de conducción.
-            <br><br>
-            El computador a bordo cuenta con funciones que le permiten al conductor ver fácilmente en el panel de instrumentos la información necesaria. En dicha pantalla se puede observar el consumo promedio, la autonomía del vehículo, distancias recorridas, entre otras funciones del carro para que el conductor pueda manejar sin necesidad de distracción.
-        </div>
-        <div class="extra">
+    <div class="module">
+        <div class="title" id="exterior">Exterior</div>
+        <div class="fila">
             <div class="img">
-                <img src="[[cdn_url]]/web_content/assets/interior-gol-volkswagen.jpg" alt="">
+                <img src="[[cdn_url]]/web_content/assets/Golf R caracteristicas 1.jpg"/>
             </div>
-            <div class="title">Aire Acondicionado</div>
+            <div class="text">
+                <div class="title">Faros LED con luz de curva dinámica (AFS)</div>
+                <div class="subtitle">Ilumina al máximo tu camino.</div>
+                Los faros LED con luz de curva dinámica (AFS) te darán la visibilidad necesaria para superar cualquier camino, sin importar las curvas que encuentres en el camino, ni las condiciones de luz en el exterior.
+            </div>
         </div>
-        <div class="extra">
+        <div class="title" id="interior">Interior</div>
+
+        <div class="fila reversa">
             <div class="img">
-                <img src="[[cdn_url]]/web_content/assets/gol-tilt-down-volkswagen-colombia.jpg" alt="">
+                <img src="[[cdn_url]]/web_content/assets/Golf R caracteristicas 2.jpg"/>
             </div>
-            <div class="title">Tilt Down</div>
-            <div class="info">
-                *Aplica para versión Comfortline.
+            <div class="text">
+                <div class="title">Salida de escape cuádruple cromada</div>
+                <div class="subtitle">Imposible ignorarlo.</div>
+                Al conducir un Golf R, además de sentir la velocidad, también podrás escucharla gracias al poderoso sonido de la salida de escape cuádruple cromada, que ruge deportividad y dinamismo.
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="img">
+                <img src="[[cdn_url]]/web_content/assets/Golf R caracteristicas 3.jpg"/>
+            </div>
+            <div class="text">
+                <div class="title">Volante con logo R y paletas de cambios</div>
+                <div class="subtitle">Potencia en la palma de tu mano.</div>
+                La precisión del volante multifunciones en piel con logo R te hará tener el control absoluto del auto sin perder la concentración en el camino. Mientras que con sus paletas de cambios, podrás llevarlo al máximo, con una respuesta rápida y a la mano.
+            </div>
+        </div>
+
+
+        <div class="fila reversa">
+            <div class="img">
+                <img src="[[cdn_url]]/web_content/assets/Golf R caracteristicas 4.jpg"/>
+            </div>
+            <div class="text">
+                <div class="title">Pantalla táctil de 8” con App-Connect</div>
+                <div class="subtitle">Emociones incluidas.</div>
+                Agrega emoción a tus recorridos con el radio con pantalla táctil de 8” con Volkswagen App-Connect desde donde controlarás tu teléfono móvil sin distraerte del camino.
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="extra">
+                <div class="img">
+                    <img
+                    src="[[cdn_url]]/web_content/assets/interior-gol-volkswagen.jpg"/>
+                </div>
+                <div class="title">Aire Acondicionado</div>
+            </div>
+            <div class="extra">
+                <div class="img">
+                    <img
+                    src="[[cdn_url]]/web_content/assets/gol-tilt-down-volkswagen-colombia.jpg"/>
+                </div>
+                <div class="title">Tilt Down</div>
+                <div class="info">*Aplica para versi&oacute;n Comfortline.</div>
             </div>
         </div>
     </div>

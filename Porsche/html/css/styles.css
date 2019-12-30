@@ -1866,6 +1866,12 @@ section.modelos-view {
   padding: 1em 2em;
 }
 
+@media (max-width: 720px) {
+  section.modelos-view {
+    padding: 1em .3em;
+  }
+}
+
 section.modelos-view .container_div {
   width: 100%;
   display: -ms-grid;
@@ -2096,6 +2102,104 @@ section.autos-view .content .module {
   width: 100%;
 }
 
+section.autos-view .content .module > div.fila {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 4em;
+  margin-bottom: 4em;
+  grid-auto-flow: dense;
+  max-width: 1080px;
+  margin: 3em auto;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module > div.fila {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+section.autos-view .content .module > div.fila img {
+  width: 100%;
+  height: auto;
+}
+
+section.autos-view .content .module > div.fila.reversa .img {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module > div.fila.reversa .img {
+    grid-column: unset;
+  }
+}
+
+section.autos-view .content .module > div.fila .text {
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 1em;
+  color: #808890;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.autos-view .content .module > div.fila .text .title {
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1em;
+  text-align: left;
+  color: #1d1f20;
+}
+
+section.autos-view .content .module > div.fila .text .subtitle {
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: left;
+  color: #1d1f20;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .module > div.fila .text {
+    padding: 1.3em;
+  }
+}
+
+section.autos-view .content .module > div.fila > .img,
+section.autos-view .content .module > div.fila > .text {
+  padding: 0 10%;
+}
+
+section.autos-view .content .module > div.fila .extra .title {
+  font-size: 1.8em;
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 1em;
+  padding: .7em;
+}
+
+section.autos-view .content .module > div.fila .extra .info {
+  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+  line-height: 1em;
+  color: #808890;
+}
+
 section.autos-view .content .module > .title {
   font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
   width: 100%;
@@ -2110,23 +2214,15 @@ section.autos-view .content .module > .title {
   grid-column: 1/-1;
 }
 
-section.autos-view .content .module .carousel {
+section.autos-view .content .module .colores {
   width: 100%;
-  height: 250px;
   overflow-y: hidden;
   text-align: center;
 }
 
-section.autos-view .content .module .carousel img {
+section.autos-view .content .module .colores img {
   height: 100%;
   width: auto;
-}
-
-@media (max-width: 720px) {
-  section.autos-view .content .module .carousel img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 section.autos-view .content .module .galeria {
@@ -2154,6 +2250,20 @@ section.autos-view .content .module .galeria .exterior::after {
   content: 'Exterior';
 }
 
+section.autos-view .content .module .galeria .title {
+  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-size: 2.3em;
+  line-height: 1em;
+  text-align: center;
+  background-color: #f3f5f6;
+  padding: .7em;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  margin: 1em 0;
+  grid-column: 1/-1;
+}
+
 section.autos-view .content .module .galeria .interior,
 section.autos-view .content .module .galeria .exterior {
   padding: 1em;
@@ -2179,69 +2289,6 @@ section.autos-view .content .module .galeria .interior img,
 section.autos-view .content .module .galeria .exterior img {
   width: 100%;
   height: auto;
-}
-
-section.autos-view .content .module.exterior, section.autos-view .content .module.interior {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 1em;
-  grid-row-gap: 4em;
-}
-
-@media (max-width: 720px) {
-  section.autos-view .content .module.exterior, section.autos-view .content .module.interior {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-}
-
-section.autos-view .content .module.exterior img, section.autos-view .content .module.interior img {
-  width: 100%;
-  height: auto;
-}
-
-section.autos-view .content .module.exterior .text, section.autos-view .content .module.interior .text {
-  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1.5em;
-  line-height: 1em;
-  color: #808890;
-}
-
-@media (max-width: 720px) {
-  section.autos-view .content .module.exterior .text, section.autos-view .content .module.interior .text {
-    padding: 1.3em;
-  }
-}
-
-section.autos-view .content .module.exterior > .img,
-section.autos-view .content .module.exterior > .text, section.autos-view .content .module.interior > .img,
-section.autos-view .content .module.interior > .text {
-  padding: 0 10%;
-}
-
-section.autos-view .content .module.exterior .extra .title, section.autos-view .content .module.interior .extra .title {
-  font-size: 1.8em;
-  font-family: VW Head, Helvetica Neue, Helvetica, Arial, sans-serif;
-  text-align: center;
-  line-height: 1em;
-  padding: .7em;
-}
-
-section.autos-view .content .module.exterior .extra .info, section.autos-view .content .module.interior .extra .info {
-  font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1.3em;
-  text-align: center;
-  line-height: 1em;
-  color: #808890;
-}
-
-section.autos-view .content .module.interior .text {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  -ms-grid-row: 2;
-  grid-row: 2;
 }
 
 section.blog {
@@ -2792,7 +2839,7 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
   height: auto;
 }
 
-.dpr_container .dpr_in_stock, .dpr_container .price_per_unit {
+.dpr_container .dpr_in_stock, .dpr_container .price_per_unit, .dpr_container .dpr_out_of_stock {
   display: none;
 }
 
