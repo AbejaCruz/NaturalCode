@@ -519,7 +519,6 @@ main#main-content {
                 font-family: $ff-main-light;
                 line-height: 1.4em;
                 width: 100%;
-                // width: calc(100% - 120px);
 
                 @media (max-width: $screen-m) {
                     padding: .7em 0;
@@ -546,9 +545,15 @@ main#main-content {
     display: none;
     text-align: right;
     grid-column: 1/-1;
-    background-color: $color-main;
-    color: $font-contrast-color;
+    background-color: #dde0e2;
+    color: $color-font-main;
     box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
+    margin-top: .7em;
+    transition: .4s;
+
+    &:hover {
+        box-shadow: none;
+    }
 
     >div {
         max-width: $screen-xl;
@@ -669,7 +674,7 @@ main#main-content > #web-content > section.blank-view {
         height: auto;
     }
 
-    .dpr_in_stock {
+    .dpr_in_stock, .price_per_unit {
         display: none;
     }
     .dpr_product-name {

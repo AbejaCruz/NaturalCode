@@ -1,6 +1,15 @@
 
 section.home-content {
 
+    .main_banners {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
     .main-banner {
         width: 100%;
         position: relative;
@@ -14,9 +23,6 @@ section.home-content {
 
     #home_small_banners {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        grid-column-gap: 2em;
         margin: 3em 0;
 
         img {
@@ -29,11 +35,10 @@ section.home-content {
             text-align:center;
             padding: 1em;
             text-align: center;
-            box-shadow: 0 0 2px 2px rgba(0,0,0,.1);
             margin-bottom: 1em;
 
             &:hover {
-                box-shadow: 0 0 2px 2px rgba(77, 168, 226, 0.3);
+                color: $color-main;
             }
 
           
@@ -124,6 +129,7 @@ section.home-content {
                                 display: block;
                                 margin: .3em auto;
                                 width: 100%;
+                                -webkit-appearance: none;
                             }
                         }
                     }

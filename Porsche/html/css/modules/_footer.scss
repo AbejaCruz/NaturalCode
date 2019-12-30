@@ -1,18 +1,22 @@
 
 footer#main-footer {
-    // margin-left: $header-desktop-width;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 2em;
-    max-width: $screen-xl;
-    margin: 0 auto;
-    font-family: $ff-text;
     background-color: #ffffff;
+    width: 100%;
+    
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2em;
+        max-width: $screen-xl;
+        margin: 0 auto;
+        font-family: $ff-text;
 
-
-    @media (max-width: $screen-m) {
-        grid-template-columns: repeat(2, 1fr);
+        @media (max-width: $screen-m) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
+
+
 
     ul {
         text-decoration: none;

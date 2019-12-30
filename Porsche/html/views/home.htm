@@ -9,19 +9,81 @@
             [[formulario(1)]]
         </div>
         [[home_banners_small]]
+        <script>
+            var homeInfoBanners = document.getElementById('home_small_banners');
+
+            if (homeInfoBanners.childElementCount > 0) {
+                homeInfoBanners.classList.add('swiper-container');
+                let swiperCont = document.createElement('div');
+                swiperCont.classList.add('swiper-wrapper');
+                [...homeInfoBanners.children].forEach(el => {
+                    el.classList.add('swiper-slide');
+                    swiperCont.appendChild(el);
+                });
+
+                homeInfoBanners.appendChild(swiperCont);
+
+                let swprPag =document.createElement('div');
+                swprPag.classList.add('swiper-pagination');
+                homeInfoBanners.appendChild(swprPag);
+                swprPag =document.createElement('div');
+                swprPag.classList.add('swiper-button-next');
+                homeInfoBanners.appendChild(swprPag);
+                swprPag =document.createElement('div');
+                swprPag.classList.add('swiper-button-prev');
+                homeInfoBanners.appendChild(swprPag);
+
+
+
+
+                var swiperHomeBanners = new Swiper('#home_small_banners', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                        720: {
+                            slidesPerView: 2
+                        },
+                        1080: {
+                            slidesPerView: 3
+                        }
+                    }
+                });
+
+            }
+            
+        </script>
 
     </div>
 
     <div class="selectone" id="selectOne">
         [[box2content]]
+    </div>
+    <script>
+        [...document.getElementById('selectOne').querySelectorAll('#tpl_titulo')].forEach( el => el.parentElement.removeChild(el));
+        if ([...document.querySelectorAll("[data-group]")].length > 1) {
+            document.querySelectorAll("[data-group='1']");
+            [...document.querySelectorAll("[data-group='1']")].forEach(el => el.parentElement.removeChild(el));
+        }
 
+        let groupTitle = document.createElement('div');
+        groupTitle.setAttribute('id', 'tpl_titulo');
+        groupTitle.innerHTML = 'Vehículos Destacados';
+        document.getElementById('selectOne').prepend(groupTitle);
 
-
-        <script>
+    </script>
+    <script>
             if ((document.getElementById('selectOne').getElementsByClassName('container_div'))[0] ) {
 
 
-                // if (document.getElementsByClassName('pr_resp')) $('.container_div.swiper-wrapper').append(document.getElementsByClassName('pr_resp')[0]);
 
                 let grpContainer = document.createElement('div');
                 grpContainer.classList.add('swiper-container');
@@ -50,7 +112,6 @@
             }
 
         </script>
-    </div>
     
     <div class="saber-mas">
         <div class="title">¿Quieres Saber más?</div>
