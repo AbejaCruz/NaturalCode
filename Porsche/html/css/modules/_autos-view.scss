@@ -87,13 +87,24 @@ section.autos-view {
                     padding: 3em;
                     max-height: unset;
                     background: #ffffff;
+                    backdrop-filter: none;
                 }
                 h1 {
                     line-height: 1em;
                 }
 
+                label {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: block;
+                    @media(max-width: $screen-m) {
+                        width: unset;
+                    }
+                }
+
                 li {
                     margin-top: .5em;
+
                 }
                 p {
                     font-family: $ff-main-light;
@@ -101,32 +112,36 @@ section.autos-view {
                     line-height: 1em;
                     text-align: justify;
                     width: 80%;
+                    margin: 0 auto;
+                    @media (max-width: $screen-m) {
+                        width: 100%;
+                        max-width: 580px;
+                    }
                 }
                 input,
                 select {
-                    @media (max-width: $screen-m) {
-                        margin: 0;
-                    }
 
                     font-size: inherit;
                     line-height: 1em;
-
                     font-family: $ff-main-light;
                     display: block;
-                    margin-top: .3em;
-                    margin-bottom: .5em;
+                    margin: .3em auto .5em;
                     padding: .7em;
                     border-radius: 4px;
                     border: 1px solid #dedede;
                     width: 80%;
 
                     @media (max-width: $screen-m) {
+                        margin: 0;
                         width: 100%;
+                        max-width: 580px;
                     }
+
+
                 }
                 input[type="checkbox"] {
                     display: inline-block;
-                    margin: 0 1em;
+                    margin: .5em 1em;
                     width: unset;
                 }
                 .btn, input[type="submit"] {
@@ -287,6 +302,7 @@ section.autos-view {
                 .exterior {
                     padding: 1em;
                     position: relative;
+                    transition: .3s;
 
                     &::after {
                         position: absolute;
@@ -305,6 +321,15 @@ section.autos-view {
                     img {
                         width: 100%;
                         height: auto;
+                        transition: all .3s;
+
+                        &.thumbnail {
+
+                            &:hover {
+    
+                                transform: scale(1.04);
+                            }
+                        }
                     }
                 }
             }

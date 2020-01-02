@@ -991,6 +991,8 @@ section.lm-form .formulario form {
 @media (max-width: 720px) {
   section.lm-form .formulario form {
     width: 95%;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
 }
 
@@ -2035,11 +2037,25 @@ section.autos-view .content .main-banner .inner-form {
     padding: 3em;
     max-height: unset;
     background: #ffffff;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
 }
 
 section.autos-view .content .main-banner .inner-form h1 {
   line-height: 1em;
+}
+
+section.autos-view .content .main-banner .inner-form label {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .main-banner .inner-form label {
+    width: unset;
+  }
 }
 
 section.autos-view .content .main-banner .inner-form li {
@@ -2052,6 +2068,14 @@ section.autos-view .content .main-banner .inner-form p {
   line-height: 1em;
   text-align: justify;
   width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  section.autos-view .content .main-banner .inner-form p {
+    width: 100%;
+    max-width: 580px;
+  }
 }
 
 section.autos-view .content .main-banner .inner-form input,
@@ -2060,8 +2084,7 @@ section.autos-view .content .main-banner .inner-form select {
   line-height: 1em;
   font-family: VW Head Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   display: block;
-  margin-top: .3em;
-  margin-bottom: .5em;
+  margin: .3em auto .5em;
   padding: .7em;
   border-radius: 4px;
   border: 1px solid #dedede;
@@ -2072,19 +2095,14 @@ section.autos-view .content .main-banner .inner-form select {
   section.autos-view .content .main-banner .inner-form input,
   section.autos-view .content .main-banner .inner-form select {
     margin: 0;
-  }
-}
-
-@media (max-width: 720px) {
-  section.autos-view .content .main-banner .inner-form input,
-  section.autos-view .content .main-banner .inner-form select {
     width: 100%;
+    max-width: 580px;
   }
 }
 
 section.autos-view .content .main-banner .inner-form input[type="checkbox"] {
   display: inline-block;
-  margin: 0 1em;
+  margin: .5em 1em;
   width: unset;
 }
 
@@ -2268,6 +2286,8 @@ section.autos-view .content .module .galeria .interior,
 section.autos-view .content .module .galeria .exterior {
   padding: 1em;
   position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 section.autos-view .content .module .galeria .interior::after,
@@ -2289,6 +2309,14 @@ section.autos-view .content .module .galeria .interior img,
 section.autos-view .content .module .galeria .exterior img {
   width: 100%;
   height: auto;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+section.autos-view .content .module .galeria .interior img.thumbnail:hover,
+section.autos-view .content .module .galeria .exterior img.thumbnail:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 section.blog {
@@ -2846,6 +2874,8 @@ section.escribanos-view form > div .tyc .accept, section.escribanos-view form > 
 .dpr_container .dpr_product-name {
   font-size: 1.3em;
   line-height: 1em;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .dpr_container .dpr_in_stock {

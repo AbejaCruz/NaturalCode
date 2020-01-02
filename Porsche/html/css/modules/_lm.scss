@@ -90,6 +90,7 @@ section.lm-form {
 
             @media (max-width: $screen-m) {
                 width: 95%;
+                backdrop-filter: none;
             }
 
             .li_forma {

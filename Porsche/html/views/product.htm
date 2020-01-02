@@ -10,23 +10,7 @@
     <div class="autos-header">
         <h1>[[product_name]]</h1>
         <nav id="auto-nav">
-            <ul>
-                <li>
-                    <a href="#colores">Colores</a>
-                </li>
-                <li>
-                    <a href="#seguridad">Seguridad</a>
-                </li>
-                <li>
-                    <a href="#exterior">Exterior</a>
-                </li>
-                <li>
-                    <a href="#interior">Interior</a>
-                </li>
-                <li>
-                    <a href="#tecnologia">Tecnología</a>
-                </li>
-            </ul>
+            <ul></ul>
         </nav>
     </div>
     <div class="content">
@@ -62,4 +46,17 @@
             }
         });
     }
+
+    // Sets the navigation bar
+    [...document.querySelectorAll('.title.navigation')].forEach( el => {
+        let nav = document.getElementById('auto-nav').children[0];
+        let name = el.getAttribute('id');
+
+        let li = document.createElement('li');
+        let a = document.createElement('a');
+        a.setAttribute('href', '#' + name);
+        a.innerHTML = el.innerHTML.trim();
+        li.appendChild(a);
+        nav.appendChild(li);
+    } );
 </script>
