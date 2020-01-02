@@ -1,0 +1,54 @@
+<div id="detalle-producto">
+    <div class="detalle-c pr" itemscope itemtype="http://schema.org/Product">
+        [[product_gallery]]
+
+        <div class="descripcion-producto">
+            <div class="descrpcion-cont">
+                <div class="cont-prod">
+                    <div style="text-align: right; color: #ccc; font-size: 16px">
+                        [[product_structured_data]]
+                        <meta itemprop="brand" content="[[prod_opt_name_from_spec(1)]]">
+                        SKU: <span itemprop="sku">[[product_sku]]</span>
+                    </div>
+                    <div class="logo-marca">
+                        [[prod_opt_image_from_spec(1)]]
+                        <!--- <img src="images/marca-2.jpg" alt="marca" class="full-img"> -->
+                    </div>
+                    <div>
+                        [[product_in_cart]]
+                    </div>
+                    <h1 itemprop="name">[[product_name]]</h1>
+                    <div class="prod-view pr">
+                        <div class="price-prod" >
+                            [[product_price_html]]
+                        </div>
+                        [[product_stock_status]]
+                        [[product_llamar_cotizar]]
+                    </div>
+                    <!-- <div class="cont-btn">
+                        <a href="#" class="btn-talla">
+                            <span>Conoce tu talla</span>
+                            <span class="icon icon-talla"></span>
+                        </a>
+                    </div> -->
+
+                    <div class="cont-btn">
+                        <div class="btn-carrito">
+                            [[product_form]]
+                        </div>
+                    </div>
+
+                    <div class="txt-producto">
+                        <p>[[product_description]]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="especificacion-prd">
+    [[product_specs]]
+</div>
+<div class="legal">
+    <p>(*Todos los precios incluyen el impuesto al valor agregado obligatorio y en algunos casos el precio de envío.)</p>
+</div>
