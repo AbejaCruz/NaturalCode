@@ -1,11 +1,7 @@
-$image_preview_size: 180px;
-$screen-s: 340px;
-$screen-m: 540px;
-$screen-tablet: 768px;
-$screen-l: 900px;
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
+@import "./modules/variables";
 * {
     box-sizing: border-box;
 }

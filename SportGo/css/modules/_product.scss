@@ -8,6 +8,7 @@ section#product-view {
     padding: 5px 20px 13px 20px;
     border: #000 solid 1px;
     background: #fff;
+    font-family: $ff-tc;
 
     p {
         line-height: 1em;
@@ -23,13 +24,39 @@ section#product-view {
     .title {
         font-size: 2em;
         font-weight: bold;
+        font-family: $ff-adidas;
     }
-    
+
+
+    #product_gallery {
+        width: 100%;
+
+        .glass-case {
+            
+            ul#product-gallery {
+
+                li {
+                    border: 2px solid black;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    transition: .2s;
+
+                    &.gc-active {
+                        border: none;
+                    }
+                }
+            }
+
+            .gc-display-area {
+                border: none;
+            }
+        }
+    }
 
     .prod-images {
         .prod-image {
             text-align: center;
-            
+
             img {
                 width: auto;
                 max-width: 600px;
@@ -72,18 +99,23 @@ section#product-view {
             }
         }
     }
-    .price {
+    #product_pricing {
         position: absolute;
         display: block;
         width: 65%;
         text-align: right;
-        font-family: adiNeue, Arial, Helvetica, sans-serif;
+        font-family: $ff-adidas;
         font-size: 2em;
-        border-bottom: #000 3px solid;
+        border-bottom: #000000 3px solid;
         right: 1.2em;
+        color: transparent;
+
+        #product_price {
+            color: #000000;
+        }
     }
 
-    
+
     .specs-btn {
         margin-top: 1em;
         display: grid;
@@ -94,7 +126,7 @@ section#product-view {
         
         .spec {
             text-align: left;
-            
+
             .name{
                 font-weight: 600;
                 background-color: #FFFFFF;
