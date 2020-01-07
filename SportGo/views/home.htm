@@ -3,213 +3,6 @@
     <span class="sport">Sport</span>
     <span class="go">GO</span>
 </div>
-<div id="thanks-message">
-    <a href="#close" title="Close" class="close-modal" style="top: 1em;">&times;</a>
-
-    <div class="message">
-        ¡Gracias por tu compra!
-        <span class="message-body">
-            Te llegará un mensaje de confirmación a tu correo
-        </span>
-        <a href="#" class="btn">Volver al catálogo</a>
-    </div>
-</div>
-<div id="checkout-window">
-
-    <a href="#close" title="Close" class="close-modal" style="top: 1em;">&times;</a>
-    <a href="#" class="btn continuar">Seguir Comprando</a>
-
-    <div class="products">
-        <div class="title">
-            Productos Seleccionados
-        </div>
-        <div class="product">
-            <div class="img">
-                <img src="[[cdn_domain]]/css/sport-go/images/woman-hoodie.png" alt="">
-            </div>
-            <div class="info">
-                <div class="prod-variant"><span class="ttl">Marca:</span><span>Nike</span></div>
-                <div class="prod-variant"><span class="ttl">Talla</span><span>M</span></div>
-                <div class="prod-variant"><span class="ttl">Candidad</span><span>2</span></div>
-                <div class="prod-variant"><span class="ttl">Precio</span><span>$41,000</span></div>
-                <div class="prod-variant"><span class="ttl">Total</span><span>$81,000</span></div>
-            </div>
-            <div class="name">
-                Hoodie Lorem ipsum dolor sit amet consectetur
-            </div>
-        </div>
-        <div class="product">
-            <div class="img">
-                <img src="[[cdn_domain]]/css/sport-go/images/sport-go-joggers.png" alt="">
-            </div>
-            <div class="info">
-                <div class="prod-variant"><span class="ttl">Marca:</span><span>Adidas</span></div>
-                <div class="prod-variant"><span class="ttl">Talla:</span><span>M</span></div>
-                <div class="prod-variant"><span class="ttl">Candidad:</span><span>1</span></div>
-                <div class="prod-variant"><span class="ttl">Precio:</span><span>$241,000</span></div>
-            </div>
-            <div class="name">
-                Joggers Lorem ipsum dolor sit amet consectetur
-            </div>
-        </div>
-        <div class="total">
-            Total: $322,000
-        </div>
-    </div>
-    
-    <div class="vendor-code">
-        <form action="">
-            <div class="input">
-                <label for="vendor-code">Código de vendedor:</label>
-                <input type="text" name="vendor-code" id="vendor-code" required>
-            </div>
-            <div class="input">
-                <label for="discount-code">Código de descuento:</label>
-                <input type="text" name="discount-code" id="discount-code" required>
-            </div>
-            <div class="met-envio">
-                <div class="title">Métodos de envío</div>
-                <div class="compra-rapida">
-                    <div class="input">
-                        <label>Envío Rápido:</label>
-                        <input type="radio" name="metodo-envio" id="metodo-envio" value="0" required>
-                        <span class="time">1 a 10 días</span>
-                    </div>
-                    <div class="input">
-                        <label>Envío Normal:</label>
-                        <input type="radio" name="metodo-envio" id="metodo-envio" value="1" required>
-                        <span class="time">11 a 20 días</span>
-                    </div>
-                </div>
-        </div>
-
-            <div class="input">
-                <a href="#thanks-message" class="btn go-font">go</a>
-            </div>
-        </form>
-    </div>
-</div>
-<div id="delivery-window">
-    <a href="#close" title="Close" class="close-modal" style="top: 1em;">&times;</a>
-    <a href="#" class="btn continuar">Seguir Comprando</a>
-    <div class="title">¿Dónde te lo entregamos?</div>
-    <form action="">
-        
-        <div class="input" style="display: block;">
-            <input type="checkbox" name="copiar-direccion" id="copiar-direccion" required>
-            <label for="copiar-direccion">Copiar información</label>
-        </div>
-        <div class="input">
-            <label for="direccion">Dirección:</label>
-            <input type="text" name="direccion" id="direccion" required>
-        </div>
-        <div class="input">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" required>
-        </div>
-        <div class="input">
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" id="apellido" required>
-        </div>
-        <div class="input">
-            <label for="ciudad">Ciudad:</label>
-            <input type="text" name="ciudad" id="ciudad" required>
-        </div>
-        <div class="input">
-            <label for="departamento">Departamento:</label>
-            <input type="text" name="departamento" id="departamento" required>
-        </div>
-        
-        <div class="input">
-            <a href="#checkout-window" class="btn go-font">go</a>
-        </div>
-    </form>
-
-</div>
-<div id="login-window">
-    
-    <a href="#close" title="Close" class="close-modal" style="top: 1em;">&times;</a>
-    <a href="#registration-window" class="btn" id="registration-btn">
-        Registrarse
-    </a>
-
-    <form action="">
-        <div class="input">
-            <label for="email">e-mail:</label>
-            <input type="email" name="email" id="email" required>
-        </div>
-        <div class="input">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
-        </div>
-        <div class="input">
-            <a href="#checkout-window" class="btn">Login</a>
-        </div>
-    </form>
-</div>
-<div id="registration-window">
-        <a href="#close" title="Close" class="close-modal">&times;</a>
-
-    <div class="title">
-        Registrarse
-    </div>
-    <form action="">
-        <div class="input">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" required>
-        </div>
-        <div class="input">
-            <label for="pais">País:</label>
-            <input type="text" name="pais" id="pais" required>
-        </div>
-        <div class="input">
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" id="apellido" required>
-        </div>
-        <div class="input">
-            <label for="cedula">Departamento:</label>
-            <input type="text" name="cedula" id="cedula" required>
-        </div>
-        <div class="input">
-            <label for="email">email:</label>
-            <input type="email" name="email" id="email" required>
-        </div>
-        <div class="input">
-            <label for="ciudad">Ciudad:</label>
-            <input type="text" name="ciudad" id="ciudad" required>
-        </div>
-        <div class="input">
-            <label for="cedula">Cédula:</label>
-            <input type="text" name="cedula" id="cedula" required>
-        </div>
-        <div class="input">
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" name="telefono" id="telefono" required>
-        </div>
-        <div class="input">
-            <label for="direccion">Dirección:</label>
-            <input type="text" name="direccion" id="direccion" required>
-        </div>
-        <div class="input">
-            <label for="telefono2">Teléfono 2:</label>
-            <input type="tel" name="telefono2" id="telefono2" required>
-        </div>
-        <div class="input line">
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" name="contrasena" id="contrasena" required>
-        </div>
-        <div class="input line">
-            <label for="confirmacion">Confirmación:</label>
-            <input type="password" name="confirmacion" id="confirmacion" required>
-        </div>
-        <div class="input line">
-            <a href="#delivery-window" class="btn go-font">go</a>
-        </div>
-    </form>
-</div>
-<div id="checkout-window">
-
-</div>
 <a class="shopping-cart" id="shopping-cart" href="#viewShoppingCart">
     <div class="quantity" id="shopping-cart-qty">
         0
@@ -220,208 +13,31 @@
         </svg>
     </div>
 </a>
-<div class="swiper-container" style="display: none;">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide pag-1">
-            <img src="[[cdn_domain]]/css/sport-go/images/page-1.png" alt="">
-            <svg data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 714"><path class="canvas" d="M0 0h1480v714H0z"/><a href="#openHoodie"><path class="shape orange" d="M590.5 379h-3l3-15.6 2.3-10.3v-11.9l2.7-6.5 3-16 4.6-17.2 3.5-19.1 3.4-5-3.4-5.3-2.7-4.2 4.6-18 1.5-9.6 4.2-37.4V157l2.7-9.1 10.3-7.7-2.3-5 5-4.5v-8l14.5-8.9 15.3-1.9 9.6 4.6 11.4 3.8 8.4 4.2 5.4-4.2 7.6-3 8.4-1.2 8-2.6 7.7-7 8.4-4.9h9.2l8.8 7.7 6.5 6.5 11.4 3.8 5.8 6.5 5.7 19.8v73.4l4.6 5.8v21.7l-16.8 13.8-11.9-3.8-7.6-3.5-.4-3-2.7 8-.4 20.3 4.3 22.5 1.1 21.4-3.8 3 3 2-1.5 9.1 3 4 2 2.8 7.2 9.7-22.1 3.2-19.9 2.9-16.8.8-14.9.8-8.8.4-12.6.7-3 1.1-46.3 2.7-6.1-4.2-3.5 7.6v14.5l-6.9-6.8-10.7 2.3z"/></a><a href="#openJoggers"><path class="shape white" d="M608.5 371.8l7.3 44 3.4 45v24.5l-2.3 31-.7 12.2.7 27.9 5.7 47.8 8.8 29.4 10.7 1.5 13-2.7v-47.7l2.7-34s-2.3-21-2.3-19.9 12.6-41.3 12.6-41.3l2.7-46.2 4.2-37.1 4.2-23.7h10.3l19.5 21 5.4 11.5 13.7 22.6 21.8 28.6 5.3 11.8 15 25.5-3.9 27.3.8 18 6.5 27.9 2.3 29.8 2.3 21 7.2 3.8 9.2 1.5 11.1-2.6 3.4-3 5.4-75.8v-26.7l1.9-31.7-3-16.8-19.5-52-13.8-31.8-8.4-18-10.3-19.4-38.6 5.7-34.8 3-26.4.8-29 .4-16 2.3z"/></a><a href="#"><path class="shape" d="M636.4 704.3c1.1.8-11.8-6.9-11.8-6.9v-18.7l3.8-16.8 2.1-12.3 2.5-8.4 9.1-4.2h14.2v10l2.7 3v14.5l3 14.6 2.7 14.5v5.3l-5 2.7-12.3 2.7h179.3l-20.2-2.7-16.8-14.1-3.1-5-15.3-9.5-14.1-10.7-.4-7.6 13-13.4 4.6-10.7-4.2-8.4 8 5.3 1.5 13.8 5.3 5.7 11.1-1.5 5.8 2.3.7-8.8 12.2-3.8 1.6 8.8 6.1-11.5 10-3.8-6.6 5-7.2 11.8 2.6 9.2 3.5 13.3 7.6 12.6 5.8 3.8 3.8 4.6 5.3 6.5-1.9 7.3-12.2 1.5z"/></a></svg>
-            
-
-        </div>
-        <div class="swiper-slide pag-2">
-            <img src="[[cdn_domain]]/css/sport-go/images/page-2.png" alt="">
-            <svg data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1482 715"><path class="canvas" d="M0 0h1482v715H0z"/><a href="#"><path class="shape green" d="M597.8 245.4h35.3l9.2 2.3V266l-3.7 5.5 1.9 17.9-1 27.5 2.8 10v21.6l-2.8 15.6 11 11v7.4l7 7.3 30.2 4.6h33.5l30.7-3.2 29.8-3.7 10.6-6.9 12.4-6.4v-13.7l-8.8-6.4-3.2-18.9-7.8-28.4-4.6-23.8-2.3-26.2-1.8-22 4.1 5 36.3-8.2 1.8-3.7-3.2-12.3-6.4-21.6-5-21.6-8.3-17.4-13.8-10-22.5-14.8-4.5-4-10.6-2.4-5-4.1-5-2-6-2.6 5.5 5-4.6 7.9-7.4 9.1-13.5 1-15.8-2.8-13.8-8.7-3.2-8.3 2.8-3.2-8.7 6.4-13.3 7.8-12.4 7.8-6 5.5-13.7 6-7 6.9 1.5 3.6-17 27.1v22l-3.7 13.8v23.3z"/></a><a href="#"><path class="shape black" d="M674.9 642l20.1-1.8 8.3 1 2.3-17 4.1-22V565l3.2-7.3-3.2-17.5 3.2-4.6-6.9-16 7-4.6 4.5-38.5 1.9-27.5 6.8-31.2L741 443l16.9 36.2 3.6 2.3v13.3l6 6-4.1 5 .4 10.6 3.7 4.6-4.1 3.2v31.2l4.1 28.9 4.6 20.6 3.7 8.7v9.6l6 13.3 1.8 12h3.2l11 2.3 15.1-3.7 6.9-3.7-4.6-14.6 4.6-10.1-6.9-6.5 4.6-4.6-4.1-20.6v-46.8l2.3-10.5-4.2-6.4 5-3.7v-13.8l3.3-22.4-5-10.6 2.2-9.6-.9-37.6-3.6-23-2.8 1.9-6.4-7.4.4-4.5 5.5-6.5-18.8-4.5-7.8 4.5-35.3 6-24.7 1.4-24.8.4-25.7-.9-14.2-3.2-6 3.7v10l5 8.3 8.8 9.2-1.4 4.6-4.1-.5-8.3-4.6 8.3 38.1 2.7 18.8-1.8 13.8 6 17-2.8 8-.9 5.2-3.7 7.8 4.2 40.4 3.6 22-3.6 22.5 6.8 9.6 2.8 3.7 1.4 14.6z"/></a><a href="#"><path class="shape white" d="M711.3 676.3l-3.1-8.7-1.2-9-5.7-11.3-1.8 4V646l-7-4.9-9.2 1.2-6.9 1.9-3.6 7-5 6-5.4 2.4-4 7.5 2.7 2.1-2.7 7-9.2 5.7-3.2 3.9-4.6 6.5-1.5 7.5 1.2 5.8 3.7 2.3 9.8 1.7 14.2-1.8L679 704l7.7-7.2 3.6-3.7 10.4-6.2 10.5-6.9v-2.1l65.2.1-1.1 5.5 1 6.6s6.2 3.7 6.6 3.7l15.3.4 21.3 1 19.7 4 18.5 1.4 15.7-1.5 7.8-4.1 4.2-6.1-1-5-3.8-4-15.9-4.5-13-4.1-6.4-6.4-8.8-10.6-11-8.5-7.4-2.3-7.2 6-6.9 9-7.8 1.5-9.3-2.5-2.9-1.9-2.1 3-1.6 4.8-1.2 3.6-.3 8.4-1.2 2.1h-67.4z"/></a></svg>
-        </div>
-        <div class="swiper-slide pag-3">
-            <img src="[[cdn_domain]]/css/sport-go/images/page-3.png" alt="">
-            <svg id="ills" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1482 807"><path class="canvas" d="M0 0h1482v807H0z"/><a href="#"><path id="kid_cap" class="shape" d="M613 142.7l13.5-11.6 23.8-3.4 38.5 7.5 8 5.4 1.2 17.7h12.5l-1.2 12.5-7 8H720l15.3-7.4 10.4-10.7 1.5-3.3-9.5-8-24.4-7.6-1.5-14L709 114l-5.2-11.3L693.4 90l-21.7-5.5-21 1.5-13.2 4.6-11 7.7-10.8 15.3-2.7 10v19z"/></a><a href="#"><path id="girl_cap" class="shape" d="M812 164.4l-2.1-7.3 5.8-10.4v-8.9l5.2-24.1 15.9-21.5 20.5-7.6 21 1.5 23.3 11.4 8 9.1 3 18v16.6l1.5 9.5-1.5 6-2.4 1.3-1.6-16.2-9.7-12-28.5-5.3-16.8 1.4-19.3 5.8-13.7 7-3 2.2-1 8.2-.6 10.1-4 5.2z"/></a><a href="#"><path id="kid_hoodie" class="shape" d="M470.5 350.6l-15.6-12-8.2-10.6 29.6-37.3 44.4-45.6 7-2.7v-4.3l13.7-7 38.3-35.1 1.5-5.6 14.3-8.5h17.8l6 12.8 8.7 5.2 7.9 12.6 14.7 13.1 6.7 4.3 9.8-.6 2.4-1L695 221l6.2-9.2-7-5.5 7 .3 4.2 5.8h2.8l1.5 3.7 16.2 13.8 9.5 16.8 3.4-.3 2.3 6.7-1.7 29.4 5.2 50 4.3 2.2v4l8.5 19.3-7.6 38.2L746 413l-5 24.8-3.3 12.5s-1.8-.6-2.7 0-2.1-5.8-2.1-5.8l-6.2-12.2-11.3-51.4 4.3-24.2-6.7-9.8-3.7-10 .7-23-4.3-1.8-5.8-5-8.3 24.9-6.7 11.6-4.9 3-4 33-4.9 30-7.3 8.3-4 8-24.2-1.9-38.5-3-39.4-14.7L524 374l-6.4-6.7 17.1-15.6-1.2-5.8 12.5-12.5 8-27.5 7.7-6.7s.2-3 .9-4l11.6-15.3 1.5-4.9 1.5-12 5.2-11.2-6.7 9.4-12 7-6 4h-2.8l-2.4 10.1-6.8 9.8-10.4 6.1 2.5 3.1-8 5.2-5.5 5.8-9.8 1.5-7 7-25.6 20.8z"/></a><a href="#"><path id="girl_hoodie" class="shape purple" d="M774.7 439l-6.4 4.6-11-2.3-7.6-4.1-8.7-3.1 4.2-17.4 8-38.1 4.7-21.9s10.1-10 10.1-11 1.2-9.5 1.2-9.5h3l10.8-67 2.1-18.6 6.1-21.4 19.3-15.6s20.8-7 22.3-7.3 7 10 7 10l11 4.6 10.7-5.2 10.7-9.4 12.6-7 6.4-4.3 11.9-4.6 4-8.6 1.9-10.4 12.5-1.2v8.6l6.1 3-2 5.5 5.1 2.5 1.5 4 4-1.2s.6 2.7 1.6 2.7l5.8.3v-8l4.9 4.6-5 6.8-2.1 12.5-1.9 6.8 6.8 31.7.6 2.8-2.2 1.2 24.8 75.8v18.7l-5.8 12.5-8 8.3-57.2 48.6-23.2 2.7-7-1.2 2.8-6.1-8.9-9.8-9.8-22.6-2.7-5-.7-14.6-3.6-4.3-6.5-15.3 3-1.5-8.8-9.8-35.1 66.4-16.5 29.3-5.5 7z"/></a><a href="#"><path id="kid_pants" class="shape" d="M517.3 370.5l-33.6 24.4-34.6 34.6-5.8 11.9-4 14.4 5.2 16.2 14.7 15.9 19.1 21.4 10.9 11.9 23 12.5 15.5 2.8 2.8-2.8 14.3-3.3 6.4-4.6 2.8-8v-9.7l-5.5-1 .6-8.5-7-7.4-5.5-.9-2.8-4-2.7-.6-17.2-17.7-1.5-8.6 17.4-11 26.3 5 9.5 11.9 10.1 11 8.3 11L604 534 617 588l3.6 42.8v10l-3 4.6 8.5 4 3.7 8-2.1 6.7-.3 4.3 26.6 4 3.3-8v-7l4.6-3.1 2.8-4.9v-10.4l4-14-2.8-7 2.7-45 2.8-24.2-8-8-.3-4.8 4.6-8.6-6.4-4 3.7-22.9-2.5-16.2.6-18.3-2.7-8 1.8-6.1-2.7-4.3 4-4-2.5-6-.6-9.3-33.3-4.9-28.5-2.3-41-14.8-40.3-35.7z"/></a><a href="#"><path id="girl_pants" class="shape pink" d="M869.8 419.6l2.5 14.2-2.5 8.5 6.1 20.5 5 31.8v30.6l-8.6 29-6.8 27-2.4 28.3-5.8 21.1 4.6 12.6 7.2 2.4-3.3 10.1-3 2.8 1.2 4.3 14.7 6 12-3.6 5.7-5.2-2.4-3.7-.6-8 4.9-2.4 4-8.9 41.5-118.5 6.1-9 23.2-45.8 11.4-18.3 30.5-20.2-24.1 25.1-2.2 8.2 1.5 5.5-10.4 13.8 3.7 6.4 12.2 7.7 10.4 2.7 8.9-13.5 5.2-1.2 4.6-.9s17.7-20.2 18.6-20.8 29.4-28.7 29.4-28.7l8.5-3.7 7.7-11.3 4.9-18-6.1-13.8-8-5.8-20.1-8.9h-9.8l-10.1-5.5-38-12.2-17.3-3-15-3.2v4.3l-5.8 12.6-65.2 56.9-23.2 2.7z"/></a><a href="#"><path id="kid_shoe_left" class="shape black" d="M522.9 535.6l-1.6 8.5v10.1l-3.7 4-1.5 8.3 1.8 3-8.5 15-3.1 7V605l12 3h11l12.5-10.4 10.7-8.9 10-24.1 13.2-15.6 8.9-15.6-3-8.9-9-3.2-9.7-9.6 5.2-1.2-1.6-2.5h-9.1l-3.4 3.4 4 2.2s3.4 10 3.4 11-2.8 8.5-2.8 8.5l-10.4 1.5-2.7 2.8-3.6-6.3-11.4 2.6-4.1 2.5z"/><path id="kid_shoe_right" class="shape" d="M628 732.1l6.7 7H659l12.5-3.4 2.4-6-4.2-20.5-4.3-6.7v-5.2l-3-4.3-1.3-13.4-3-5.8-7-3.1-19.5-1.8-6 3.3-6.7 8.9v12l3.7 9.7 4.6 14.7.9 14.6z"/></a><a href="#"><path id="girl_shoe_left" class="shape black" d="M862.8 672L852 695.4l-1.9 11.3 3.7 7.3 3.4 5 11 15.5 14 4.6h18.4l8.8-2.2-1.2-15-3-11.3-1-8.2S901 696 901 695s-1.8-10-1.8-10l-1.9-5.5-14-6.5-13.8 6.8-1.2 3.3-8.3 3.4z"/><path id="girl_shoe_right" class="shape" d="M948 512.3L958 523l30.5 31 20.8 12.5 6.1-6.2V551l-4.8-8-.4-6.1-3.6-10.7-1-5.2-1.2-12.5-4.2-7-2.2 2.7-.9 4.3-12 .3-9.4-10.1v-12l-4-4.5-8 4.2-5.4 1.9-10.2 24z"/></a><a href="#"><path id="kid_glasses" class="shape yellow" d="M617.8 171.7l-4.8 11.2 4.8 6.9 1.6 4.9 8.6 5.2s5 2 6.6 1.8 7-5.5 7-5.5l3.7-9.5h4.4l3.2 9s9.4 7.4 10.8 7.2 10 0 10 0l7.9-6.5 2.7-5.5v-2.3l3.7-3.2 11.9-19.7-4.3 1.6-9.2 14.5-1.6 3.6-1.9-1.1-6.2-4.4-23.6-1.1h-34.6l-2 1.6 3-6.5-.5-3.7z"/></a><a href="#"><path id="girl_glasses" class="shape yellowgreen" d="M849.9 181.8l-5.3-8.8-1.6-8.6 3.4-6-19-12.9V143l24 11 21.9 8.4 2.3 5.6 6.8 1.2 7.8-1.9 7.6 1.2 7.1 1.7 5 4.2-1.3 6.4-5 8.5-12.4 5.7-8-5.4-6-7.8 1.3-9.7-2.5.3-7.3 6.4-10.8 5.5-8-2.5z"/></a></svg>
-
-        </div>
-        <div class="swiper-slide">Slide 4</div>
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-</div>
 <!-- Swiper -->
-<div class="swiper-container" id="mobile">
+<div class="swiper-container" id="catalogo">
     <div class="swiper-wrapper">
-        <div class="swiper-slide pag-1">
+        <div class="swiper-slide pag-1" data-hash="pagina-1">
             <img src="[[cdn_domain]]/css/sport-go/images/page-1.png" alt="">
-            <svg data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 714"><path class="canvas" d="M0 0h1480v714H0z"/><a href="#openHoodie"><path class="shape orange" d="M590.5 379h-3l3-15.6 2.3-10.3v-11.9l2.7-6.5 3-16 4.6-17.2 3.5-19.1 3.4-5-3.4-5.3-2.7-4.2 4.6-18 1.5-9.6 4.2-37.4V157l2.7-9.1 10.3-7.7-2.3-5 5-4.5v-8l14.5-8.9 15.3-1.9 9.6 4.6 11.4 3.8 8.4 4.2 5.4-4.2 7.6-3 8.4-1.2 8-2.6 7.7-7 8.4-4.9h9.2l8.8 7.7 6.5 6.5 11.4 3.8 5.8 6.5 5.7 19.8v73.4l4.6 5.8v21.7l-16.8 13.8-11.9-3.8-7.6-3.5-.4-3-2.7 8-.4 20.3 4.3 22.5 1.1 21.4-3.8 3 3 2-1.5 9.1 3 4 2 2.8 7.2 9.7-22.1 3.2-19.9 2.9-16.8.8-14.9.8-8.8.4-12.6.7-3 1.1-46.3 2.7-6.1-4.2-3.5 7.6v14.5l-6.9-6.8-10.7 2.3z"/></a><a href="#openJoggers"><path class="shape white" d="M608.5 371.8l7.3 44 3.4 45v24.5l-2.3 31-.7 12.2.7 27.9 5.7 47.8 8.8 29.4 10.7 1.5 13-2.7v-47.7l2.7-34s-2.3-21-2.3-19.9 12.6-41.3 12.6-41.3l2.7-46.2 4.2-37.1 4.2-23.7h10.3l19.5 21 5.4 11.5 13.7 22.6 21.8 28.6 5.3 11.8 15 25.5-3.9 27.3.8 18 6.5 27.9 2.3 29.8 2.3 21 7.2 3.8 9.2 1.5 11.1-2.6 3.4-3 5.4-75.8v-26.7l1.9-31.7-3-16.8-19.5-52-13.8-31.8-8.4-18-10.3-19.4-38.6 5.7-34.8 3-26.4.8-29 .4-16 2.3z"/></a><a href="#"><path class="shape" d="M636.4 704.3c1.1.8-11.8-6.9-11.8-6.9v-18.7l3.8-16.8 2.1-12.3 2.5-8.4 9.1-4.2h14.2v10l2.7 3v14.5l3 14.6 2.7 14.5v5.3l-5 2.7-12.3 2.7h179.3l-20.2-2.7-16.8-14.1-3.1-5-15.3-9.5-14.1-10.7-.4-7.6 13-13.4 4.6-10.7-4.2-8.4 8 5.3 1.5 13.8 5.3 5.7 11.1-1.5 5.8 2.3.7-8.8 12.2-3.8 1.6 8.8 6.1-11.5 10-3.8-6.6 5-7.2 11.8 2.6 9.2 3.5 13.3 7.6 12.6 5.8 3.8 3.8 4.6 5.3 6.5-1.9 7.3-12.2 1.5z"/></a></svg>
-            
-                
-            <a href="#openHoodie" class="info-link pos1">
-                <div class="info-item">
-                    <div class="image-preview">
-                        <img src="[[cdn_domain]]/css/sport-go/images/women-hoodie-preview.png" alt="">
-                    </div>
-                    <div class="title">
-                        Lorem Ipsum
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet, consectetuer
-                        adipiscing elit, sed diam nonummy nibh
-                        euismod tincidunt ut laoreet dolore magna
-                        aliquam erat volutpat. Ut
-                    </div>
-                </div>
-            </a>
-            <a href="#openJoggers" class="info-link pos2">
-                <div class="info-item">
-                    <div class="image-preview">
-                        <img src="[[cdn_domain]]/css/sport-go/images/sport-go-joggers.png"
-                            alt="">
-                    </div>
-                    <div class="title">
-                        Lorem Ipsum
-                    </div>
-                    <div class="description">
-                        Rrrer er e r er e r er e r e re r e r er e r
-                        e re r er e r er e r er e r er e rwererd d
-                        wef we fwe rf wer fwe r fwe r fwe r wer fw
-                        erf w efr w fw er fwe rf we rf we rfw efr we
-                        rfew fw f er few fr ew rf ew rf wrf e rf ew
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque beatae quos consequuntur!
-                    </div>
-                </div>
-            </a>
-            
-    <div id="openHoodie" class="modalDialog">
-            <div class="product-modal">
-                <a href="#close" title="Close" class="close-modal">&times;</a>
-                <div class="title">Woman Hoodie Sport-Go</div>
-                <div class="prod-images">
-                    <div class="thumbs">
-                        <div class="thumb">
-                            <img src="[[cdn_domain]]/css/sport-go/images/woman-hoodie.png" alt="">
-                        </div>
-                        <div class="thumb">
-                            <img src="[[cdn_domain]]/css/sport-go/images/woman-hoodie.png" alt="">
-                        </div>
-                        <div class="thumb">
-                            <img src="[[cdn_domain]]/css/sport-go/images/woman-hoodie.png" alt="">
-                        </div>
-                    </div>
-                    <div class="prod-image">
-                        <img src="[[cdn_domain]]/css/sport-go/images/woman-hoodie.png" alt="">
-                    </div>
-
-                </div>
-                <div class="price">
-                    $269.900
-                </div>
-                <div class="specs-btn">
-
-                    <div class="specs">
-                        <div class="spec">
-                            <div class="name">
-                                Colors
-                            </div>
-                            <div class="variants">
-                                <div class="variant color-test" style="background-color: rgb(2, 84, 90);"></div>
-                                <div class="variant color-test" style="background-color: rgb(116, 204, 15);"></div>
-                                <div class="variant color-test" style="background-color: rgb(190, 129, 129);"></div>
-                            </div>
-                        </div>
-                        <div class="spec">
-                            <div class="name">Size</div>
-                            <div class="variants">
-                                <div class="variant selected">S</div>
-                                <div class="variant">M</div>
-                                <div class="variant">L</div>
-                                <div class="variant">XL</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="add-to-cart">
-                        <div class="btn" onclick="addToCart();">
-                            <div class="outter-box"></div>
-                            Add to cart
-                        </div>
-                    </div>
-                </div>
-
-                <p>This is a sample modal box that can display your product.</p>
-                <p>You could use this place to add a neat description to your hoodie, or the other products on your store.</p>
-            </div>
-        </div>
-        <!-- Hoodie -->
+            <svg data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 714"><path class="canvas" d="M0 0h1480v714H0z"/><a href="p/morral-reebok-one-series-30l-grip-bag/" target="modal-iframe" onclick="relinkIframe(this.href);"><path class="shape orange" d="M590.5 379h-3l3-15.6 2.3-10.3v-11.9l2.7-6.5 3-16 4.6-17.2 3.5-19.1 3.4-5-3.4-5.3-2.7-4.2 4.6-18 1.5-9.6 4.2-37.4V157l2.7-9.1 10.3-7.7-2.3-5 5-4.5v-8l14.5-8.9 15.3-1.9 9.6 4.6 11.4 3.8 8.4 4.2 5.4-4.2 7.6-3 8.4-1.2 8-2.6 7.7-7 8.4-4.9h9.2l8.8 7.7 6.5 6.5 11.4 3.8 5.8 6.5 5.7 19.8v73.4l4.6 5.8v21.7l-16.8 13.8-11.9-3.8-7.6-3.5-.4-3-2.7 8-.4 20.3 4.3 22.5 1.1 21.4-3.8 3 3 2-1.5 9.1 3 4 2 2.8 7.2 9.7-22.1 3.2-19.9 2.9-16.8.8-14.9.8-8.8.4-12.6.7-3 1.1-46.3 2.7-6.1-4.2-3.5 7.6v14.5l-6.9-6.8-10.7 2.3z"/></a><a href="/p/licra-basic-lg-t-pr2/" target="modal-iframe" onclick="relinkIframe(this.href);"><path class="shape white" d="M608.5 371.8l7.3 44 3.4 45v24.5l-2.3 31-.7 12.2.7 27.9 5.7 47.8 8.8 29.4 10.7 1.5 13-2.7v-47.7l2.7-34s-2.3-21-2.3-19.9 12.6-41.3 12.6-41.3l2.7-46.2 4.2-37.1 4.2-23.7h10.3l19.5 21 5.4 11.5 13.7 22.6 21.8 28.6 5.3 11.8 15 25.5-3.9 27.3.8 18 6.5 27.9 2.3 29.8 2.3 21 7.2 3.8 9.2 1.5 11.1-2.6 3.4-3 5.4-75.8v-26.7l1.9-31.7-3-16.8-19.5-52-13.8-31.8-8.4-18-10.3-19.4-38.6 5.7-34.8 3-26.4.8-29 .4-16 2.3z"/></a><a href="p/tenis-new-balance-wrl420-gray/" target="modal-iframe" onclick="relinkIframe(this.href);"><path class="shape" d="M636.4 704.3c1.1.8-11.8-6.9-11.8-6.9v-18.7l3.8-16.8 2.1-12.3 2.5-8.4 9.1-4.2h14.2v10l2.7 3v14.5l3 14.6 2.7 14.5v5.3l-5 2.7-12.3 2.7h179.3l-20.2-2.7-16.8-14.1-3.1-5-15.3-9.5-14.1-10.7-.4-7.6 13-13.4 4.6-10.7-4.2-8.4 8 5.3 1.5 13.8 5.3 5.7 11.1-1.5 5.8 2.3.7-8.8 12.2-3.8 1.6 8.8 6.1-11.5 10-3.8-6.6 5-7.2 11.8 2.6 9.2 3.5 13.3 7.6 12.6 5.8 3.8 3.8 4.6 5.3 6.5-1.9 7.3-12.2 1.5z"/></a></svg>
 
         
-        <div id="openJoggers" class="modalDialog">
-                <div class="product-modal">
-                    <a href="#close" title="Close" class="close-modal">&times;</a>
-                    <div class="title">Woman Joggers Sport-Go</div>
-                    <div class="prod-images">
-                        <div class="thumbs">
-                            <div class="thumb">
-                                <img src="https://gloimg.zafcdn.com/zaful/pdm-product-pic/Clothing/2017/07/10/goods-first-img/1499707622137014428.jpg" alt="">
-                            </div>
-                            <div class="thumb">
-                                <img src="https://gloimg.zafcdn.com/zaful/pdm-product-pic/Clothing/2017/07/10/goods-first-img/1499707622076775374.jpg" alt="">
-                            </div>
-                            <div class="thumb">
-                                <img src="https://image.made-in-china.com/43f34j00wJqEcVdCKmkM/Wholesale-Women-Fitness-Yoga-Pants-Womens-Gym-Sports-Wear.webp" alt="">
-                            </div>
-                        </div>
-                        <div class="prod-image">
-                            <img src="https://gloimg.zafcdn.com/zaful/pdm-product-pic/Clothing/2017/07/10/goods-first-img/1499707622137014428.jpg" alt="">
-                        </div>
-    
-                    </div>
-                    <div class="price">
-                        $269.900
-                    </div>
-                    <div class="specs-btn">
-    
-                        <div class="specs">
-                            <div class="spec">
-                                <div class="name">
-                                    Colors
-                                </div>
-                                <div class="variants">
-                                    <div class="variant color-test" style="background-color: rgb(2, 84, 90);"></div>
-                                    <div class="variant color-test" style="background-color: rgb(116, 204, 15);"></div>
-                                    <div class="variant color-test" style="background-color: rgb(190, 129, 129);"></div>
-                                </div>
-                            </div>
-                            <div class="spec">
-                                <div class="name">Size</div>
-                                <div class="variants">
-                                    <div class="variant">S</div>
-                                    <div class="variant">M</div>
-                                    <div class="variant selected">L</div>
-                                    <div class="variant">XL</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="add-to-cart">
-                            <div class="btn" onclick="addToCart();">
-                                <div class="outter-box"></div>
-                                Add to cart
-                            </div>
-                        </div>
-                    </div>
-    
-                    <p>This is a sample modal box that can display your product.</p>
-                    <p>You could use this place to add a neat description to your hoodie, or the other products on your store.</p>
-                </div>
-            </div>
-            <!-- Joggers -->
         </div>
-        <div class="swiper-slide pag-2">
+        <div class="swiper-slide pag-2" data-hash="pagina-2">
             <img src="[[cdn_domain]]/css/sport-go/images/page-2.png" alt="">
-            <svg data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1482 715"><path class="canvas" d="M0 0h1482v715H0z"/><a href="#"><path class="shape green" d="M597.8 245.4h35.3l9.2 2.3V266l-3.7 5.5 1.9 17.9-1 27.5 2.8 10v21.6l-2.8 15.6 11 11v7.4l7 7.3 30.2 4.6h33.5l30.7-3.2 29.8-3.7 10.6-6.9 12.4-6.4v-13.7l-8.8-6.4-3.2-18.9-7.8-28.4-4.6-23.8-2.3-26.2-1.8-22 4.1 5 36.3-8.2 1.8-3.7-3.2-12.3-6.4-21.6-5-21.6-8.3-17.4-13.8-10-22.5-14.8-4.5-4-10.6-2.4-5-4.1-5-2-6-2.6 5.5 5-4.6 7.9-7.4 9.1-13.5 1-15.8-2.8-13.8-8.7-3.2-8.3 2.8-3.2-8.7 6.4-13.3 7.8-12.4 7.8-6 5.5-13.7 6-7 6.9 1.5 3.6-17 27.1v22l-3.7 13.8v23.3z"/></a><a href="#"><path class="shape black" d="M674.9 642l20.1-1.8 8.3 1 2.3-17 4.1-22V565l3.2-7.3-3.2-17.5 3.2-4.6-6.9-16 7-4.6 4.5-38.5 1.9-27.5 6.8-31.2L741 443l16.9 36.2 3.6 2.3v13.3l6 6-4.1 5 .4 10.6 3.7 4.6-4.1 3.2v31.2l4.1 28.9 4.6 20.6 3.7 8.7v9.6l6 13.3 1.8 12h3.2l11 2.3 15.1-3.7 6.9-3.7-4.6-14.6 4.6-10.1-6.9-6.5 4.6-4.6-4.1-20.6v-46.8l2.3-10.5-4.2-6.4 5-3.7v-13.8l3.3-22.4-5-10.6 2.2-9.6-.9-37.6-3.6-23-2.8 1.9-6.4-7.4.4-4.5 5.5-6.5-18.8-4.5-7.8 4.5-35.3 6-24.7 1.4-24.8.4-25.7-.9-14.2-3.2-6 3.7v10l5 8.3 8.8 9.2-1.4 4.6-4.1-.5-8.3-4.6 8.3 38.1 2.7 18.8-1.8 13.8 6 17-2.8 8-.9 5.2-3.7 7.8 4.2 40.4 3.6 22-3.6 22.5 6.8 9.6 2.8 3.7 1.4 14.6z"/></a><a href="#"><path class="shape white" d="M711.3 676.3l-3.1-8.7-1.2-9-5.7-11.3-1.8 4V646l-7-4.9-9.2 1.2-6.9 1.9-3.6 7-5 6-5.4 2.4-4 7.5 2.7 2.1-2.7 7-9.2 5.7-3.2 3.9-4.6 6.5-1.5 7.5 1.2 5.8 3.7 2.3 9.8 1.7 14.2-1.8L679 704l7.7-7.2 3.6-3.7 10.4-6.2 10.5-6.9v-2.1l65.2.1-1.1 5.5 1 6.6s6.2 3.7 6.6 3.7l15.3.4 21.3 1 19.7 4 18.5 1.4 15.7-1.5 7.8-4.1 4.2-6.1-1-5-3.8-4-15.9-4.5-13-4.1-6.4-6.4-8.8-10.6-11-8.5-7.4-2.3-7.2 6-6.9 9-7.8 1.5-9.3-2.5-2.9-1.9-2.1 3-1.6 4.8-1.2 3.6-.3 8.4-1.2 2.1h-67.4z"/></a></svg>
+            <svg data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1482 715">
+                <path class="canvas" d="M0 0h1482v715H0z"/>
+                <a href="/p/pantalon-nike-atletico-nacional-2018/" target="modal-iframe" onclick="relinkIframe(this.href);">
+                    <path class="shape green" d="M597.8 245.4h35.3l9.2 2.3V266l-3.7 5.5 1.9 17.9-1 27.5 2.8 10v21.6l-2.8 15.6 11 11v7.4l7 7.3 30.2 4.6h33.5l30.7-3.2 29.8-3.7 10.6-6.9 12.4-6.4v-13.7l-8.8-6.4-3.2-18.9-7.8-28.4-4.6-23.8-2.3-26.2-1.8-22 4.1 5 36.3-8.2 1.8-3.7-3.2-12.3-6.4-21.6-5-21.6-8.3-17.4-13.8-10-22.5-14.8-4.5-4-10.6-2.4-5-4.1-5-2-6-2.6 5.5 5-4.6 7.9-7.4 9.1-13.5 1-15.8-2.8-13.8-8.7-3.2-8.3 2.8-3.2-8.7 6.4-13.3 7.8-12.4 7.8-6 5.5-13.7 6-7 6.9 1.5 3.6-17 27.1v22l-3.7 13.8v23.3z"/>
+                </a>
+                <a href="/p/licra-adidas-larga-response/" target="modal-iframe" onclick="relinkIframe(this.href);">
+                    <path class="shape black" d="M674.9 642l20.1-1.8 8.3 1 2.3-17 4.1-22V565l3.2-7.3-3.2-17.5 3.2-4.6-6.9-16 7-4.6 4.5-38.5 1.9-27.5 6.8-31.2L741 443l16.9 36.2 3.6 2.3v13.3l6 6-4.1 5 .4 10.6 3.7 4.6-4.1 3.2v31.2l4.1 28.9 4.6 20.6 3.7 8.7v9.6l6 13.3 1.8 12h3.2l11 2.3 15.1-3.7 6.9-3.7-4.6-14.6 4.6-10.1-6.9-6.5 4.6-4.6-4.1-20.6v-46.8l2.3-10.5-4.2-6.4 5-3.7v-13.8l3.3-22.4-5-10.6 2.2-9.6-.9-37.6-3.6-23-2.8 1.9-6.4-7.4.4-4.5 5.5-6.5-18.8-4.5-7.8 4.5-35.3 6-24.7 1.4-24.8.4-25.7-.9-14.2-3.2-6 3.7v10l5 8.3 8.8 9.2-1.4 4.6-4.1-.5-8.3-4.6 8.3 38.1 2.7 18.8-1.8 13.8 6 17-2.8 8-.9 5.2-3.7 7.8 4.2 40.4 3.6 22-3.6 22.5 6.8 9.6 2.8 3.7 1.4 14.6z"/></a><a href="#"><path class="shape white" d="M711.3 676.3l-3.1-8.7-1.2-9-5.7-11.3-1.8 4V646l-7-4.9-9.2 1.2-6.9 1.9-3.6 7-5 6-5.4 2.4-4 7.5 2.7 2.1-2.7 7-9.2 5.7-3.2 3.9-4.6 6.5-1.5 7.5 1.2 5.8 3.7 2.3 9.8 1.7 14.2-1.8L679 704l7.7-7.2 3.6-3.7 10.4-6.2 10.5-6.9v-2.1l65.2.1-1.1 5.5 1 6.6s6.2 3.7 6.6 3.7l15.3.4 21.3 1 19.7 4 18.5 1.4 15.7-1.5 7.8-4.1 4.2-6.1-1-5-3.8-4-15.9-4.5-13-4.1-6.4-6.4-8.8-10.6-11-8.5-7.4-2.3-7.2 6-6.9 9-7.8 1.5-9.3-2.5-2.9-1.9-2.1 3-1.6 4.8-1.2 3.6-.3 8.4-1.2 2.1h-67.4z"/></a></svg>
         </div>
-        <div class="swiper-slide pag-3">
+        <div class="swiper-slide pag-3" data-hash="pagina-3">
             <img src="[[cdn_domain]]/css/sport-go/images/page-3.png" alt="">
-            <svg id="ills" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1482 807"><path class="canvas" d="M0 0h1482v807H0z"/><a href="#"><path id="kid_cap" class="shape" d="M613 142.7l13.5-11.6 23.8-3.4 38.5 7.5 8 5.4 1.2 17.7h12.5l-1.2 12.5-7 8H720l15.3-7.4 10.4-10.7 1.5-3.3-9.5-8-24.4-7.6-1.5-14L709 114l-5.2-11.3L693.4 90l-21.7-5.5-21 1.5-13.2 4.6-11 7.7-10.8 15.3-2.7 10v19z"/></a><a href="#"><path id="girl_cap" class="shape" d="M812 164.4l-2.1-7.3 5.8-10.4v-8.9l5.2-24.1 15.9-21.5 20.5-7.6 21 1.5 23.3 11.4 8 9.1 3 18v16.6l1.5 9.5-1.5 6-2.4 1.3-1.6-16.2-9.7-12-28.5-5.3-16.8 1.4-19.3 5.8-13.7 7-3 2.2-1 8.2-.6 10.1-4 5.2z"/></a><a href="#"><path id="kid_hoodie" class="shape" d="M470.5 350.6l-15.6-12-8.2-10.6 29.6-37.3 44.4-45.6 7-2.7v-4.3l13.7-7 38.3-35.1 1.5-5.6 14.3-8.5h17.8l6 12.8 8.7 5.2 7.9 12.6 14.7 13.1 6.7 4.3 9.8-.6 2.4-1L695 221l6.2-9.2-7-5.5 7 .3 4.2 5.8h2.8l1.5 3.7 16.2 13.8 9.5 16.8 3.4-.3 2.3 6.7-1.7 29.4 5.2 50 4.3 2.2v4l8.5 19.3-7.6 38.2L746 413l-5 24.8-3.3 12.5s-1.8-.6-2.7 0-2.1-5.8-2.1-5.8l-6.2-12.2-11.3-51.4 4.3-24.2-6.7-9.8-3.7-10 .7-23-4.3-1.8-5.8-5-8.3 24.9-6.7 11.6-4.9 3-4 33-4.9 30-7.3 8.3-4 8-24.2-1.9-38.5-3-39.4-14.7L524 374l-6.4-6.7 17.1-15.6-1.2-5.8 12.5-12.5 8-27.5 7.7-6.7s.2-3 .9-4l11.6-15.3 1.5-4.9 1.5-12 5.2-11.2-6.7 9.4-12 7-6 4h-2.8l-2.4 10.1-6.8 9.8-10.4 6.1 2.5 3.1-8 5.2-5.5 5.8-9.8 1.5-7 7-25.6 20.8z"/></a><a href="#"><path id="girl_hoodie" class="shape purple" d="M774.7 439l-6.4 4.6-11-2.3-7.6-4.1-8.7-3.1 4.2-17.4 8-38.1 4.7-21.9s10.1-10 10.1-11 1.2-9.5 1.2-9.5h3l10.8-67 2.1-18.6 6.1-21.4 19.3-15.6s20.8-7 22.3-7.3 7 10 7 10l11 4.6 10.7-5.2 10.7-9.4 12.6-7 6.4-4.3 11.9-4.6 4-8.6 1.9-10.4 12.5-1.2v8.6l6.1 3-2 5.5 5.1 2.5 1.5 4 4-1.2s.6 2.7 1.6 2.7l5.8.3v-8l4.9 4.6-5 6.8-2.1 12.5-1.9 6.8 6.8 31.7.6 2.8-2.2 1.2 24.8 75.8v18.7l-5.8 12.5-8 8.3-57.2 48.6-23.2 2.7-7-1.2 2.8-6.1-8.9-9.8-9.8-22.6-2.7-5-.7-14.6-3.6-4.3-6.5-15.3 3-1.5-8.8-9.8-35.1 66.4-16.5 29.3-5.5 7z"/></a><a href="#"><path id="kid_pants" class="shape" d="M517.3 370.5l-33.6 24.4-34.6 34.6-5.8 11.9-4 14.4 5.2 16.2 14.7 15.9 19.1 21.4 10.9 11.9 23 12.5 15.5 2.8 2.8-2.8 14.3-3.3 6.4-4.6 2.8-8v-9.7l-5.5-1 .6-8.5-7-7.4-5.5-.9-2.8-4-2.7-.6-17.2-17.7-1.5-8.6 17.4-11 26.3 5 9.5 11.9 10.1 11 8.3 11L604 534 617 588l3.6 42.8v10l-3 4.6 8.5 4 3.7 8-2.1 6.7-.3 4.3 26.6 4 3.3-8v-7l4.6-3.1 2.8-4.9v-10.4l4-14-2.8-7 2.7-45 2.8-24.2-8-8-.3-4.8 4.6-8.6-6.4-4 3.7-22.9-2.5-16.2.6-18.3-2.7-8 1.8-6.1-2.7-4.3 4-4-2.5-6-.6-9.3-33.3-4.9-28.5-2.3-41-14.8-40.3-35.7z"/></a><a href="#"><path id="girl_pants" class="shape pink" d="M869.8 419.6l2.5 14.2-2.5 8.5 6.1 20.5 5 31.8v30.6l-8.6 29-6.8 27-2.4 28.3-5.8 21.1 4.6 12.6 7.2 2.4-3.3 10.1-3 2.8 1.2 4.3 14.7 6 12-3.6 5.7-5.2-2.4-3.7-.6-8 4.9-2.4 4-8.9 41.5-118.5 6.1-9 23.2-45.8 11.4-18.3 30.5-20.2-24.1 25.1-2.2 8.2 1.5 5.5-10.4 13.8 3.7 6.4 12.2 7.7 10.4 2.7 8.9-13.5 5.2-1.2 4.6-.9s17.7-20.2 18.6-20.8 29.4-28.7 29.4-28.7l8.5-3.7 7.7-11.3 4.9-18-6.1-13.8-8-5.8-20.1-8.9h-9.8l-10.1-5.5-38-12.2-17.3-3-15-3.2v4.3l-5.8 12.6-65.2 56.9-23.2 2.7z"/></a><a href="#"><path id="kid_shoe_left" class="shape black" d="M522.9 535.6l-1.6 8.5v10.1l-3.7 4-1.5 8.3 1.8 3-8.5 15-3.1 7V605l12 3h11l12.5-10.4 10.7-8.9 10-24.1 13.2-15.6 8.9-15.6-3-8.9-9-3.2-9.7-9.6 5.2-1.2-1.6-2.5h-9.1l-3.4 3.4 4 2.2s3.4 10 3.4 11-2.8 8.5-2.8 8.5l-10.4 1.5-2.7 2.8-3.6-6.3-11.4 2.6-4.1 2.5z"/><path id="kid_shoe_right" class="shape" d="M628 732.1l6.7 7H659l12.5-3.4 2.4-6-4.2-20.5-4.3-6.7v-5.2l-3-4.3-1.3-13.4-3-5.8-7-3.1-19.5-1.8-6 3.3-6.7 8.9v12l3.7 9.7 4.6 14.7.9 14.6z"/></a><a href="#"><path id="girl_shoe_left" class="shape black" d="M862.8 672L852 695.4l-1.9 11.3 3.7 7.3 3.4 5 11 15.5 14 4.6h18.4l8.8-2.2-1.2-15-3-11.3-1-8.2S901 696 901 695s-1.8-10-1.8-10l-1.9-5.5-14-6.5-13.8 6.8-1.2 3.3-8.3 3.4z"/><path id="girl_shoe_right" class="shape" d="M948 512.3L958 523l30.5 31 20.8 12.5 6.1-6.2V551l-4.8-8-.4-6.1-3.6-10.7-1-5.2-1.2-12.5-4.2-7-2.2 2.7-.9 4.3-12 .3-9.4-10.1v-12l-4-4.5-8 4.2-5.4 1.9-10.2 24z"/></a><a href="#"><path id="kid_glasses" class="shape yellow" d="M617.8 171.7l-4.8 11.2 4.8 6.9 1.6 4.9 8.6 5.2s5 2 6.6 1.8 7-5.5 7-5.5l3.7-9.5h4.4l3.2 9s9.4 7.4 10.8 7.2 10 0 10 0l7.9-6.5 2.7-5.5v-2.3l3.7-3.2 11.9-19.7-4.3 1.6-9.2 14.5-1.6 3.6-1.9-1.1-6.2-4.4-23.6-1.1h-34.6l-2 1.6 3-6.5-.5-3.7z"/></a><a href="#"><path id="girl_glasses" class="shape yellowgreen" d="M849.9 181.8l-5.3-8.8-1.6-8.6 3.4-6-19-12.9V143l24 11 21.9 8.4 2.3 5.6 6.8 1.2 7.8-1.9 7.6 1.2 7.1 1.7 5 4.2-1.3 6.4-5 8.5-12.4 5.7-8-5.4-6-7.8 1.3-9.7-2.5.3-7.3 6.4-10.8 5.5-8-2.5z"/></a></svg>
+            <svg id="ills" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1482 807"><path class="canvas" d="M0 0h1482v807H0z"/><a href="/p/gorra-new-era-snapback-blacked/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="kid_cap" class="shape" d="M613 142.7l13.5-11.6 23.8-3.4 38.5 7.5 8 5.4 1.2 17.7h12.5l-1.2 12.5-7 8H720l15.3-7.4 10.4-10.7 1.5-3.3-9.5-8-24.4-7.6-1.5-14L709 114l-5.2-11.3L693.4 90l-21.7-5.5-21 1.5-13.2 4.6-11 7.7-10.8 15.3-2.7 10v19z"/></a><a href="/p/gorra-new-era-snapback-blacked/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="girl_cap" class="shape" d="M812 164.4l-2.1-7.3 5.8-10.4v-8.9l5.2-24.1 15.9-21.5 20.5-7.6 21 1.5 23.3 11.4 8 9.1 3 18v16.6l1.5 9.5-1.5 6-2.4 1.3-1.6-16.2-9.7-12-28.5-5.3-16.8 1.4-19.3 5.8-13.7 7-3 2.2-1 8.2-.6 10.1-4 5.2z"/></a><a  href="/p/camiseta-under-armour-alter-ego-capitan-america-nino/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="kid_hoodie" class="shape" d="M470.5 350.6l-15.6-12-8.2-10.6 29.6-37.3 44.4-45.6 7-2.7v-4.3l13.7-7 38.3-35.1 1.5-5.6 14.3-8.5h17.8l6 12.8 8.7 5.2 7.9 12.6 14.7 13.1 6.7 4.3 9.8-.6 2.4-1L695 221l6.2-9.2-7-5.5 7 .3 4.2 5.8h2.8l1.5 3.7 16.2 13.8 9.5 16.8 3.4-.3 2.3 6.7-1.7 29.4 5.2 50 4.3 2.2v4l8.5 19.3-7.6 38.2L746 413l-5 24.8-3.3 12.5s-1.8-.6-2.7 0-2.1-5.8-2.1-5.8l-6.2-12.2-11.3-51.4 4.3-24.2-6.7-9.8-3.7-10 .7-23-4.3-1.8-5.8-5-8.3 24.9-6.7 11.6-4.9 3-4 33-4.9 30-7.3 8.3-4 8-24.2-1.9-38.5-3-39.4-14.7L524 374l-6.4-6.7 17.1-15.6-1.2-5.8 12.5-12.5 8-27.5 7.7-6.7s.2-3 .9-4l11.6-15.3 1.5-4.9 1.5-12 5.2-11.2-6.7 9.4-12 7-6 4h-2.8l-2.4 10.1-6.8 9.8-10.4 6.1 2.5 3.1-8 5.2-5.5 5.8-9.8 1.5-7 7-25.6 20.8z"/></a><a href="/p/camiseta-under-armour-alter-ego-capitan-america-nino/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="girl_hoodie" class="shape purple" d="M774.7 439l-6.4 4.6-11-2.3-7.6-4.1-8.7-3.1 4.2-17.4 8-38.1 4.7-21.9s10.1-10 10.1-11 1.2-9.5 1.2-9.5h3l10.8-67 2.1-18.6 6.1-21.4 19.3-15.6s20.8-7 22.3-7.3 7 10 7 10l11 4.6 10.7-5.2 10.7-9.4 12.6-7 6.4-4.3 11.9-4.6 4-8.6 1.9-10.4 12.5-1.2v8.6l6.1 3-2 5.5 5.1 2.5 1.5 4 4-1.2s.6 2.7 1.6 2.7l5.8.3v-8l4.9 4.6-5 6.8-2.1 12.5-1.9 6.8 6.8 31.7.6 2.8-2.2 1.2 24.8 75.8v18.7l-5.8 12.5-8 8.3-57.2 48.6-23.2 2.7-7-1.2 2.8-6.1-8.9-9.8-9.8-22.6-2.7-5-.7-14.6-3.6-4.3-6.5-15.3 3-1.5-8.8-9.8-35.1 66.4-16.5 29.3-5.5 7z"/></a><a href="/p/short-con-mallas-2-en-1-gym/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="kid_pants" class="shape" d="M517.3 370.5l-33.6 24.4-34.6 34.6-5.8 11.9-4 14.4 5.2 16.2 14.7 15.9 19.1 21.4 10.9 11.9 23 12.5 15.5 2.8 2.8-2.8 14.3-3.3 6.4-4.6 2.8-8v-9.7l-5.5-1 .6-8.5-7-7.4-5.5-.9-2.8-4-2.7-.6-17.2-17.7-1.5-8.6 17.4-11 26.3 5 9.5 11.9 10.1 11 8.3 11L604 534 617 588l3.6 42.8v10l-3 4.6 8.5 4 3.7 8-2.1 6.7-.3 4.3 26.6 4 3.3-8v-7l4.6-3.1 2.8-4.9v-10.4l4-14-2.8-7 2.7-45 2.8-24.2-8-8-.3-4.8 4.6-8.6-6.4-4 3.7-22.9-2.5-16.2.6-18.3-2.7-8 1.8-6.1-2.7-4.3 4-4-2.5-6-.6-9.3-33.3-4.9-28.5-2.3-41-14.8-40.3-35.7z"/></a><a  href="/p/tenis-nike-air-max-tavas/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="girl_pants" class="shape pink" d="M869.8 419.6l2.5 14.2-2.5 8.5 6.1 20.5 5 31.8v30.6l-8.6 29-6.8 27-2.4 28.3-5.8 21.1 4.6 12.6 7.2 2.4-3.3 10.1-3 2.8 1.2 4.3 14.7 6 12-3.6 5.7-5.2-2.4-3.7-.6-8 4.9-2.4 4-8.9 41.5-118.5 6.1-9 23.2-45.8 11.4-18.3 30.5-20.2-24.1 25.1-2.2 8.2 1.5 5.5-10.4 13.8 3.7 6.4 12.2 7.7 10.4 2.7 8.9-13.5 5.2-1.2 4.6-.9s17.7-20.2 18.6-20.8 29.4-28.7 29.4-28.7l8.5-3.7 7.7-11.3 4.9-18-6.1-13.8-8-5.8-20.1-8.9h-9.8l-10.1-5.5-38-12.2-17.3-3-15-3.2v4.3l-5.8 12.6-65.2 56.9-23.2 2.7z"/></a><a href="/p/tenis-nike-air-max-tavas/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="kid_shoe_left" class="shape black" d="M522.9 535.6l-1.6 8.5v10.1l-3.7 4-1.5 8.3 1.8 3-8.5 15-3.1 7V605l12 3h11l12.5-10.4 10.7-8.9 10-24.1 13.2-15.6 8.9-15.6-3-8.9-9-3.2-9.7-9.6 5.2-1.2-1.6-2.5h-9.1l-3.4 3.4 4 2.2s3.4 10 3.4 11-2.8 8.5-2.8 8.5l-10.4 1.5-2.7 2.8-3.6-6.3-11.4 2.6-4.1 2.5z"/><path id="kid_shoe_right" class="shape" d="M628 732.1l6.7 7H659l12.5-3.4 2.4-6-4.2-20.5-4.3-6.7v-5.2l-3-4.3-1.3-13.4-3-5.8-7-3.1-19.5-1.8-6 3.3-6.7 8.9v12l3.7 9.7 4.6 14.7.9 14.6z"/></a><a href="/p/tenis-nike-running--free-rn/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="girl_shoe_left" class="shape black" d="M862.8 672L852 695.4l-1.9 11.3 3.7 7.3 3.4 5 11 15.5 14 4.6h18.4l8.8-2.2-1.2-15-3-11.3-1-8.2S901 696 901 695s-1.8-10-1.8-10l-1.9-5.5-14-6.5-13.8 6.8-1.2 3.3-8.3 3.4z"/><path id="girl_shoe_right" class="shape" d="M948 512.3L958 523l30.5 31 20.8 12.5 6.1-6.2V551l-4.8-8-.4-6.1-3.6-10.7-1-5.2-1.2-12.5-4.2-7-2.2 2.7-.9 4.3-12 .3-9.4-10.1v-12l-4-4.5-8 4.2-5.4 1.9-10.2 24z"/></a><a  href="/p/tenis-adidas-rosados-running-response-lt-w/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="kid_glasses" class="shape yellow" d="M617.8 171.7l-4.8 11.2 4.8 6.9 1.6 4.9 8.6 5.2s5 2 6.6 1.8 7-5.5 7-5.5l3.7-9.5h4.4l3.2 9s9.4 7.4 10.8 7.2 10 0 10 0l7.9-6.5 2.7-5.5v-2.3l3.7-3.2 11.9-19.7-4.3 1.6-9.2 14.5-1.6 3.6-1.9-1.1-6.2-4.4-23.6-1.1h-34.6l-2 1.6 3-6.5-.5-3.7z"/></a><a  href="/p/tenis-adidas-negro-cloudfoam-racer-9s/" target="modal-iframe" onclick="relinkIframe(this.href);"><path id="girl_glasses" class="shape yellowgreen" d="M849.9 181.8l-5.3-8.8-1.6-8.6 3.4-6-19-12.9V143l24 11 21.9 8.4 2.3 5.6 6.8 1.2 7.8-1.9 7.6 1.2 7.1 1.7 5 4.2-1.3 6.4-5 8.5-12.4 5.7-8-5.4-6-7.8 1.3-9.7-2.5.3-7.3 6.4-10.8 5.5-8-2.5z"/></a></svg>
 
         </div>
-        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide" data-hash="pagina-4">Slide 4</div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -429,72 +45,23 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
 </div>
-
-<div id="viewShoppingCart">
-    <div class="inner">
-        <a href="#close" title="Close" class="close-modal">&times;</a>
-        <h2>Carro de Compras</h2>
-        <div class="products">
-            <div class="title">Productos</div>
-            <div class="img"><img src="https://gloimg.zafcdn.com/zaful/pdm-product-pic/Clothing/2017/07/10/goods-first-img/1499707622076775374.jpg" alt=""></div>
-            <div class="name">Joggers Test</div>
-            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, asperiores repellat! Illum corporis qui corrupti quas debitis dolores sunt ipsam ratione saepe, nesciunt facilis quis quibusdam beatae dignissimos nihil distinctio.</div>
-            <div class="qty">
-                - <input type="number" name="qty" id="qty" value="1"> +
-            </div>
-            <div class="pp_unit">$241,000</div>
-            <div class="ptotal">Total: $241,000</div>
-
-            <div class="img"><img src="[[cdn_domain]]/css/sport-go/images/woman-hoodie.png" alt=""></div>
-            <div class="name">Hoodie Test</div>
-            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, asperiores repellat! Illum corporis qui corrupti.</div>
-            <div class="qty">
-                - <input type="number" name="qty" id="qty" value="2"> +
-            </div>
-            <div class="pp_unit">$41,000</div>
-            <div class="ptotal">Total: $82,000</div>
-        </div>
-        <div class="pricing">
-            <div class="title">
-                Precios
-            </div>
-            <div class="inf">Total productos</div>
-            <div class="value">3</div>
-            <div class="inf">Costo productos</div>
-            <div class="value">$363,000</div>
-            <div class="inf">Costo Envío</div>
-            <div class="value">$5,670</div>
-            <div class="divider">&nbsp;</div>
-            
-            <div class="inf">Total con Descuento</div>
-            <div class="value">$368,670</div>
-            <div class="inf">Tarjeta crédito</div>
-            <div class="value">$318,670</div>
-
-            <a class="btn keep-shopping" href="#login-window">
-                <div class="outter-box"></div>
-                Comprar
-            </a>
-            
-            <a class="btn keep-shopping" href="#">
-                <div class="outter-box"></div>
-                    Ir a catálogo
-                </a>
-
-        </div>
-    </div>
-</div>
+<iframe src="#" id="modal-iframe" name="modal-iframe" frameborder="0">Este explorador no soporta esta funcionalidad del catálogo</iframe>
 
 <!-- Swiper JS -->
 <script src="/css/sport-go/swiper.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>
-    var swiper = new Swiper('#mobile', {
+    var swiper = new Swiper('#catalogo', {
         
         effect: 'cube',
         grabCursor: true,
         loop: true,
+        roundLenghts: true,
+        hashNavigation: true,
+        // mousewheel: true,
+        keyboard: true,
+        centeredSlides: true,
         cubeEffect: {
             shadow: false,
             slideShadows: false,
@@ -511,11 +78,11 @@
         }
     });
 </script>
-<script src="./js/eventListeners.js"></script>
 <script>
-    var totalItemsCart = 0;
-    function addToCart () {
-        totalItemsCart++;
-        document.getElementById('shopping-cart-qty').innerHTML = totalItemsCart;
+    function relinkIframe (url) {
+        var modalIframe = document.getElementById('modal-iframe');
+        modalIframe.href = url;
+        location.hash = "modal-iframe";
+        return false;
     }
 </script>

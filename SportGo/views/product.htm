@@ -1,5 +1,5 @@
 <section id="product-view">
-    <a href="#close" title="Close" class="close-modal">&times;</a>
+    <a href="#" title="Close" class="close-modal" onclick="window.top.location.hash='close'">&times;</a>
     <div class="title">[[product_name]]</div>
     <div class="prod-images">
     </div>
@@ -7,8 +7,10 @@
 
     [[product_price_html]]
     <div class="specs-btn">
+            [[product_specs]]
 
-        <div class="specs">
+        <!-- <div class="specs"> -->
+<!-- 
             <div class="spec">
                 <div class="name">
                     Colors
@@ -27,16 +29,27 @@
                     <div class="variant">L</div>
                     <div class="variant">XL</div>
                 </div>
-            </div>
-        </div>
-        <div class="add-to-cart">
-            <div class="btn" onclick="addToCart();">
+            </div> -->
+        <!-- </div> -->
+
+        [[product_form]]
+
+        <!-- <div class="add-to-cart">
+            <div class="btn">
                 <div class="outter-box"></div>
                 Add to cart
             </div>
-        </div>
+        </div> -->
     </div>
+    [[product_stock_status]]
 
-    <p>This is a sample modal box that can display your product.</p>
-    <p>You could use this place to add a neat description to your hoodie, or the other products on your store.</p>
+    [[product_description]]
+
+    <div class="logo-marca">
+        [[prod_opt_image_from_spec(1)]]
+    </div>
+    [[product_in_cart]]
+
+
+
 </section>
